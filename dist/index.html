@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b35">
+  <title>NoordWeeb — A great website. One clear price.</title>
+  <meta name="description" content="Websites for independent businesses. Explore the NoordWeeb showroom, choose your extras and pay once for your website build. Future changes, quoted when you need them.">
+  <meta property="og:title" content="NoordWeeb — A great website. One clear price.">
+  <meta property="og:description" content="Pick your model. Make it your own. Websites for independent businesses, built by a small team.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23173b35'/%3E%3Cpath d='M10 30V10h6l8 12V10h6v20h-6l-8-12v12z' fill='%23d8ee7d'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="NoordWeeb home"><span class="brand-mark" aria-hidden="true">n<span>↗</span></span>noordweeb<span class="brand-period">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#showroom">The showroom</a><a href="#how-it-works">How it works</a><a href="#about">Meet the team</a></nav>
+    <a class="button button-small" href="#configure">Build your website <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">Menu <span aria-hidden="true">+</span></button>
+  </header>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#showroom">The showroom</a><a href="#how-it-works">How it works</a><a href="#about">Meet the team</a><a href="#configure">Build your website</a></nav>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-cross" aria-hidden="true">✳</span> SMALL TEAM. GOOD WEBSITES. CLEAR DEALS.</p>
+        <h1>A great website.<br>One <span class="underlined">clear price.</span></h1>
+        <p class="hero-description">Your business deserves a proper home online. Pick a starting point, choose your extras, and make it yours.</p>
+        <div class="hero-actions"><a class="button" href="#showroom">Explore the showroom <span aria-hidden="true">↗</span></a><a class="text-link" href="#how-it-works">Here’s how it works <span aria-hidden="true">→</span></a></div>
+        <div class="hero-facts"><span><span aria-hidden="true">✓</span> One-time website build</span><span><span aria-hidden="true">✓</span> Changes priced on request</span></div>
+      </div>
+      <div class="hero-visual" aria-label="A preview of the Kade restaurant website concept">
+        <div class="preview-caption"><span>YOUR NEXT CHAPTER, ONLINE.</span><span aria-hidden="true">↙</span></div>
+        <a href="/templates/kade/" class="hero-browser" aria-label="Explore the Kade restaurant template">
+          <div class="browser-bar"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>kade · restaurant concept</span><span aria-hidden="true">↗</span></div>
+          <div class="mini-restaurant"><div class="mini-nav"><span class="mini-logo">kade.</span><span>OUR TABLE · OUR STORY</span></div><div class="mini-hero"><span class="mini-eyebrow">A LITTLE SLOWER. A LITTLE CLOSER.</span><p>Good food.<br>Better company.</p><span class="mini-cta">Find your seat ↗</span></div><div class="mini-bottom"><span>SEASONAL. LOCAL. ALWAYS WELCOMING.</span><span>AMSTERDAM</span></div></div>
+        </a>
+        <div class="price-ticket"><span class="ticket-icon" aria-hidden="true">↗</span><div><span>The Hospitality website</span><strong id="hero-starting-price">One time. €2,295.</strong></div></div>
+        <span class="visual-note">A starting point. Never a copy-paste business.</span>
+      </div>
+    </section>
+    <div class="promise-bar"><div class="wrap promise-inner"><p>Your website. Your next step.</p><span>Built around your business</span><span>Made for mobile</span><span>Clear scope, agreed upfront</span></div></div>
+    <section class="section wrap" id="showroom">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE SHOWROOM</p><h2>Find your kind of website.</h2></div><p>Different businesses. Different personalities.<br>Take a look around. Picture your name here.</p></div>
+      <div id="showroom-grid" class="showroom-grid"></div>
+      <p class="section-note">These are fictional demo businesses, built to show what’s possible. Every design is adapted to your brand, content and customers.</p>
+    </section>
+    <section class="build-section" id="configure">
+      <div class="wrap section">
+        <div class="section-heading"><div><p class="eyebrow">02 / MAKE IT YOURS</p><h2>A website, with your name on it.</h2></div><p>Choose your model. Add what matters.<br>See where your budget goes.</p></div>
+        <div class="config-layout">
+          <div class="config-options">
+            <div class="step-label"><span>1</span><h3>Start with the right model</h3></div>
+            <label class="sr-only" for="package-select">Website package</label><select id="package-select"></select>
+            <div class="package-detail" id="package-detail"></div>
+            <div class="step-label extra-heading"><span>2</span><h3>Add the finishing touches</h3><span class="optional-label">OPTIONAL</span></div>
+            <div id="addon-groups"></div>
+          </div>
+          <aside class="quote-card" aria-label="Your website estimate">
+            <div class="quote-heading"><span class="eyebrow">YOUR NEXT WEBSITE</span><span class="quote-symbol" aria-hidden="true">↗</span></div>
+            <div id="chosen-template" class="chosen-template" hidden></div>
+            <h3 id="quote-name">The One-page</h3><p id="quote-scope"></p>
+            <div class="quote-lines" id="quote-lines"></div>
+            <div class="quote-total"><span>One-time build</span><strong id="quote-total" aria-live="polite" aria-atomic="true">€1,395</strong><span>Excluding any applicable VAT</span></div>
+            <a class="button button-lime quote-action" href="#project-brief">Let’s make it happen <span aria-hidden="true">↗</span></a>
+            <p class="quote-disclaimer">An estimate, not a commitment. We’ll agree the exact scope and final price with you first.</p>
+            <div class="ownership-note"><span aria-hidden="true">✓</span><p>No required maintenance subscription. Future updates and changes are quoted when you need them.</p></div>
+            <p class="third-party-note">Hosting, your domain, and any third-party subscriptions are separate. We’ll make those costs clear before you agree.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap" id="how-it-works">
+      <div class="section-heading"><div><p class="eyebrow">03 / NO MYSTERY. JUST A PROCESS.</p><h2>From “we need a website”<br>to “that’s our website.”</h2></div><p>A small team, a clear plan,<br>and you in the loop.</p></div>
+      <div class="process-grid">
+        <article><span class="process-number">01</span><h3>Find your fit.</h3><p>Browse the showroom. Pick a model and extras, or tell us what you have in mind.</p></article>
+        <article><span class="process-number">02</span><h3>Agree the details.</h3><p>We talk through your business, content and goals. You get a clear scope, price and timeline before we start.</p></article>
+        <article><span class="process-number">03</span><h3>Make it yours.</h3><p>We build around your brand and content. You review it in two consolidated revision rounds.</p></article>
+        <article><span class="process-number">04</span><h3>Go live. Keep growing.</h3><p>We help you launch and hand it over. Need something later? Come back for a separate quote.</p></article>
+      </div>
+    </section>
+    <section class="about-section" id="about"><div class="wrap about-inner"><div><p class="eyebrow">SMALL BY CHOICE</p><h2>Two friends.<br>One straightforward<br>way of working.</h2></div><div class="about-copy"><p class="about-lead">You run your business.<br>We’ll take care of the website.</p><p id="founder-intro">We’re two friends who like good design, clear conversations, and knowing exactly what we’re paying for. We think you probably do too.</p><p>You work directly with the people building your site. We agree the job, build it well, and stay a conversation away when you want something new.</p><div class="about-signature"><span class="signature-symbol" aria-hidden="true">n↗</span><div><strong id="founder-signature">The NoordWeeb team</strong><span data-company-line>A project of Tæknistoð ehf., Iceland</span></div></div></div></div></section>
+    <section class="section wrap faq-section"><div><p class="eyebrow">GOOD TO KNOW</p><h2>A few straight answers.</h2></div><div class="faq-list">
+      <details><summary>Is it really a one-time payment?<span aria-hidden="true">+</span></summary><p>The website build and the extras you select have a one-time price. There’s no required ongoing maintenance plan. Hosting, your domain, and third-party tools can have their own recurring charges; we agree those separately before you commit. Payment timing is set out in your quote.</p></details>
+      <details><summary>What if I want to change something later?<span aria-hidden="true">+</span></summary><p>Get in touch with what you need: a new page, fresh content, a feature or a fix. We assess the work and agree a price before starting. Any correction or support obligations for the original delivery are set out in your project agreement.</p></details>
+      <details><summary>Will my website look exactly like the demo?<span aria-hidden="true">+</span></summary><p>The demos are starting points. Your logo, colours, images and content make the design yours. Larger layout changes or custom features are scoped and priced before we build. The demo businesses, menus and rooms are fictional examples.</p></details>
+      <details><summary>What do I need to provide?<span aria-hidden="true">+</span></summary><p>Your logo or business name, approved text, images you have permission to use, and practical details such as opening hours and contact information. Copywriting and content entry are available as extras. Translations and third-party accounts are supplied by you.</p></details>
+      <details><summary>How long does a website take?<span aria-hidden="true">+</span></summary><p>Typical builds take 2–3 weeks for a one-page site, 3–4 weeks for business, hospitality and booking sites, and 4–6 weeks for a small shop. Your quote confirms the actual schedule, based on scope, availability and when your content is ready.</p></details>
+      <details><summary>Can I use my own hosting and domain?<span aria-hidden="true">+</span></summary><p>Yes. We’ll check that they support the agreed site and work out the launch and handover with you. If you need help choosing hosting or setting up your domain, include that in your brief. Provider costs are separate from the build.</p></details>
+    </div></section>
+    <section class="brief-section" id="project-brief"><div class="wrap brief-layout"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Your business.<br>Your next chapter.</h2><p>Tell us a little about it. We’ll put your selected model, extras and details into a project brief you can keep.</p><p class="brief-mode" id="brief-mode">Create a brief to download or copy. Your details stay in this browser; nothing is sent automatically.</p></div><form id="brief-form">
+      <div class="field-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Alex"></label><label>Business name<input name="business" autocomplete="organization" required maxlength="150" placeholder="Your business"></label></div>
+      <label>Email address<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@yourbusiness.com"></label>
+      <label>What have you got in mind? <span class="optional-text">(optional)</span><textarea name="message" rows="3" maxlength="3000" placeholder="A little about your business, your current website and what you’d like to change."></textarea></label>
+      <p class="form-privacy">Preparing a brief doesn’t place an order. <a href="/privacy/">How we handle your details</a>.</p>
+      <button type="submit" class="button">Create my project brief <span aria-hidden="true">↗</span></button>
+    </form></div></section>
+  </main>
+  <noscript><p class="noscript-note">Enable JavaScript to explore the showroom and configure your website. You can still view the <a href="/templates/kade/">restaurant</a>, <a href="/templates/crumb/">bakery</a> and <a href="/templates/still/">hotel</a> demos.</p></noscript>
+  <footer class="footer wrap"><div class="footer-top"><a class="wordmark" href="/">noordweeb<span class="brand-period">.</span></a><p>Good websites. Straightforward people.</p><a href="#configure">Let’s build something <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> NoordWeeb</span><span data-company-line>A project of Tæknistoð ehf. · Iceland</span><div><a href="/privacy/">Privacy</a><a href="/project-terms/">Working together</a></div></div></footer>
+  <dialog id="brief-dialog" class="brief-dialog" aria-labelledby="brief-dialog-title"><button type="button" class="close-dialog" aria-label="Close project brief">×</button><p class="eyebrow">YOUR NEXT STEP</p><h2 id="brief-dialog-title">Your brief is ready.</h2><p id="brief-result-note">Download or copy it to keep your choices. Nothing has been sent to NoordWeeb.</p><pre id="brief-output" tabindex="0"></pre><div class="dialog-actions"><button type="button" class="button" id="download-brief">Download brief <span aria-hidden="true">↓</span></button><button type="button" class="button button-outline" id="copy-brief">Copy brief</button><a class="button button-outline" id="email-brief" hidden>Open email</a></div><p class="copy-status" role="status" id="copy-status"></p></dialog>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "brand": "NoordWeeb",
+  "legalName": "Tæknistoð ehf.",
+  "country": "Iceland",
+  "founders": ["", "Emil"],
+  "contactEmail": "",
+  "contactPhone": "",
+  "whatsappNumber": "",
+  "registeredAddress": "",
+  "registrationNumber": "",
+  "vatNumber": "",
+  "websiteUrl": "",
+  "language": "en",
+  "currency": "EUR",
+  "pricesExcludeVat": true,
+  "pricingStatus": "CRM catalogue; confirm before public launch",
+  "registrationStatus": "Trading-name and company details to be confirmed before public launch"
+}

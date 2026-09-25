@@ -1,0 +1,54 @@
+{
+  "id": "crumb",
+  "name": "Crumb",
+  "type": "Cafés & bakeries",
+  "tag": "YOUR DAILY GOOD THING",
+  "description": "A bright little home for good coffee, fresh baking and your neighbourhood regulars.",
+  "packageId": "one-page",
+  "color": "#f5cf54",
+  "features": [
+    "One-page",
+    "Menu",
+    "Opening hours"
+  ],
+  "business": {
+    "name": "crumb",
+    "eyebrow": "FRESH OUT OF THE OVEN. EVERY MORNING.",
+    "headline": "Good mornings<br>start here.",
+    "intro": "Slow dough. Proper coffee. A little something worth getting out of bed for.",
+    "location": "Amsterdam",
+    "storyTitle": "Made slowly.<br>Gone by lunchtime.",
+    "story": "We believe a neighbourhood runs on good coffee and familiar faces. So we’re up early, folding butter, shaping dough and getting the first pot on. Come as you are.",
+    "menu": [
+      {
+        "name": "The butter croissant",
+        "description": "Flaky, golden, made fresh",
+        "price": "€3.80"
+      },
+      {
+        "name": "Cinnamon morning bun",
+        "description": "Soft centre, crisp sugar edges",
+        "price": "€4.20"
+      },
+      {
+        "name": "Sourdough toast",
+        "description": "Cultured butter & seasonal jam",
+        "price": "€6.50"
+      },
+      {
+        "name": "Flat white",
+        "description": "A double shot, silky milk",
+        "price": "€3.90"
+      }
+    ],
+    "hours": [
+      "Monday–Friday · 07:30–16:00",
+      "Saturday–Sunday · 08:30–16:00"
+    ],
+    "contactEmail": "",
+    "phone": "",
+    "address": "Amsterdam · example location",
+    "bookingUrl": ""
+  },
+  "demo": true
+}

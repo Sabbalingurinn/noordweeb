@@ -1,0 +1,38 @@
+[
+  {
+    "name": "bistro",
+    "filename": "bistro.jpg",
+    "photographer": "Glenov Brankovic",
+    "sourcePage": "https://unsplash.com/photos/a-room-with-tables-and-chairs-e4B5AvA7Jqo",
+    "imageUrl": "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37?auto=format&fit=max&fm=jpg&q=85&w=1400",
+    "alt": "Warm restaurant interior with dark wood walls, pendant lights and set dining tables.",
+    "position": "50% 50%",
+    "localPath": "/private/tmp/noordweeb-assets/bistro.jpg",
+    "bytes": 351397,
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "bakery",
+    "filename": "bakery.jpg",
+    "photographer": "Conor Brown",
+    "sourcePage": "https://unsplash.com/photos/a-bunch-of-croissants-that-are-on-a-table-sqkXyyj4WdE",
+    "imageUrl": "https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=max&fm=jpg&q=85&w=1400",
+    "alt": "Golden butter croissants arranged on a parchment-lined baking tray.",
+    "position": "50% 50%",
+    "localPath": "/private/tmp/noordweeb-assets/bakery.jpg",
+    "bytes": 375589,
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "hotel",
+    "filename": "hotel.jpg",
+    "photographer": "Point3D Commercial Imaging Ltd.",
+    "sourcePage": "https://unsplash.com/photos/white-bed-linen-on-bed-oxeCZrodz78",
+    "imageUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=max&fm=jpg&q=85&w=1400",
+    "alt": "Serene modern hotel room with white linen, a grey headboard, warm lamps and natural window light.",
+    "position": "50% 55%",
+    "localPath": "/private/tmp/noordweeb-assets/hotel.jpg",
+    "bytes": 191452,
+    "license": "https://unsplash.com/license"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "id": "kade",
+  "name": "Kade",
+  "type": "Restaurants & bistros",
+  "tag": "A SEAT AT THE TABLE",
+  "description": "Atmosphere first. Seasonal menus, your story, and a clear route to a table.",
+  "packageId": "hospitality",
+  "color": "#e8e5dc",
+  "features": [
+    "Menu",
+    "Reservations",
+    "Your story"
+  ],
+  "business": {
+    "name": "kade.",
+    "eyebrow": "A LITTLE SLOWER. A LITTLE CLOSER.",
+    "headline": "Good food.<br>Better company.",
+    "intro": "A neighbourhood table for long lunches, late conversations and whatever the season brings.",
+    "location": "Amsterdam",
+    "storyTitle": "A place to come together.",
+    "story": "The best evenings rarely need a plan. Just a warm welcome, something good on your plate, and people you want to stay a little longer with.",
+    "menu": [
+      {
+        "name": "Burrata & late-summer tomatoes",
+        "description": "Basil oil, toasted sourdough",
+        "price": "€14"
+      },
+      {
+        "name": "Market fish",
+        "description": "Seasonal greens, lemon butter",
+        "price": "€26"
+      },
+      {
+        "name": "Roasted cauliflower",
+        "description": "White bean purée, herb dressing",
+        "price": "€21"
+      },
+      {
+        "name": "Chocolate & sea salt",
+        "description": "Dark chocolate mousse, olive oil",
+        "price": "€9"
+      }
+    ],
+    "hours": [
+      "Wednesday–Thursday · 17:00–22:00",
+      "Friday–Saturday · 12:00–23:00",
+      "Sunday · 12:00–21:00"
+    ],
+    "contactEmail": "",
+    "phone": "",
+    "address": "Amsterdam · example location",
+    "bookingUrl": ""
+  },
+  "demo": true
+}

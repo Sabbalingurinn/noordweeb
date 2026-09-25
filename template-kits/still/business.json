@@ -1,0 +1,50 @@
+{
+  "id": "still",
+  "name": "Still",
+  "type": "Boutique stays",
+  "tag": "A LITTLE ROOM TO BREATHE",
+  "description": "A quieter kind of website. Thoughtful rooms, local discoveries and easy booking.",
+  "packageId": "booking",
+  "color": "#d8e0e4",
+  "features": [
+    "Rooms",
+    "Booking",
+    "Local guide"
+  ],
+  "business": {
+    "name": "still.",
+    "eyebrow": "STAY A LITTLE. FEEL A LOT.",
+    "headline": "Somewhere<br>to slow down.",
+    "intro": "Thoughtful rooms. Unhurried mornings. A small city stay that feels entirely your own.",
+    "location": "Amsterdam",
+    "storyTitle": "Less rush.<br>More room.",
+    "story": "A good stay is about how it makes you feel. Natural textures, quiet corners and a team with time for you. Step out into the city, then come home to a little calm.",
+    "menu": [
+      {
+        "name": "The Cosy Room",
+        "description": "A calm retreat for two · queen bed",
+        "price": "18 m²"
+      },
+      {
+        "name": "The Garden Room",
+        "description": "Green views & a little extra space",
+        "price": "25 m²"
+      },
+      {
+        "name": "The Loft",
+        "description": "Room to linger · king bed",
+        "price": "35 m²"
+      }
+    ],
+    "hours": [
+      "Check-in from 15:00",
+      "Check-out by 11:00",
+      "Reception · 07:00–23:00"
+    ],
+    "contactEmail": "",
+    "phone": "",
+    "address": "Amsterdam · example location",
+    "bookingUrl": ""
+  },
+  "demo": true
+}
