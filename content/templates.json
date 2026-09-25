@@ -1,5 +1,158 @@
 [
-  {"id":"kade","name":"Kade","type":"Restaurants & bistros","tag":"A SEAT AT THE TABLE","description":"Atmosphere first. Seasonal menus, your story, and a clear route to a table.","packageId":"hospitality","color":"#e8e5dc","features":["Menu","Reservations","Your story"],"business":{"name":"kade.","eyebrow":"A LITTLE SLOWER. A LITTLE CLOSER.","headline":"Good food.<br>Better company.","intro":"A neighbourhood table for long lunches, late conversations and whatever the season brings.","location":"Amsterdam","storyTitle":"A place to come together.","story":"The best evenings rarely need a plan. Just a warm welcome, something good on your plate, and people you want to stay a little longer with.","menu":[{"name":"Burrata & late-summer tomatoes","description":"Basil oil, toasted sourdough","price":"€14"},{"name":"Market fish","description":"Seasonal greens, lemon butter","price":"€26"},{"name":"Roasted cauliflower","description":"White bean purée, herb dressing","price":"€21"},{"name":"Chocolate & sea salt","description":"Dark chocolate mousse, olive oil","price":"€9"}],"hours":["Wednesday–Thursday · 17:00–22:00","Friday–Saturday · 12:00–23:00","Sunday · 12:00–21:00"],"contactEmail":"","phone":"","address":"Amsterdam · example location","bookingUrl":""}},
-  {"id":"crumb","name":"Crumb","type":"Cafés & bakeries","tag":"YOUR DAILY GOOD THING","description":"A bright little home for good coffee, fresh baking and your neighbourhood regulars.","packageId":"one-page","color":"#f5cf54","features":["One-page","Menu","Opening hours"],"business":{"name":"crumb","eyebrow":"FRESH OUT OF THE OVEN. EVERY MORNING.","headline":"Good mornings<br>start here.","intro":"Slow dough. Proper coffee. A little something worth getting out of bed for.","location":"Amsterdam","storyTitle":"Made slowly.<br>Gone by lunchtime.","story":"We believe a neighbourhood runs on good coffee and familiar faces. So we’re up early, folding butter, shaping dough and getting the first pot on. Come as you are.","menu":[{"name":"The butter croissant","description":"Flaky, golden, made fresh","price":"€3.80"},{"name":"Cinnamon morning bun","description":"Soft centre, crisp sugar edges","price":"€4.20"},{"name":"Sourdough toast","description":"Cultured butter & seasonal jam","price":"€6.50"},{"name":"Flat white","description":"A double shot, silky milk","price":"€3.90"}],"hours":["Monday–Friday · 07:30–16:00","Saturday–Sunday · 08:30–16:00"],"contactEmail":"","phone":"","address":"Amsterdam · example location","bookingUrl":""}},
-  {"id":"still","name":"Still","type":"Boutique stays","tag":"A LITTLE ROOM TO BREATHE","description":"A quieter kind of website. Thoughtful rooms, local discoveries and easy booking.","packageId":"booking","color":"#d8e0e4","features":["Rooms","Booking","Local guide"],"business":{"name":"still.","eyebrow":"STAY A LITTLE. FEEL A LOT.","headline":"Somewhere<br>to slow down.","intro":"Thoughtful rooms. Unhurried mornings. A small city stay that feels entirely your own.","location":"Amsterdam","storyTitle":"Less rush.<br>More room.","story":"A good stay is about how it makes you feel. Natural textures, quiet corners and a team with time for you. Step out into the city, then come home to a little calm.","menu":[{"name":"The Cosy Room","description":"A calm retreat for two · queen bed","price":"18 m²"},{"name":"The Garden Room","description":"Green views & a little extra space","price":"25 m²"},{"name":"The Loft","description":"Room to linger · king bed","price":"35 m²"}],"hours":["Check-in from 15:00","Check-out by 11:00","Reception · 07:00–23:00"],"contactEmail":"","phone":"","address":"Amsterdam · example location","bookingUrl":""}}
+  {
+    "id": "kade",
+    "name": "Kade",
+    "type": "Restaurants & bistros",
+    "tag": "A SEAT AT THE TABLE",
+    "description": "Atmosphere first. Seasonal menus, your story, and a clear route to a table.",
+    "packageId": "one-page",
+    "color": "#e8e5dc",
+    "features": [
+      "Menu",
+      "Your story",
+      "Booking link"
+    ],
+    "business": {
+      "name": "kade.",
+      "eyebrow": "A LITTLE SLOWER. A LITTLE CLOSER.",
+      "headline": "Good food.<br>Better company.",
+      "intro": "A neighbourhood table for long lunches, late conversations and whatever the season brings.",
+      "location": "Amsterdam",
+      "storyTitle": "A place to come together.",
+      "story": "The best evenings rarely need a plan. Just a warm welcome, something good on your plate, and people you want to stay a little longer with.",
+      "menu": [
+        {
+          "name": "Burrata & late-summer tomatoes",
+          "description": "Basil oil, toasted sourdough",
+          "price": "€14"
+        },
+        {
+          "name": "Market fish",
+          "description": "Seasonal greens, lemon butter",
+          "price": "€26"
+        },
+        {
+          "name": "Roasted cauliflower",
+          "description": "White bean purée, herb dressing",
+          "price": "€21"
+        },
+        {
+          "name": "Chocolate & sea salt",
+          "description": "Dark chocolate mousse, olive oil",
+          "price": "€9"
+        }
+      ],
+      "hours": [
+        "Wednesday–Thursday · 17:00–22:00",
+        "Friday–Saturday · 12:00–23:00",
+        "Sunday · 12:00–21:00"
+      ],
+      "contactEmail": "",
+      "phone": "",
+      "address": "Amsterdam · example location",
+      "bookingUrl": ""
+    }
+  },
+  {
+    "id": "crumb",
+    "name": "Crumb",
+    "type": "Cafés & bakeries",
+    "tag": "YOUR DAILY GOOD THING",
+    "description": "A bright little home for good coffee, fresh baking and your neighbourhood regulars.",
+    "packageId": "one-page",
+    "color": "#f5cf54",
+    "features": [
+      "One-page",
+      "Menu",
+      "Opening hours"
+    ],
+    "business": {
+      "name": "crumb",
+      "eyebrow": "FRESH OUT OF THE OVEN. EVERY MORNING.",
+      "headline": "Good mornings<br>start here.",
+      "intro": "Slow dough. Proper coffee. A little something worth getting out of bed for.",
+      "location": "Amsterdam",
+      "storyTitle": "Made slowly.<br>Gone by lunchtime.",
+      "story": "We believe a neighbourhood runs on good coffee and familiar faces. So we’re up early, folding butter, shaping dough and getting the first pot on. Come as you are.",
+      "menu": [
+        {
+          "name": "The butter croissant",
+          "description": "Flaky, golden, made fresh",
+          "price": "€3.80"
+        },
+        {
+          "name": "Cinnamon morning bun",
+          "description": "Soft centre, crisp sugar edges",
+          "price": "€4.20"
+        },
+        {
+          "name": "Sourdough toast",
+          "description": "Cultured butter & seasonal jam",
+          "price": "€6.50"
+        },
+        {
+          "name": "Flat white",
+          "description": "A double shot, silky milk",
+          "price": "€3.90"
+        }
+      ],
+      "hours": [
+        "Monday–Friday · 07:30–16:00",
+        "Saturday–Sunday · 08:30–16:00"
+      ],
+      "contactEmail": "",
+      "phone": "",
+      "address": "Amsterdam · example location",
+      "bookingUrl": ""
+    }
+  },
+  {
+    "id": "still",
+    "name": "Still",
+    "type": "Boutique stays",
+    "tag": "A LITTLE ROOM TO BREATHE",
+    "description": "A quieter kind of website. Thoughtful rooms, practical details and a link to your booking service.",
+    "packageId": "one-page",
+    "color": "#d8e0e4",
+    "features": [
+      "Rooms",
+      "Your story",
+      "Booking link"
+    ],
+    "business": {
+      "name": "still.",
+      "eyebrow": "STAY A LITTLE. FEEL A LOT.",
+      "headline": "Somewhere<br>to slow down.",
+      "intro": "Thoughtful rooms. Unhurried mornings. A small city stay that feels entirely your own.",
+      "location": "Amsterdam",
+      "storyTitle": "Less rush.<br>More room.",
+      "story": "A good stay is about how it makes you feel. Natural textures, quiet corners and a team with time for you. Step out into the city, then come home to a little calm.",
+      "menu": [
+        {
+          "name": "The Cosy Room",
+          "description": "A calm retreat for two · queen bed",
+          "price": "18 m²"
+        },
+        {
+          "name": "The Garden Room",
+          "description": "Green views & a little extra space",
+          "price": "25 m²"
+        },
+        {
+          "name": "The Loft",
+          "description": "Room to linger · king bed",
+          "price": "35 m²"
+        }
+      ],
+      "hours": [
+        "Check-in from 15:00",
+        "Check-out by 11:00",
+        "Reception · 07:00–23:00"
+      ],
+      "contactEmail": "",
+      "phone": "",
+      "address": "Amsterdam · example location",
+      "bookingUrl": ""
+    }
+  }
 ]

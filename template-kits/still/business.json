@@ -3,13 +3,13 @@
   "name": "Still",
   "type": "Boutique stays",
   "tag": "A LITTLE ROOM TO BREATHE",
-  "description": "A quieter kind of website. Thoughtful rooms, local discoveries and easy booking.",
-  "packageId": "booking",
+  "description": "A quieter kind of website. Thoughtful rooms, practical details and a link to your booking service.",
+  "packageId": "one-page",
   "color": "#d8e0e4",
   "features": [
     "Rooms",
-    "Booking",
-    "Local guide"
+    "Your story",
+    "Booking link"
   ],
   "business": {
     "name": "still.",

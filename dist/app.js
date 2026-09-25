@@ -14,7 +14,7 @@ mobileNav.addEventListener('click', (event) => {
   if (event.target.closest('a')) { mobileNav.hidden = true; menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); }
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
-document.querySelector('#hero-starting-price').textContent = `One time. ${money(catalog.packages.find(item => item.id === 'hospitality').price)}.`;
+document.querySelector('#hero-starting-price').textContent = money(catalog.packages.find(item => item.id === 'one-page').price);
 document.querySelectorAll('[data-company-line]').forEach(element => { element.textContent = `A project of ${business.legalName} · ${business.country}`; });
 const founders = business.founders.filter(name => typeof name === 'string' && name.trim()).map(name => name.trim());
 if (founders.length === 2) {
@@ -27,8 +27,8 @@ document.querySelector('#showroom-grid').innerHTML = templates.map((template, in
   return `<article class="template-card"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true"><div class="card-preview-nav"><span>${escapeHtml(template.business.name)}</span><span>${template.id === 'still' ? 'ROOMS & STORIES' : template.id === 'crumb' ? 'COFFEE. BREAD. GOOD COMPANY.' : 'OUR TABLE · OUR STORY'}</span></div><div class="card-preview-hero"><img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933"><div><span>${escapeHtml(template.tag)}</span><p>${template.business.headline}</p><span class="card-preview-cta">${template.id === 'still' ? 'Find your room' : template.id === 'crumb' ? 'Come on in' : 'Find your seat'} ↗</span></div></div></div><span class="preview-open">Explore demo <span aria-hidden="true">↗</span></span></a><div class="template-title"><h3>${template.name}<span class="model-index"> / 0${index + 1}</span></h3><span>${template.type}</span></div><p>${template.description}</p><div class="template-features">${template.features.map(feature => `<span>${feature}</span>`).join('')}</div><div class="template-bottom"><div><span>BUILD FROM</span><strong>${money(base.price)} <small>one time</small></strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${template.name} design">Make it yours <span aria-hidden="true">↗</span></button></div></article>`;
 }).join('');
 
-const packageSelect = document.querySelector('#package-select');
-packageSelect.innerHTML = catalog.packages.map(item => `<option value="${item.id}">${item.name} — ${money(item.price)}</option>`).join('');
+const packageOptions = document.querySelector('#package-options');
+packageOptions.innerHTML = catalog.packages.map(item => `<label class="package-option"><input type="radio" name="package" value="${item.id}"><span><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.scope)}</span></span><b>${money(item.price)}</b></label>`).join('');
 const params = new URLSearchParams(location.search);
 let chosenTemplate = templates.find(item => item.id === params.get('template')) || null;
 let selectedPackage = chosenTemplate?.packageId || (catalog.packages.some(item => item.id === params.get('package')) ? params.get('package') : 'one-page');
@@ -36,13 +36,12 @@ let selectedExtras = [];
 let currentQuote;
 let briefText = '';
 let briefTrigger;
-const groups = ['Get found', 'Your content', 'Do more'];
-document.querySelector('#addon-groups').innerHTML = groups.map((group, index) => `<details class="addon-group" ${index === 0 ? 'open' : ''}><summary><span>${group}<span class="group-count" data-group-count="${index}"></span></span><span aria-hidden="true">+</span></summary><div class="addon-list">${catalog.addons.filter(item => item.group === group).map(item => `<label class="addon-item"><input type="checkbox" name="addon" value="${item.id}"><span><strong>${item.name}</strong><span>${item.description}</span></span><span class="addon-price" data-price="${item.id}">+${money(item.price)}</span></label>`).join('')}</div></details>`).join('');
+document.querySelector('#addon-groups').innerHTML = catalog.addons.map(item => `<label class="addon-item"><input type="checkbox" name="addon" value="${item.id}"><span><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></span><span class="addon-price">+${money(item.price)}</span></label>`).join('');
 
 function updateQuote() {
   currentQuote = calculateQuote(catalog, selectedPackage, selectedExtras);
   selectedExtras = currentQuote.addonIds;
-  packageSelect.value = selectedPackage;
+  packageOptions.querySelectorAll('input').forEach(input => { input.checked = input.value === selectedPackage; });
   const { base, addons, totalCents } = currentQuote;
   document.querySelector('#package-detail').innerHTML = `<p>${base.description}</p><div class="scope-tags"><span>${base.scope}</span><span>Typical build: ${base.delivery}*</span></div><ul>${base.includes.map(item => `<li><span aria-hidden="true">✓</span>${item}</li>`).join('')}</ul><p class="delivery-note">*An estimate once content is ready. Your quote confirms timing.</p>`;
   document.querySelector('#quote-name').textContent = base.name;
@@ -54,28 +53,20 @@ function updateQuote() {
   templateNote.innerHTML = chosenTemplate ? `Design direction: <strong>${chosenTemplate.name}</strong><button type="button" id="clear-template" aria-label="Remove ${chosenTemplate.name} design selection">×</button>` : '';
   document.querySelector('#clear-template')?.addEventListener('click', () => { chosenTemplate = null; updateQuote(); });
   document.querySelectorAll('input[name="addon"]').forEach(input => {
-    const included = selectedPackage === 'booking' && input.value === 'reservations';
-    input.checked = included || selectedExtras.includes(input.value);
-    input.disabled = included;
-    input.closest('label').classList.toggle('included', included);
-    document.querySelector(`[data-price="${input.value}"]`).textContent = included ? 'Included' : `+${money(catalog.addons.find(item => item.id === input.value).price)}`;
-  });
-  groups.forEach((group, index) => {
-    const count = addons.filter(item => item.group === group).length;
-    document.querySelector(`[data-group-count="${index}"]`).textContent = count ? `${count} selected` : '';
+    input.checked = selectedExtras.includes(input.value);
   });
 }
 
-packageSelect.addEventListener('change', () => { selectedPackage = packageSelect.value; updateQuote(); });
+packageOptions.addEventListener('change', event => {
+  if (event.target.name !== 'package') return;
+  selectedPackage = event.target.value;
+  updateQuote();
+});
 document.querySelector('#addon-groups').addEventListener('change', event => {
   if (event.target.name !== 'addon') return;
   const { value, checked } = event.target;
   selectedExtras = selectedExtras.filter(id => id !== value);
-  if (checked) {
-    if (value === 'copy') selectedExtras = selectedExtras.filter(id => id !== 'copy-page');
-    if (value === 'copy-page') selectedExtras = selectedExtras.filter(id => id !== 'copy');
-    selectedExtras.push(value);
-  }
+  if (checked) selectedExtras.push(value);
   updateQuote();
 });
 document.querySelectorAll('[data-template]').forEach(button => button.addEventListener('click', () => {
@@ -83,7 +74,7 @@ document.querySelectorAll('[data-template]').forEach(button => button.addEventLi
   selectedPackage = chosenTemplate.packageId;
   updateQuote();
   document.querySelector('#configure').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-  packageSelect.focus({ preventScroll: true });
+  packageOptions.querySelector('input:checked').focus({ preventScroll: true });
 }));
 updateQuote();
 
@@ -95,7 +86,7 @@ document.querySelector('#brief-form').addEventListener('submit', event => {
   if (!event.currentTarget.reportValidity()) return;
   const data = new FormData(event.currentTarget);
   const { base, addons, totalCents } = currentQuote;
-  briefText = ['NOORDWEEB — PROJECT BRIEF', new Date().toISOString().slice(0,10), '', `Name: ${data.get('name').trim()}`, `Business: ${data.get('business').trim()}`, `Email: ${data.get('email').trim()}`, '', `Design direction: ${chosenTemplate?.name || 'Let’s decide together'}`, `Website: ${base.name} (${base.scope}) — ${money(base.price)}`, ...addons.map(item => `Extra: ${item.name} — ${money(item.price)}`), '', `ESTIMATED ONE-TIME BUILD: ${money(totalCents)}`, 'Excluding applicable VAT. Final scope, taxes, delivery and payment schedule to be agreed in a written quote.', 'Hosting, domain and third-party subscriptions are separate. No maintenance subscription required. Later changes are quoted separately.', '', 'ABOUT THE PROJECT', data.get('message').trim() || 'To discuss.', '', 'This brief is not an order and has not been submitted to NoordWeeb.'].join('\n');
+  briefText = ['NOORDWEEB — PROJECT BRIEF', new Date().toISOString().slice(0,10), '', `Name: ${data.get('name').trim()}`, `Business: ${data.get('business').trim()}`, `Email: ${data.get('email').trim()}`, '', `Design direction: ${chosenTemplate?.name || 'Let’s decide together'}`, `Website: ${base.name} (${base.scope}) — ${money(base.price)}`, ...addons.map(item => `Extra: ${item.name} — ${money(item.price)}\n  ${item.description}`), '', `ESTIMATED ONE-TIME BUILD: ${money(totalCents)}`, 'Excluding applicable VAT. Final scope, taxes, delivery and payment schedule to be agreed in a written quote.', 'Includes two grouped revision rounds, launch help and website files. Client supplies approved content unless the relevant extra is selected.', 'Hosting, domain and third-party subscriptions are separate, in your own accounts. No maintenance subscription required. Later changes are quoted separately.', 'Simple business websites only: no shop, customer accounts, custom booking system, CMS or custom integrations.', '', 'ABOUT THE PROJECT', data.get('message').trim() || 'To discuss.', '', 'This brief is not an order and has not been submitted to NoordWeeb.'].join('\n');
   document.querySelector('#brief-output').textContent = briefText;
   document.querySelector('#copy-status').textContent = '';
   const emailLink = document.querySelector('#email-brief');
@@ -125,7 +116,7 @@ if (document.modelContext?.registerTool) {
   const lifecycle = new AbortController();
   const options = { signal: lifecycle.signal };
   const registration = [
-    { name: 'read_website_catalogue', description: 'Read NoordWeeb website models, one-time extras, and the current estimate. Does not submit or place an order.', inputSchema: { type:'object', properties:{}, additionalProperties:false }, annotations:{readOnlyHint:true}, execute: input => { if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).length) throw new Error('The catalogue reader takes an empty object.'); return { packages:catalog.packages, addons:catalog.addons, estimate:{packageId:selectedPackage,addonIds:selectedExtras,totalCents:currentQuote.totalCents,currency:'EUR',vat:'excluded',recurringCosts:'separate'} }; } },
+    { name: 'read_website_catalogue', description: 'Read NoordWeeb website models, one-time extras, and the current estimate. Does not submit or place an order.', inputSchema: { type:'object', properties:{}, additionalProperties:false }, annotations:{readOnlyHint:true}, execute: input => { if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).length) throw new Error('The catalogue reader takes an empty object.'); return { packages:catalog.packages, addons:catalog.addons, servicePolicy:catalog.servicePolicy, estimate:{packageId:selectedPackage,addonIds:selectedExtras,totalCents:currentQuote.totalCents,currency:'EUR',vat:'excluded',recurringCosts:'separate'} }; } },
     { name:'configure_website_estimate', description:'Stage a website package and extras in the visible configurator. This only changes the estimate; no enquiry or order is sent.', inputSchema:{type:'object',properties:{packageId:{type:'string',enum:catalog.packages.map(item=>item.id)},addonIds:{type:'array',items:{type:'string',enum:catalog.addons.map(item=>item.id)},uniqueItems:true}},required:['packageId','addonIds'],additionalProperties:false}, annotations:{readOnlyHint:false}, execute: input => { if(!input || typeof input !== 'object' || !Array.isArray(input.addonIds) || Object.keys(input).some(key => !['packageId','addonIds'].includes(key))) throw new Error('Provide packageId and addonIds only.'); const quote=calculateQuote(catalog,input.packageId,input.addonIds); selectedPackage=quote.packageId;selectedExtras=quote.addonIds;updateQuote();return {packageId:selectedPackage,addonIds:selectedExtras,totalCents:quote.totalCents,currency:'EUR',submitted:false}; } }
   ];
   registration.forEach(tool => { try { Promise.resolve(document.modelContext.registerTool(tool, options)).catch(() => {}); } catch {} });

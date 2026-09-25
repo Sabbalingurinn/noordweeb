@@ -17,186 +17,85 @@ export const business = {
   "language": "en",
   "currency": "EUR",
   "pricesExcludeVat": true,
-  "pricingStatus": "CRM catalogue; confirm before public launch",
+  "pricingStatus": "Owner-delegated fixed-scope offer: two website sizes and four optional extras",
   "registrationStatus": "Trading-name and company details to be confirmed before public launch"
 };
 export const catalog = {
   "packages": [
     {
       "id": "one-page",
-      "name": "The One-page",
-      "price": 139500,
-      "description": "One focused page. Everything your customers need to take the next step.",
-      "scope": "1 page",
+      "name": "One good page",
+      "price": 95000,
+      "description": "A clear introduction to your business. What you do, why it matters, and how to reach you.",
+      "scope": "1 page · up to 6 sections",
+      "delivery": "1–2 weeks",
+      "includes": [
+        "Your branding, text and photographs",
+        "A considered layout for phones and computers",
+        "Contact, directions and existing booking links",
+        "Your menu PDF or up to 6 menu / service entries",
+        "Page title, description and search basics",
+        "Two grouped revision rounds",
+        "Launch help and your website files"
+      ]
+    },
+    {
+      "id": "small-site",
+      "name": "A little more room",
+      "price": 165000,
+      "description": "A small website with separate pages for your services, menu, story or work. Still simple to use.",
+      "scope": "Up to 5 pages",
       "delivery": "2–3 weeks",
       "includes": [
-        "Custom design for desktop and mobile",
-        "Contact route and clear call to action",
-        "Technical SEO foundations",
-        "Two consolidated revision rounds"
-      ]
-    },
-    {
-      "id": "hospitality",
-      "name": "The Hospitality",
-      "price": 229500,
-      "description": "A welcoming home for your café, restaurant, bar or bakery.",
-      "scope": "Up to 5 pages",
-      "delivery": "3–4 weeks",
-      "includes": [
-        "Home, menu, story, location and contact",
-        "Mobile-friendly menu and reservation route",
-        "Opening hours and map link",
-        "Technical SEO foundations",
-        "Two consolidated revision rounds"
-      ]
-    },
-    {
-      "id": "brochure",
-      "name": "The Business",
-      "price": 239500,
-      "description": "Room for your services, projects, team and next enquiry.",
-      "scope": "Up to 5 pages",
-      "delivery": "3–4 weeks",
-      "includes": [
-        "Business-led structure and custom design",
-        "Up to five individually designed pages",
-        "Basic contact form with spam protection",
-        "Technical SEO foundations",
-        "Two consolidated revision rounds"
-      ]
-    },
-    {
-      "id": "booking",
-      "name": "The Booking",
-      "price": 259000,
-      "description": "Turn a visit into a reservation with your existing booking platform.",
-      "scope": "Up to 4 pages + booking",
-      "delivery": "3–4 weeks",
-      "includes": [
-        "Up to four individually designed pages",
-        "One existing booking or calendar integration",
-        "Booking journey checked on desktop and mobile",
-        "Technical SEO and conversion setup",
-        "Two consolidated revision rounds"
-      ]
-    },
-    {
-      "id": "webshop",
-      "name": "The Small Shop",
-      "price": 345000,
-      "description": "A focused online shop, ready for your first fifteen products.",
-      "scope": "Up to 15 products",
-      "delivery": "4–6 weeks",
-      "includes": [
-        "Shop design, basket and payment-provider checkout",
-        "Standard shipping rules",
-        "Up to fifteen supplied products entered",
-        "Order confirmations and basic handover training",
-        "Two consolidated revision rounds"
+        "Everything in One good page",
+        "Up to five pages in one consistent design",
+        "Clear navigation between your pages",
+        "Space for your menu, services or gallery",
+        "Search titles and descriptions for each page",
+        "Two grouped revision rounds across the site"
       ]
     }
   ],
   "addons": [
     {
-      "id": "analytics",
-      "name": "Analytics & Search Console",
-      "price": 8500,
-      "group": "Get found",
-      "description": "Privacy-friendly measurement, search registration and key events."
-    },
-    {
-      "id": "gbp",
-      "name": "Google Business Profile",
-      "price": 9500,
-      "group": "Get found",
-      "description": "Categories, services, hours, photos and your website link set up."
-    },
-    {
-      "id": "seo",
-      "name": "Local SEO launch pack",
-      "price": 39500,
-      "group": "Get found",
-      "description": "Local keyword map, page metadata, structured data and launch check."
-    },
-    {
       "id": "copy",
-      "name": "Copywriting · up to 5 pages",
-      "price": 69500,
-      "group": "Your content",
-      "description": "An interview-based draft, editing and one revision round."
-    },
-    {
-      "id": "copy-page",
-      "name": "Copywriting · one page",
-      "price": 14500,
-      "group": "Your content",
-      "description": "One clear, focused page written from your supplied input."
+      "name": "Help with the words",
+      "price": 25000,
+      "description": "We shape your notes into up to 1,000 words for the site. One round of edits included."
     },
     {
       "id": "menu",
-      "name": "Menu or catalogue entry",
-      "price": 24500,
-      "group": "Your content",
-      "description": "Structure and entry of up to 25 supplied menu or catalogue items."
-    },
-    {
-      "id": "extra-page",
-      "name": "One extra page",
-      "price": 17500,
-      "group": "Your content",
-      "description": "One page in your approved design, using copy you supply."
+      "name": "Your menu, put online",
+      "price": 10000,
+      "description": "For longer lists: we enter up to 30 supplied menu or price-list items as readable text. No ordering system."
     },
     {
       "id": "language",
-      "name": "Second-language setup",
-      "price": 69500,
-      "group": "Your content",
-      "description": "Language switch and page structure. You supply the translations."
+      "name": "One more language",
+      "price": 35000,
+      "description": "A second version of the same pages, with a language switch. You provide the translations."
     },
     {
-      "id": "reservations",
-      "name": "Reservation integration",
-      "price": 29500,
-      "group": "Do more",
-      "description": "One existing reservation or appointment platform, connected and styled."
-    },
-    {
-      "id": "contact-form",
-      "name": "Advanced enquiry form",
-      "price": 29500,
-      "group": "Do more",
-      "description": "Conditional fields, validation, spam protection and email delivery."
-    },
-    {
-      "id": "newsletter",
-      "name": "Newsletter signup",
-      "price": 14500,
-      "group": "Do more",
-      "description": "A signup form connected to one existing mailing-list provider."
-    },
-    {
-      "id": "whatsapp",
-      "name": "WhatsApp contact button",
-      "price": 6500,
-      "group": "Do more",
-      "description": "A mobile contact button with a ready-to-send opening message."
-    },
-    {
-      "id": "business-email",
-      "name": "Business email setup",
-      "price": 8500,
-      "group": "Do more",
-      "description": "Domain records and setup for one existing email provider account."
-    },
-    {
-      "id": "integration",
-      "name": "External integration",
-      "price": 69500,
-      "group": "Do more",
-      "description": "One documented connection to a CRM, till or bookkeeping platform; feasibility agreed first."
+      "id": "booking-widget",
+      "name": "Your booking tool, on the page",
+      "price": 15000,
+      "description": "We embed one existing provider’s supported widget. You own the account; provider fees are separate. A simple booking link is already included."
     }
-  ]
+  ],
+  "servicePolicy": {
+    "model": "One-time website build; future changes quoted individually before work starts.",
+    "included": "Contact, phone, WhatsApp, map and existing booking links are included when supplied. One language, supplied copy and images, launch on one agreed static-compatible host, and website files are included. A supplied menu PDF or up to six short menu/service/room entries is included; the menu extra covers longer lists of up to 30 items.",
+    "excluded": [
+      "Online shops or on-site payments",
+      "Customer accounts or membership areas",
+      "Custom booking systems",
+      "Dashboards, apps or custom integrations",
+      "Content management systems or ongoing content entry"
+    ],
+    "providerCosts": "Hosting, domain registration and third-party services are paid separately by the customer. Accounts stay in the customer’s name. No required maintenance plan.",
+    "aftercare": "New changes are quoted in advance. Faults in the agreed delivered work are assessed against the original agreement, not automatically sold as new work.",
+    "scope": "Maximum five original pages, plus their mirror translations if the language extra is chosen. No open-ended custom-development tier."
+  }
 };
 export const templates = [
   {
@@ -205,12 +104,12 @@ export const templates = [
     "type": "Restaurants & bistros",
     "tag": "A SEAT AT THE TABLE",
     "description": "Atmosphere first. Seasonal menus, your story, and a clear route to a table.",
-    "packageId": "hospitality",
+    "packageId": "one-page",
     "color": "#e8e5dc",
     "features": [
       "Menu",
-      "Reservations",
-      "Your story"
+      "Your story",
+      "Booking link"
     ],
     "business": {
       "name": "kade.",
@@ -311,13 +210,13 @@ export const templates = [
     "name": "Still",
     "type": "Boutique stays",
     "tag": "A LITTLE ROOM TO BREATHE",
-    "description": "A quieter kind of website. Thoughtful rooms, local discoveries and easy booking.",
-    "packageId": "booking",
+    "description": "A quieter kind of website. Thoughtful rooms, practical details and a link to your booking service.",
+    "packageId": "one-page",
     "color": "#d8e0e4",
     "features": [
       "Rooms",
-      "Booking",
-      "Local guide"
+      "Your story",
+      "Booking link"
     ],
     "business": {
       "name": "still.",

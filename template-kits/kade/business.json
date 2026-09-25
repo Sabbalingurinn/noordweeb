@@ -4,12 +4,12 @@
   "type": "Restaurants & bistros",
   "tag": "A SEAT AT THE TABLE",
   "description": "Atmosphere first. Seasonal menus, your story, and a clear route to a table.",
-  "packageId": "hospitality",
+  "packageId": "one-page",
   "color": "#e8e5dc",
   "features": [
     "Menu",
-    "Reservations",
-    "Your story"
+    "Your story",
+    "Booking link"
   ],
   "business": {
     "name": "kade.",

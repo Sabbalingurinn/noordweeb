@@ -1,55 +1,54 @@
 # The NoordWeeb template workflow
 
-Show the customer a working design, agree the website package and extras, then adapt a known implementation to their actual business.
+Show a working design, choose one page or up to five pages, agree any of the four extras, and adapt the known implementation to the customer's real business.
 
-| Design | Good fit | Customer preview | AI kit |
+| Design | Good fit | Preview | Portable AI kit |
 | --- | --- | --- | --- |
 | Kade | Restaurants, bistros, wine bars | `/templates/kade/` | `template-kits/noordweeb-kade.zip` |
-| Crumb | Cafés, bakeries, small neighbourhood businesses | `/templates/crumb/` | `template-kits/noordweeb-crumb.zip` |
-| Still | Boutique stays, guesthouses, small hotels | `/templates/still/` | `template-kits/noordweeb-still.zip` |
+| Crumb | Cafés, bakeries, neighbourhood businesses | `/templates/crumb/` | `template-kits/noordweeb-crumb.zip` |
+| Still | Guesthouses, boutique stays, small hotels | `/templates/still/` | `template-kits/noordweeb-still.zip` |
 
-The preview has real navigation, a menu/room section, a story, practical information and a selection link back to the configurator. It is labelled as a fictional demo. In-person sales can use the local preview. Remote customers need an appropriately shared/public deployment; the initial Sites preview is owner-private.
+All previews are fictional single-page designs, starting at €950. They have working section navigation, story, menu/rooms and practical information. Booking buttons explain demo mode; they never make reservations. The existing deployed preview is owner-private; remote customer access needs an owner-approved audience change.
 
-## 1. During a sales conversation
+## Sell a small, specific result
 
-Open a demo. Show desktop and mobile layouts. Explain that it is a starting point and that branding, copy, photography and practical details will be theirs. Select “Choose this design” to carry the design into the website configurator. Agree the base package and optional extras. Generate a brief to keep the choices.
+Open a demo on desktop and phone. Explain what changes: business name, branding, text, photographs, menu/rooms and practical details. Choose the design to carry it into the estimator. One page costs €950 with up to six sections. Up to five pages costs €1,650. Both include two grouped revision rounds, search basics, basic contact/map/booking links, a menu PDF or up to six short entries, launch help and files. State the actual page list in the quote.
 
-Do not describe the fictional venues as past customers. The stock photographs are visual references, not photos of their business. Scope, time, tax, provider costs and payment schedule are confirmed in a written quote.
+Offer only relevant extras: copy shaping €250 (up to 1,000 words and one edit round), longer menu entry €100 (up to 30 supplied items), one mirrored language €350 (customer translations), or an existing supported booking widget €150. Recurring provider costs stay separate and in customer-owned accounts. All figures exclude applicable VAT.
 
-## 2. Collect the customer content
+Decline shops, accounts, custom booking systems, apps, CMS dashboards and custom integrations. A request that requires one of those does not fit this offer. Future content updates are separately quoted.
 
-Get the business name, approved logo/brand colours, desired language, audience, real address and opening hours, email/phone, approved copy, images and permission to use them, menu/products/room information, and an existing booking provider if included. Ask who owns the domain and hosting accounts. Identify any extra pages, integrations or content work before production.
+## Collect the customer content
 
-## 3. Hand a kit to another AI
+Get approved name/logo/colours, audience/language, address/hours, email/phone, final copy, authorised photography, menu/room/service information, and an existing booking link if relevant. Confirm client-owned domain and hosting access. Identify the exact pages and extras before production. Do not invent missing facts, reviews or registrations.
 
-Unzip the selected kit into a new customer folder. Give the AI `BUILD_BRIEF.md` plus the customer’s answers. The kit includes the actual responsive HTML and CSS, local fonts/licences, photo/credits, editable `business.json`, a renderer, and a dependency-free generation command. It can reproduce the preview from the supplied files instead of guessing from a screenshot.
+## Give another AI the actual implementation
+
+Unzip the kit into a separate customer project. It includes HTML/CSS, editable business.json, a renderer, a local stock image, local fonts/licences, credits and BUILD_BRIEF.md. This makes the design reproducible without guessing from screenshots.
 
 ```text
-Adapt this NoordWeeb template for the customer described below. Read
-BUILD_BRIEF.md and CREDITS.md. Keep the established layout and mobile
-behaviour. Edit business.json, replace authorised imagery, and run
-node generate.mjs. Add only the pages and integrations in the agreed scope.
-Preserve demo mode until real content and working contact routes are ready.
-Verify the resulting website in a browser. Never invent business facts,
-reviews or working integrations. Report unresolved inputs before handover.
+Adapt this NoordWeeb template for the customer below. Read BUILD_BRIEF.md
+and CREDITS.md. Preserve the established layout and mobile behaviour. Edit
+business.json, replace authorised imagery and run node generate.mjs. Add
+only the actual pages and four permitted extras included in the quote.
+Stay within the static-site offer: no shops, accounts, CMS, custom booking
+or custom integrations. Keep demo mode until real content and contact
+routes are ready. Verify the site in a browser. Do not invent facts,
+reviews or working integrations. Report missing inputs before handover.
 
 Customer facts:
-Agreed website package:
-Agreed extras:
+Package and exact page/section list:
+Selected extras:
 Approved assets and copy:
 Brand changes:
 Booking/contact destination:
-Hosting/domain arrangement:
+Client-owned hosting/domain arrangement:
 ```
 
-## 4. Build what was actually sold
+## Build and verify what was sold
 
-Each kit starts as one page. The One-page package can use that structure. A Hospitality, Business, Booking or Shop agreement may require additional pages, forms, real provider connections or commerce that the visual kit alone does not implement. Complete those before delivery. Menu entry and copywriting must follow the agreed content allowances; extra pages and language work are separately priced.
+Each kit starts as one page. A five-page agreement requires the actual additional pages, consistent navigation and page metadata. The language extra mirrors the agreed page set. The supplied generator handles the single-page reference; additional pages, translations or widgets must be implemented and tested by the adapting model when sold.
 
-For a production adaptation, set `demo` to `false` after replacing fictional details. The generator requires a real address and a contact route. Use an approved HTTPS booking URL, or show a genuine contact route. Remove demo/noindex treatment for the real business as appropriate, add approved legal information and ensure any third-party service is actually configured.
+Set `demo: false` only after replacing fictional details. The renderer requires a real address and valid email or phone. A booking URL must use HTTPS. Simple links are included; embedding a supported widget is the €150 extra. Do not charge for a widget when only a link is provided.
 
-## 5. Review and hand over
-
-Check the complete customer journey at 360px, 390px, 768px and 1440px. Check keyboard operation, headings, focus, image descriptions and mobile readability. Exercise every contact/booking action and any agreed form/payment integration. Check the approved content, opening hours, location, prices and metadata. Deliver the agreed files, accounts, documentation and scope of support.
-
-Future work starts with a new request and an agreed quote. No ongoing content changes or care subscription are silently included.
+Check 360px, 390px, 768px and 1440px widths, keyboard operation, focus, readable contrast, image descriptions, contact routes, booking links/widget, page navigation, metadata and approved legal information. Remove demo messages and any fictional claims before launch. Deliver the agreed files and handover notes. Assess faults under the original agreement; new work gets an agreed quote.
