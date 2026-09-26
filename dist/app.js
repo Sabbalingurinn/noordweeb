@@ -23,6 +23,7 @@ if (founders.length === 2) {
 }
 
 function renderPreview(template) {
+  if (template.id === 'kade') return `<div class="kade-card"><img src="/assets/kade.jpg" alt="" loading="lazy" width="1400" height="933"><div class="kade-invite"><span>KADE · AMSTERDAM</span><strong>Good food.<br>Better company.</strong><small>FIND YOUR SEAT ↗</small></div></div>`;
   if (template.id === 'stem') return `<div class="stem-card"><div class="stem-card-head"><strong>stem.</strong><span>FLOWERS FOR EVERYDAY</span></div><div class="stem-card-body"><p>Flowers<br>with feeling.</p><img src="/assets/stem.jpg" alt="" loading="lazy" width="1400" height="934"></div><span class="stem-card-flower" aria-hidden="true">✳</span></div>`;
   if (template.id === 'rove') return `<div class="rove-card"><div class="rove-card-head"><strong>ROVE/</strong><span>FIX · RIDE · REPEAT</span></div><p>RIDE MORE.<br>WORRY LESS.</p><img src="/assets/rove.jpg" alt="" loading="lazy" width="1400" height="2100"><span class="rove-card-badge">YOUR NEIGHBOURHOOD BIKE WORKSHOP</span></div>`;
   const previewNav = template.id === 'still' ? 'ROOMS & STORIES' : template.id === 'crumb' ? 'COFFEE. BREAD. GOOD COMPANY.' : 'OUR TABLE · OUR STORY';

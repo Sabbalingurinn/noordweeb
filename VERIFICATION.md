@@ -27,3 +27,9 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Reviewed the homepage and showroom on desktop and at 768px and 390px, plus the Stem and Rove demos at 390px. Corrected the Rove hero image crop and showroom card lettering so the workshop scene and headline remain visible. At 390px, the custom request form and result dialog fit the viewport without horizontal overflow.
 - Entered a sample request in the browser and verified that the result contains the visitor's details and requested work, that it does not state a custom price, and that the mailto link contains the correct recipient, subject and body. No email was sent during testing.
 - `npm run build`, `npm run check` and `git diff --check` pass. Both new ZIP archives pass `unzip -t`. No browser console errors appeared on the homepage.
+
+## Editorial opening and demo differentiation — 26 September 2026
+
+- Replaced the former headline-left/photo-right opening with a full-width editorial headline, framed café photograph and short note from the studio. Removed the redundant strip below the hero. The price and showroom links remain visible in the new layout.
+- Reworked Kade as a dinner invitation over its restaurant photograph and a dark story section. Reworked Crumb as a type-led bakery poster with a wide photograph and a shelf-like menu. Still retains its quieter photographic layout. The showroom preview for Kade reflects its new design.
+- Reviewed the main opening at desktop, 768px, 390px and 360px; there was no horizontal overflow at 768px or 360px. Reviewed Kade and Crumb at desktop, tablet and phone widths, and Still at phone width. Updated the phone headline break so “walking in.” stays together.

@@ -40,12 +40,12 @@ The build refreshes data, demos, information pages, kits and ZIPs. The four main
 
 Prices exclude applicable VAT. Both packages include two grouped revision rounds, contact/directions/existing booking links, search basics, launch help and website files. A supplied menu PDF or up to six short menu/service entries is included. Hosting, domains and third-party services are separate provider costs; accounts belong to the customer. Future changes get a separate quote. There is no compulsory maintenance plan.
 
-No shops, accounts, custom booking systems, CMS dashboards, apps or complex integrations. The owner delegated these pricing and scope decisions in the redesign request; they replace the older CRM-derived catalogue. Do not ask a follow-up model to restore or reconfirm that old catalogue. The CRM was neither changed nor connected to this site.
+No online shops, accounts, custom booking systems, CMS dashboards, apps or complex integrations. The owner delegated these pricing and scope decisions in the redesign request; they replace the older CRM-derived catalogue. Do not ask a follow-up model to restore or reconfirm that old catalogue. The CRM was neither changed nor connected to this site.
 
 ## Behaviour
 
-- Responsive editorial design, mobile navigation, a custom coastal N mark and serif wordmark, a welcoming café photograph, showroom, pricing, studio story and FAQ.
-- Kade, Crumb, Still, Stem and Rove are fictional single-page demos. The florist and bike workshop use distinct editorial and industrial layouts. All start at €950; any design can be expanded under the five-page package. Demo actions do not make bookings.
+- An editorial opening with a short studio note, mobile navigation, a custom coastal N mark and serif wordmark, a welcoming café photograph, showroom, pricing, studio story and FAQ.
+- Kade, Crumb, Still, Stem and Rove are fictional single-page demos. Kade uses a printed dinner-invitation layout, Crumb a bakery poster and product shelf, Still an immersive hotel photograph, Stem an editorial florist layout, and Rove an industrial workshop layout. All start at €950; any design can be expanded under the five-page package. Demo actions do not make bookings.
 - Native package radios and four extra checkboxes share the same integer-cent calculator. Duplicate extras are never charged twice.
 - Form validation, local brief and custom price request previews, copy and text download. The configured `contactEmail` is `noordweeb@noordweeb.nl` and adds a mailto draft. The visitor reviews and sends it in their email app; there is no submission backend or automatic email delivery. Custom work receives a separate human-reviewed price.
 - Optional WebMCP tools read the catalogue/service policy and stage estimates without submitting orders.

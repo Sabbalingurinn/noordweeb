@@ -138,6 +138,14 @@
 .template-card:nth-child(n+4) { grid-column: span 3; }
 .template-card:nth-child(n+4) .template-preview { height: 335px; }
 .stem-preview, .rove-preview { padding: 0; }
+.kade-preview { padding: 0; background: #26382f; }
+.kade-preview .card-preview-content { height: 100%; }
+.kade-card { position: relative; height: 100%; padding: 13px; overflow: hidden; background: #26382f; }
+.kade-card img { position: absolute; inset: 13px; width: calc(100% - 26px); height: calc(100% - 26px); object-fit: cover; filter: brightness(.78); }
+.kade-invite { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 59%; height: 100%; padding: 18px 15px; background: #f4ebdc; color: #26382f; }
+.kade-invite span { font-size: 8px; font-weight: 650; letter-spacing: 1.2px; }
+.kade-invite strong { font: normal 29px/1 Georgia, serif; letter-spacing: -1.2px; }
+.kade-invite small { font-size: 8px; font-weight: 650; letter-spacing: 1.1px; }
 .stem-preview { background: #e9dcee; }
 .rove-preview { background: #d9f469; }
 .stem-preview .card-preview-content,
@@ -195,6 +203,7 @@
   .showroom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .template-card, .template-card:nth-child(n+4) { grid-column: auto; }
   .template-card:nth-child(n+4) .template-preview { height: 260px; }
+  .kade-invite strong { font-size: 25px; }
   .stem-card-body p { font-size: 37px; }
   .stem-card-body img { height: 180px; }
   .rove-card p { font-size: 30px; margin-top: 15px; letter-spacing: -2.3px; }
@@ -207,6 +216,7 @@
   .coast-figure > img { height: 330px; object-position: 50% 56%; }
   .showroom-grid { grid-template-columns: 1fr; }
   .template-card:nth-child(n+4) .template-preview { height: 310px; }
+  .kade-invite strong { font-size: 31px; }
   .stem-card-body p { font-size: 45px; }
   .stem-card-body img { height: 225px; }
   .rove-card p { font-size: 34px; margin-top: 20px; letter-spacing: -2.7px; }
@@ -217,4 +227,74 @@
   .custom-price-fields { grid-template-columns: 1fr; }
   .custom-price-actions { align-items: flex-start; flex-direction: column; }
   .custom-price-actions p { max-width: 100%; }
+}
+
+/* The opening is laid out like a small editorial spread, with a note from the studio. */
+.hero { display: block; padding-block: 68px 104px; }
+.hero-intro { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 42px; align-items: start; margin-bottom: 58px; }
+.hero-intro-label { border-top: 1px solid var(--ink); padding-top: 13px; color: var(--accent); }
+.hero-intro-label>span { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.8px; margin-bottom: 35px; }
+.hero-intro-label p { font-size: 10px; line-height: 1.65; letter-spacing: 1.2px; font-weight: 600; margin: 0; }
+.hero-intro h1 { font: 400 clamp(78px, 8.1vw, 126px)/.9 var(--serif); letter-spacing: -5.4px; margin: 0; max-width: 1020px; }
+.hero-intro h1 em { font-weight: 400; color: var(--accent); white-space: nowrap; }
+.hero-composition { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 8%; align-items: start; }
+.hero-photo { margin: 0; position: relative; background: #e7dfd0; padding: 13px 13px 0; }
+.hero-photo img { height: 495px; object-fit: cover; object-position: 50% 56%; }
+.hero-photo figcaption { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; font-weight: 600; letter-spacing: 1.2px; padding: 15px 3px 18px; }
+.hero-letter { border-top: 1px solid var(--ink); padding-top: 17px; margin-top: 47px; }
+.hero-letter-label { font-size: 11px; font-weight: 700; letter-spacing: 1.7px; margin-bottom: 48px; color: var(--accent); }
+.hero-letter .hero-description { font: 400 clamp(24px, 2.5vw, 33px)/1.31 var(--serif); letter-spacing: -.6px; color: var(--ink); max-width: 470px; margin-bottom: 20px; }
+.hero-handnote { color: var(--accent); font: italic 24px/1.3 var(--serif); margin: 0 0 34px; transform: rotate(-2deg); }
+.hero-letter .hero-actions { display: flex; align-items: flex-start; flex-direction: column; gap: 17px; }
+.hero-letter .button { min-width: 295px; }
+.hero-letter .quiet-link { margin-left: 2px; }
+.hero-signoff { display: flex; gap: 14px; align-items: center; margin-top: 58px; padding-top: 18px; border-top: 1px solid var(--line); }
+.hero-signoff .rune-mark { color: var(--accent); height: 39px; width: 25px; }
+.hero-signoff span { font-size: 12px; line-height: 1.5; color: var(--muted); }
+#showroom { padding-top: 35px; }
+
+@media (max-width: 1050px) {
+  .hero-intro { grid-template-columns: 150px minmax(0, 1fr); gap: 28px; }
+  .hero-intro h1 { font-size: clamp(70px, 8vw, 100px); }
+  .hero-composition { gap: 6%; }
+  .hero-photo img { height: 440px; }
+  .hero-letter { margin-top: 20px; }
+  .hero-letter-label { margin-bottom: 32px; }
+  .hero-signoff { margin-top: 36px; }
+}
+@media (max-width: 760px) {
+  .hero { padding-block: 50px 76px; }
+  .hero-intro { grid-template-columns: 1fr; gap: 30px; margin-bottom: 37px; }
+  .hero-intro-label { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+  .hero-intro-label>span { margin: 0; white-space: nowrap; }
+  .hero-intro-label p { text-align: right; }
+  .hero-intro h1 { font-size: clamp(63px, 10vw, 84px); letter-spacing: -3.8px; }
+  .hero-composition { gap: 5%; grid-template-columns: minmax(0, 1fr) minmax(0, .86fr); }
+  .hero-photo img { height: 395px; }
+  .hero-photo figcaption { font-size: 8px; letter-spacing: .6px; }
+  .hero-letter .hero-description { font-size: 24px; }
+  .hero-handnote { font-size: 19px; }
+  .hero-letter .button { min-width: 0; width: 100%; }
+  .hero-signoff { display: none; }
+}
+@media (max-width: 620px) {
+  .hero { padding-block: 43px 57px; }
+  .hero-intro { gap: 27px; margin-bottom: 34px; }
+  .hero-intro-label p { font-size: 8px; }
+  .hero-intro h1 { font-size: clamp(52px, 12vw, 72px); line-height: .94; letter-spacing: -2.7px; }
+  .hero-composition { grid-template-columns: 1fr; gap: 0; }
+  .hero-photo { padding: 9px 9px 0; }
+  .hero-photo img { height: 390px; object-position: 50% 55%; }
+  .hero-photo figcaption { padding: 11px 2px 13px; }
+  .hero-letter { margin-top: 42px; padding-top: 14px; }
+  .hero-letter-label { margin-bottom: 22px; }
+  .hero-letter .hero-description { font-size: 27px; line-height: 1.3; margin-bottom: 20px; }
+  .hero-handnote { font-size: 22px; margin-bottom: 27px; }
+  .hero-letter .button { width: auto; min-width: 280px; }
+  .hero-signoff { display: flex; margin-top: 36px; }
+  #showroom { padding-top: 30px; }
+}
+@media (max-width: 370px) {
+  .hero-intro h1 { font-size: 48px; }
+  .hero-photo img { height: 350px; }
 }

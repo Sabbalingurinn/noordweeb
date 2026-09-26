@@ -189,3 +189,80 @@
   .rove-hero h1{font-size:62px}
   .rove-visit h2{font-size:62px}
 }
+
+/* Kade is arranged like a dinner invitation laid over a photograph. */
+.theme-kade .demo-hero{display:flex;align-items:center;min-height:700px;padding:36px 0;background:#26382f;color:#26382f}
+.theme-kade .demo-hero:before{background:#0c1b1280}
+.theme-kade .hero-photo{inset:36px 4%;width:92%;height:calc(100% - 72px);object-position:50% 47%}
+.theme-kade .hero-inner{position:relative;z-index:1;min-height:580px;width:min(510px,44vw);max-width:none;margin:0 0 0 max(8vw,calc((100vw - 1240px)/2));padding:46px;background:#f4ebdc;box-shadow:13px 13px 0 #142a2059}
+.theme-kade .demo-hero h1{font-size:clamp(61px,5.5vw,82px);line-height:1.01;letter-spacing:-3.5px;margin-bottom:22px}
+.theme-kade .demo-hero .overline{color:#65705b;margin-bottom:30px}
+.theme-kade .demo-intro{font-size:16px;color:#4f5c50;max-width:370px;margin-bottom:25px}
+.theme-kade .demo-hero .demo-button{background:#26382f;color:#f4ebdc}
+.theme-kade .hero-footnote{margin-top:35px;padding-top:17px;border-top:1px solid #b8bfaa;color:#4f5c50;gap:20px}
+.theme-kade .story-section{width:100%;max-width:none;padding:100px max(60px,calc((100vw - 1240px)/2));background:#26382f;color:#f4ebdc}
+.theme-kade .story-section .inline-link{color:#f4ebdc}
+.theme-kade .menu-section{background:#efe5d4}
+.theme-kade .menu-item{border-top-style:dotted;border-top-color:#8c9a83}
+.theme-kade .menu-item h3{font-style:italic}
+
+/* Crumb reads like a lively bakery poster, followed by a shelf of bakes. */
+.theme-crumb .demo-hero{display:flex;flex-direction:column;min-height:0;background:#f6d85e;color:#4d311f;overflow:hidden}
+.theme-crumb .hero-inner{order:0;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);column-gap:48px;row-gap:0;width:calc(100% - 120px);max-width:1240px;margin-inline:auto;padding:62px 0 31px}
+.theme-crumb .hero-inner>.overline{grid-column:1/-1;grid-row:1;margin-bottom:27px}
+.theme-crumb .demo-hero h1{grid-column:1;grid-row:2/4;font-size:clamp(72px,7.3vw,105px);line-height:.95;letter-spacing:-6px;margin:0}
+.theme-crumb .demo-intro{grid-column:2;grid-row:2;align-self:end;font-size:22px;line-height:1.4;max-width:335px;margin:0 0 16px;color:#4d311f;opacity:1}
+.theme-crumb .demo-hero .demo-button{grid-column:2;grid-row:3;justify-self:start;align-self:center;margin-top:16px}
+.theme-crumb .hero-footnote{grid-column:1/-1;grid-row:4;display:flex;justify-content:space-between;margin-top:46px;padding-top:16px;border-top:2px solid #6a472b;color:#55321f}
+.theme-crumb .hero-footnote>span:last-child{display:block;text-align:right;max-width:none;margin:0}
+.theme-crumb .hero-photo{position:relative;inset:auto;grid-column:auto;grid-row:auto;order:1;width:100%;height:330px;object-fit:cover;object-position:center 60%}
+.theme-crumb .menu-section{background:#fae6d7}
+.theme-crumb .menu-items{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.theme-crumb .menu-item{display:flex;flex-direction:column;min-height:235px;padding:24px 20px;border:0;background:#fff7e9}
+.theme-crumb .menu-item>div{flex:1}
+.theme-crumb .menu-item h3{font-size:20px;line-height:1.25}
+.theme-crumb .item-price{font-weight:800;margin-top:25px}
+
+/* Still remains immersive and quiet, with a restrained framed photograph. */
+.theme-still .demo-hero{margin-inline:34px;min-height:700px}
+.theme-still .demo-hero:before{background:linear-gradient(180deg,#1c2e3266,#1c2e32a3)}
+.theme-still .hero-inner{padding-top:105px}
+.theme-still .demo-hero h1{font-size:clamp(76px,7.4vw,108px);line-height:.98}
+.theme-still .text-ribbon{background:#e6ebe7}
+
+@media(max-width:1000px){
+  .theme-kade .hero-inner{width:min(490px,53vw);margin-left:6vw;padding:35px}
+  .theme-crumb .hero-inner{width:calc(100% - 64px);column-gap:30px}
+  .theme-crumb .demo-hero h1{font-size:clamp(63px,7.3vw,82px)}
+  .theme-crumb .demo-intro{font-size:18px}
+  .theme-crumb .menu-items{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .theme-kade .demo-hero{display:block;min-height:0;padding:0 0 32px}
+  .theme-kade .demo-hero:before{display:none}
+  .theme-kade .hero-photo{position:relative;inset:auto;width:100%;height:315px;z-index:0}
+  .theme-kade .hero-inner{width:calc(100% - 40px);min-height:0;margin:-60px auto 0;padding:30px 26px;box-shadow:8px 8px 0 #142a2059}
+  .theme-kade .demo-hero h1{font-size:58px;line-height:.98}
+  .theme-kade .hero-footnote{margin-top:30px}
+  .theme-kade .story-section{padding:65px 20px}
+  .theme-crumb .hero-inner{display:block;width:calc(100% - 40px);padding:45px 0 26px}
+  .theme-crumb .hero-inner>.overline{margin-bottom:24px}
+  .theme-crumb .demo-hero h1{font-size:clamp(57px,12vw,76px);letter-spacing:-4px;margin-bottom:22px}
+  .theme-crumb .demo-intro{font-size:17px;max-width:360px;margin:0 0 22px}
+  .theme-crumb .demo-hero .demo-button{margin:0}
+  .theme-crumb .hero-footnote{margin-top:35px;display:flex;align-items:center}
+  .theme-crumb .hero-footnote>span:last-child{max-width:160px}
+  .theme-crumb .hero-photo{height:260px}
+  .theme-crumb .menu-items{grid-template-columns:1fr 1fr;gap:8px}
+  .theme-crumb .menu-item{min-height:220px;padding:18px 14px}
+  .theme-crumb .menu-item h3{font-size:17px}
+  .theme-still .demo-hero{margin-inline:0;min-height:620px}
+  .theme-still .demo-hero h1{font-size:66px}
+}
+@media(max-width:390px){
+  .theme-kade .demo-hero h1{font-size:52px}
+  .theme-crumb .demo-hero h1{font-size:54px}
+  .theme-crumb .menu-items{grid-template-columns:1fr}
+  .theme-crumb .menu-item{min-height:150px}
+  .theme-still .demo-hero h1{font-size:58px}
+}
