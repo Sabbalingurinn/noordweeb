@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fbf7f0">
+  <meta name="theme-color" content="#fafbfe">
   <title>NoordWeeb — Small websites. Thoughtfully made.</title>
   <meta name="description" content="A small web studio with Icelandic roots. Simple websites for independent businesses: one page for €950 or up to five pages for €1,650. Pay once for the build.">
   <meta property="og:title" content="NoordWeeb — Small websites. Thoughtfully made.">
-  <meta property="og:description" content="Good places deserve good websites. Thoughtful sites for independent businesses, made by two friends with Icelandic roots.">
+  <meta property="og:description" content="Small business websites, made simple. Explore five distinct designs and clear one-time pricing from €950.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/assets/noordweeb-mark.svg">
   <link rel="preload" href="/assets/newsreader.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/welcome-table.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="/styles.css?v=20260926c">
+  <link rel="preload" href="/assets/kade-showcase.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="/styles.css?v=20260926d">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="wordmark" href="/" aria-label="NoordWeeb home"><svg class="rune-mark" viewBox="0 0 38 42" aria-hidden="true"><path d="M17.6 4.3c-.9 10.8-.7 22.8.5 33M5.2 13.4c7.1 6.4 17.5 13.5 27.4 16.4"/><path class="mark-wave" d="M4.5 38c6.6-2.2 13.1-2.2 19.1 0 3.3 1.1 6.6 1.1 10.4-.3"/></svg><span aria-hidden="true">noordweeb</span></a>
     <nav class="desktop-nav" aria-label="Main navigation"><a href="#showroom">The websites</a><a href="#configure">The prices</a><a href="#about">The two of us</a></nav>
-    <a class="header-contact" href="#project-brief">Let’s talk <span aria-hidden="true">↗</span></a>
+    <a class="header-contact" href="#project-brief">Start a project <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">Menu <span aria-hidden="true">+</span></button>
   </header>
   <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile navigation" hidden><a href="#showroom">The websites</a><a href="#configure">The prices</a><a href="#about">The two of us</a><a href="#project-brief">Let’s talk</a></nav>
@@ -28,12 +28,16 @@
       <div class="studio-opening-grid wrap">
         <div class="studio-opening-copy">
           <p class="studio-kicker">Independent web studio <span aria-hidden="true">·</span> Icelandic roots</p>
-          <h1>Good places<br>deserve good<br><em>websites.</em></h1>
-          <p class="studio-intro">We’re two friends making small, thoughtful websites for independent businesses. You’ll work directly with us, from our first conversation to launch.</p>
-          <div class="studio-opening-actions"><a class="button" href="#showroom">See what we make <span aria-hidden="true">↓</span></a><a class="studio-price-link" href="#configure">One good page <strong><span id="hero-starting-price">€950</span></strong></a></div>
+          <h1>Small business<br>websites, made<br>simple.</h1>
+          <p class="studio-intro">We’re two friends making clear, characterful sites for independent businesses. Start with one page, add more if you need it, and work directly with us through to launch.</p>
+          <div class="studio-opening-actions"><a class="button" href="#showroom">Explore the designs <span aria-hidden="true">↗</span></a><a class="studio-price-link" href="#configure">One good page from <strong><span id="hero-starting-price">€950</span></strong></a></div>
         </div>
-        <figure class="studio-hero-photo"><img src="/assets/welcome-table.jpg" alt="Morning sun on a café table with flowers and chairs by the window" fetchpriority="high"></figure>
+        <div class="studio-product-showcase" aria-label="A look at two fictional NoordWeeb website designs">
+          <a class="showcase-desktop" href="/templates/kade/" aria-label="Explore the Kade bistro demo"><img src="/assets/kade-showcase.webp" alt="" width="980" height="620" fetchpriority="high"></a>
+          <a class="showcase-mobile" href="/templates/crumb/" aria-label="Explore the Crumb bakery demo"><img src="/assets/crumb-mobile-showcase.webp" alt="" width="390" height="720"></a>
+        </div>
       </div>
+      <div class="studio-proof wrap" aria-label="What to expect"><p><strong>5</strong><span>distinct demo directions</span></p><p><strong>1–5</strong><span>pages, depending on your needs</span></p><p><strong>2</strong><span>grouped revision rounds</span></p></div>
     </section>
 
     <section class="section wrap" id="showroom">
@@ -70,7 +74,7 @@
     <section class="brief-section" id="project-brief"><div class="wrap brief-layout"><div><p class="eyebrow">LET’S START WITH YOUR BUSINESS</p><h2>Tell us<br><em>a little about it.</em></h2><p>A name, an idea, a website you’ve outgrown. We’ll start there.</p><p class="brief-mode" id="brief-mode">This preview creates a brief you can download or copy. Your details stay in this browser; nothing is sent automatically.</p></div><form id="brief-form"><div class="field-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Your first name"></label><label>Business name<input name="business" autocomplete="organization" required maxlength="150" placeholder="The name above your door"></label></div><label>Email address<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@yourbusiness.com"></label><label>What have you got in mind? <span class="optional-text">(optional)</span><textarea name="message" rows="3" maxlength="3000" placeholder="Tell us what you do, and what your website needs to do."></textarea></label><p class="form-privacy">No order is placed. <a href="/privacy/">A note on your privacy</a>.</p><button type="submit" class="button">Put my brief together <span aria-hidden="true">↗</span></button></form></div></section>
   </main>
   <noscript><p class="noscript-note">Enable JavaScript to choose a package or prepare a price request. You can still explore the <a href="/templates/kade/">restaurant</a>, <a href="/templates/crumb/">bakery</a>, <a href="/templates/still/">hotel</a>, <a href="/templates/stem/">flower studio</a> and <a href="/templates/rove/">bike workshop</a> demos.</p></noscript>
-  <footer class="footer wrap"><div class="footer-top"><a class="wordmark" href="/" aria-label="NoordWeeb home"><svg class="rune-mark" viewBox="0 0 38 42" aria-hidden="true"><path d="M17.6 4.3c-.9 10.8-.7 22.8.5 33M5.2 13.4c7.1 6.4 17.5 13.5 27.4 16.4"/><path class="mark-wave" d="M4.5 38c6.6-2.2 13.1-2.2 19.1 0 3.3 1.1 6.6 1.1 10.4-.3"/></svg><span aria-hidden="true">noordweeb</span></a><p>Keep it small. Make it good.</p><a class="quiet-link" href="#project-brief">Start a conversation ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> NoordWeeb</span><span data-company-line>A project of Tæknistoð ehf. · Iceland</span><div><a href="/privacy/">Privacy</a><a href="/project-terms/">Working together</a></div></div><p class="photo-credit">Morning light, photographed by <a href="https://unsplash.com/photos/table-and-chairs-by-a-sunny-window-with-flowers-dsnC3bnP4Ew" target="_blank" rel="noopener noreferrer">Tanya Barrow</a>.</p></footer>
+  <footer class="footer wrap"><div class="footer-top"><a class="wordmark" href="/" aria-label="NoordWeeb home"><svg class="rune-mark" viewBox="0 0 38 42" aria-hidden="true"><path d="M17.6 4.3c-.9 10.8-.7 22.8.5 33M5.2 13.4c7.1 6.4 17.5 13.5 27.4 16.4"/><path class="mark-wave" d="M4.5 38c6.6-2.2 13.1-2.2 19.1 0 3.3 1.1 6.6 1.1 10.4-.3"/></svg><span aria-hidden="true">noordweeb</span></a><p>Keep it small. Make it good.</p><a class="quiet-link" href="#project-brief">Start a conversation ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> NoordWeeb</span><span data-company-line>A project of Tæknistoð ehf. · Iceland</span><div><a href="/privacy/">Privacy</a><a href="/project-terms/">Working together</a></div></div></footer>
   <dialog id="brief-dialog" class="brief-dialog" aria-labelledby="brief-dialog-title"><button type="button" class="close-dialog" aria-label="Close project brief">×</button><p class="eyebrow">A STARTING POINT</p><h2 id="brief-dialog-title">Your brief is ready.</h2><p id="brief-result-note">Download or copy it to keep your choices. Nothing has been sent to NoordWeeb.</p><pre id="brief-output" tabindex="0"></pre><div class="dialog-actions"><button type="button" class="button" id="download-brief">Download brief ↓</button><button type="button" class="button button-outline" id="copy-brief">Copy brief</button><a class="button button-outline" id="email-brief" hidden>Open email</a></div><p class="copy-status" role="status" id="copy-status"></p></dialog>
   <script type="module" src="/app.js?v=20260926c"></script>
 </body>
