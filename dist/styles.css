@@ -641,7 +641,7 @@
   .still-art-copy p{font-size:clamp(42px,5vw,62px)}
   .stem-art p{font-size:clamp(40px,4.2vw,53px)}
 }
-@media(max-width:760px){
+@media(max-width:900px){
   .showroom-gallery{grid-template-columns:1fr;gap:43px}
   .showcase-item,.showcase-kade,.showcase-crumb,.showcase-still,.showcase-stem,.showcase-rove{grid-column:auto;margin:0}
   .showcase-visual,.showcase-crumb .showcase-visual,.showcase-still .showcase-visual,.showcase-stem .showcase-visual,.showcase-rove .showcase-visual{height:clamp(300px,75vw,430px)}
@@ -651,7 +651,9 @@
   .showcase-meta p{margin:6px 0 0}
   .showcase-choose{align-self:end}
   .showcase-crumb{padding-right:9px;padding-bottom:9px}
+  .crumb-art p{font-size:clamp(38px,5vw,54px)}
   .still-art-copy p{font-size:clamp(35px,6vw,55px)}
+  .stem-art-photo{top:21%;width:48%}
 }
 @media(max-width:520px){
   .showroom-gallery{gap:38px}
