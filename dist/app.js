@@ -23,19 +23,14 @@ if (founders.length === 2) {
 }
 
 function renderPreview(template) {
-  const img = id => `<img src="/assets/${id}.jpg" alt="" loading="lazy" width="1400" height="933">`;
-  if (template.id === 'kade') return `<div class="sample-kade"><div class="sample-kade-top"><span>A NEIGHBOURHOOD BISTRO</span><span>AMSTERDAM</span></div><strong>kade.</strong><div class="sample-kade-nav">Food & wine <span>Around our table</span> Find your seat</div><div class="sample-kade-body"><p>Good food.<br>Better company.<small>A table for two. Or a few more.</small></p>${img('kade')}</div></div>`;
-  if (template.id === 'crumb') return `<div class="sample-crumb"><span>ON THE COUNTER / BAKERY & COFFEE</span><strong>crumb</strong><div><div class="sample-crumb-photo">${img('crumb')}</div><p>Good<br>mornings<br>start here.<small>WHAT’S BAKING? ↓</small></p></div></div>`;
-  if (template.id === 'still') return `<div class="sample-still"><aside><strong>still.</strong><span>A SMALL CITY STAY</span><small>02 &nbsp; The rooms<br>01 &nbsp; Our way of staying<br>03 &nbsp; The details</small></aside><div><span>A LITTLE ROOM TO BREATHE</span>${img('still')}<p>Somewhere<br>to slow down.</p></div></div>`;
-  if (template.id === 'stem') return `<div class="sample-stem"><div><strong>stem.</strong><span>THE FLOWERS &nbsp; THE STUDIO</span></div><p>Flowers with<br>feeling.</p>${img('stem')}<small>a little<br><em>everyday magic.</em></small></div>`;
-  return `<div class="sample-rove"><div><strong>ROVE.</strong><span>[ SERVICES ] &nbsp; [ THE WORKSHOP ]</span></div><p><span>RIDE MORE.</span><br>WORRY LESS.</p><div class="sample-rove-work">${img('rove')}<div><span>SERVICE SHEET</span><strong>WHAT NEEDS<br>FIXING?</strong><small>01 &nbsp; SAFETY CHECK<br>02 &nbsp; EVERYDAY TUNE-UP<br>03 &nbsp; BRAKES & GEARS</small></div></div></div>`;
+  return `<img class="demo-snapshot" src="/assets/${template.id}-showcase.webp?v=2" alt="" loading="lazy" width="980" height="620">`;
 }
 const designNotes = {
-  kade: 'The kind of menu you’d keep after a good evening.',
-  crumb: 'A little louder. Best enjoyed with a coffee.',
-  still: 'Room to breathe, right down to the navigation.',
-  stem: 'A bit off-centre. Like the best bunches of flowers.',
-  rove: 'Straight to the point. Just like a good mechanic.'
+  kade: 'A seat at the table, before you even arrive.',
+  crumb: 'Feels like the packaging you’d take home.',
+  still: 'A little room to breathe, from the first scroll.',
+  stem: 'Flowers arranged like notes from the garden.',
+  rove: 'A workshop board with every answer up front.'
 };
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
   const base = catalog.packages.find(item => item.id === template.packageId);

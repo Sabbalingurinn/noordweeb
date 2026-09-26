@@ -2,10 +2,10 @@
   "id": "still",
   "name": "Still",
   "type": "Boutique stays",
-  "tag": "A LITTLE ROOM TO BREATHE",
-  "description": "A quiet hotel journal, with room details to unfold at your own pace.",
+  "tag": "ROOM TO BREATHE",
+  "description": "A quiet travel journal with immersive photography and unhurried room cards.",
   "packageId": "one-page",
-  "color": "#f4f4f0",
+  "color": "#f1efe8",
   "features": [
     "Rooms",
     "Your story",

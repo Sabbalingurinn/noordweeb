@@ -2,10 +2,10 @@
   "id": "rove",
   "name": "Rove",
   "type": "Bike shops & repair",
-  "tag": "GOOD DAYS START ON TWO WHEELS",
-  "description": "Workshop signage, a practical service sheet and prices up front.",
+  "tag": "FIX. RIDE. REPEAT.",
+  "description": "A high-visibility service board with repair cards and a technical workshop feel.",
   "packageId": "one-page",
-  "color": "#f66b36",
+  "color": "#d7f54d",
   "features": [
     "Services",
     "Workshop",

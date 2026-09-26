@@ -491,3 +491,5 @@
   .showcase-caption{font-size:12px}
   .template-preview,.template-card:nth-child(n+4) .template-preview,.template-card:nth-child(2) .template-preview,.template-card:nth-child(3) .template-preview,.template-card:nth-child(5) .template-preview{height:280px}
 }
+
+.template-preview .card-preview-content .demo-snapshot{width:100%;height:100%;object-fit:cover;object-position:left top}
