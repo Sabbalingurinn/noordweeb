@@ -493,3 +493,52 @@
 }
 
 .template-preview .card-preview-content .demo-snapshot{width:100%;height:100%;object-fit:cover;object-position:left top}
+
+/* Let the showroom frames borrow the geometry of the work inside them. */
+.design-kade{background:#4b202b;color:#fff8ec;border-color:#4b202b;border-radius:95px 95px 12px 12px}
+.design-kade .template-preview{border-radius:95px 95px 0 0}
+.design-kade .template-title>span,.design-kade .model-index,.design-kade .template-description,.design-kade .template-bottom>div>span{color:#ead5c3}
+.design-kade .design-note{color:#efb18b}
+.design-kade .template-bottom{border-color:#f2dfbd70}
+.design-kade .choose-template{background:#f3dfbd;color:#4b202b}
+.design-kade .choose-template:hover{background:#efb18b;color:#4b202b}
+
+.design-crumb{background:#89dce2;color:#852040;border:3px solid #852040;border-radius:18px 100px 18px 18px;box-shadow:12px 12px 0 #ee5977}
+.design-crumb .template-preview{border-radius:15px 97px 0 0}
+.design-crumb .template-title>span,.design-crumb .model-index,.design-crumb .template-description,.design-crumb .template-bottom>div>span{color:#67223d}
+.design-crumb .design-note{color:#852040}
+.design-crumb .template-bottom{border-color:#85204080}
+.design-crumb .choose-template{background:#852040;color:#fff8df}
+
+.design-still{background:#f7f4ed;color:#263e5c;border-radius:0;border:1px solid #a1adba;box-shadow:0 14px 30px #263e5c12}
+.design-still .template-preview{margin:18px 18px 0;width:calc(100% - 36px);height:332px;border-radius:0}
+.design-still .template-title>span,.design-still .model-index,.design-still .template-description,.design-still .template-bottom>div>span{color:#5c6f84}
+.design-still .design-note{color:#526f93}
+.design-still .choose-template{background:#263e5c;color:#fff}
+
+.design-stem{background:#eee4f4;color:#2e5837;border:2px solid #2e5837;border-radius:65px 4px 65px 4px}
+.design-stem .template-preview{border-radius:62px 0 0 0}
+.design-stem .template-title>span,.design-stem .model-index,.design-stem .template-description,.design-stem .template-bottom>div>span{color:#446b4b}
+.design-stem .design-note{color:#a4487b}
+.design-stem .template-bottom{border-color:#2e583780}
+.design-stem .choose-template{background:#2e5837;color:#fff}
+
+.design-rove{background:#172b39;color:#f3f4e9;border:0;border-radius:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 35px),calc(100% - 35px) 100%,0 100%);padding-bottom:20px}
+.design-rove .template-title>span,.design-rove .model-index,.design-rove .template-description,.design-rove .template-bottom>div>span{color:#c7d6dc}
+.design-rove .design-note{color:#ff936d}
+.design-rove .template-bottom{border-color:#f3f4e970}
+.design-rove .choose-template{background:#ff6938;color:#172b39}
+.design-rove .choose-template:hover{background:#ffa181;color:#172b39}
+
+@media(max-width:760px){
+  .template-preview,.template-card:nth-child(n+4) .template-preview,.template-card:nth-child(2) .template-preview,.template-card:nth-child(3) .template-preview,.template-card:nth-child(5) .template-preview{height:auto}
+  .template-preview .card-preview-content{height:auto}
+  .template-preview .card-preview-content .demo-snapshot{height:auto;object-fit:contain}
+  .preview-open{width:40px;height:40px;display:grid;place-items:center;right:10px;bottom:10px;padding:0;border-radius:50%;font-size:0;opacity:1}
+  .preview-open span{font-size:19px}
+  .design-kade{border-radius:70px 70px 10px 10px}.design-kade .template-preview{border-radius:70px 70px 0 0}
+  .design-crumb{border-radius:18px 70px 18px 18px;box-shadow:7px 7px 0 #ee5977}.design-crumb .template-preview{border-radius:15px 67px 0 0}
+  .design-still .template-preview{height:auto;min-height:0}
+  .design-stem{border-radius:45px 4px 45px 4px}.design-stem .template-preview{border-radius:42px 0 0 0}
+  .design-rove{display:block;clip-path:polygon(0 0,100% 0,100% calc(100% - 25px),calc(100% - 25px) 100%,0 100%)}
+}

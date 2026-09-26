@@ -3,9 +3,9 @@
   "name": "Rove",
   "type": "Bike shops & repair",
   "tag": "FIX. RIDE. REPEAT.",
-  "description": "A high-visibility service board with repair cards and a technical workshop feel.",
+  "description": "An angular workshop sheet with orange signals, diagonal imagery and clear service rows.",
   "packageId": "one-page",
-  "color": "#d7f54d",
+  "color": "#ff6938",
   "features": [
     "Services",
     "Workshop",

@@ -23,14 +23,14 @@ if (founders.length === 2) {
 }
 
 function renderPreview(template) {
-  return `<img class="demo-snapshot" src="/assets/${template.id}-showcase.webp?v=2" alt="" loading="lazy" width="980" height="620">`;
+  return `<img class="demo-snapshot" src="/assets/${template.id}-showcase.webp?v=3" alt="" loading="lazy" width="980" height="620">`;
 }
 const designNotes = {
-  kade: 'A seat at the table, before you even arrive.',
-  crumb: 'Feels like the packaging you’d take home.',
-  still: 'A little room to breathe, from the first scroll.',
-  stem: 'Flowers arranged like notes from the garden.',
-  rove: 'A workshop board with every answer up front.'
+  kade: 'A warm evening, seen through an archway.',
+  crumb: 'A bakery that feels like a bright little poster.',
+  still: 'Space to pause, with every detail in its place.',
+  stem: 'A flower study gathered into soft circles.',
+  rove: 'Sharp angles and straight answers for every rider.'
 };
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
   const base = catalog.packages.find(item => item.id === template.packageId);
