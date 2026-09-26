@@ -44,7 +44,7 @@ No shops, accounts, custom booking systems, CMS dashboards, apps or complex inte
 
 ## Behaviour
 
-- Responsive editorial design, mobile navigation, runic n wordmark, Icelandic landscape, showroom, pricing, studio story and FAQ.
+- Responsive editorial design, mobile navigation, a custom coastal N mark and serif wordmark, Icelandic landscape, showroom, pricing, studio story and FAQ.
 - Kade, Crumb and Still are fictional single-page demos. All start at €950; any design can be expanded under the five-page package. Demo actions do not make bookings.
 - Native package radios and four extra checkboxes share the same integer-cent calculator. Duplicate extras are never charged twice.
 - Form validation, local brief preview, copy and text download. A configured `contactEmail` adds a mailto draft. There is no submission backend or automatic email delivery.
@@ -63,4 +63,4 @@ The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgp
 - Bakery: [Conor Brown / Unsplash](https://unsplash.com/photos/a-bunch-of-croissants-that-are-on-a-table-sqkXyyj4WdE).
 - Hotel: [Point3D Commercial Imaging / Unsplash](https://unsplash.com/photos/white-bed-linen-on-bed-oxeCZrodz78).
 
-Photos were obtained under the [Unsplash License](https://unsplash.com/license). The venues are stock scenes, not actual NoordWeeb customers. Newsreader, DM Sans and Manrope are served locally with their SIL Open Font License files. The wordmark's custom stroke drawing takes its n form from [Unicode U+16BE, Naudiz/Nyd/Naud N](https://www.unicode.org/charts/nameslist/n_16A0.html); it is a restrained Nordic reference, not a claim that the rune is uniquely Icelandic.
+Photos were obtained under the [Unsplash License](https://unsplash.com/license). The venues are stock scenes, not actual NoordWeeb customers. Newsreader, DM Sans and Manrope are served locally with their SIL Open Font License files. The hand-drawn N mark keeps a restrained Nordic reference, with a small wave for the Icelandic coast. Its shape is original to NoordWeeb.

@@ -13,3 +13,9 @@ Story: a visitor explores a design, selects a simple website package and optiona
 - Brief generation runs only in the browser. There is no backend/API/database boundary or automatic email delivery to test. A real contact email and confirmed launch details remain owner inputs.
 
 One browser navigation temporarily stalled during inspection, then loaded successfully. Local server requests showed successful asset responses. The issue did not reproduce on the demo's return navigation.
+
+## Logo and accent refresh — 26 September 2026
+
+- Replaced the previous rune favicon and wordmark with an original coastal N mark and a full lowercase serif wordmark. The mark appears consistently on the home and generated information pages.
+- Changed the primary accent to deep fjord blue while keeping the warm paper, muted sage and pale yellow surfaces.
+- `npm run build` and `npm run check` pass. Reviewed the updated home page at desktop and 365px phone width; the logo fits beside the mobile menu without horizontal overflow.

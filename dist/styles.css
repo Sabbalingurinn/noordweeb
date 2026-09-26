@@ -17,7 +17,8 @@
   --paper: #fbf7f0;
   --ink: #302b27;
   --muted: #665e55;
-  --rust: #a24b34;
+  --accent: #31546a;
+  --rust: var(--accent);
   --line: #ddd0c1;
   --wash: #f4e7dc;
   --sea: #e9eadb;
@@ -27,7 +28,25 @@
 }
 
 ::selection { background: #ead19e; }
-.eyebrow { color: #925b3e; font-weight: 600; }
+.eyebrow { color: var(--accent); font-weight: 600; }
+.wordmark {
+  font: 500 35px/1 var(--serif);
+  letter-spacing: -1.6px;
+}
+.wordmark .rune-mark {
+  width: 34px;
+  height: 39px;
+  margin-right: 8px;
+  color: var(--accent);
+  transform: rotate(-3deg);
+}
+.wordmark span { transform: translateY(2px); }
+.rune-mark { stroke-linecap: round; stroke-linejoin: round; }
+.mark-wave { stroke-width: 1.7; opacity: .8; }
+.hero-aside-note .rune-mark { width: 28px; height: 36px; margin-right: 0; }
+.large-rune .mark-wave { stroke-width: 1.8; }
+.footer-top .wordmark { font-size: 35px; }
+.button:hover { background: #203d50; border-color: #203d50; }
 .hero { padding-bottom: 88px; }
 .hero h1 { line-height: 1.04; letter-spacing: -3.2px; }
 .hero-description { max-width: 430px; }
@@ -42,7 +61,7 @@
 #showroom .section-heading h2 em,
 .faq-section h2 em,
 .brief-layout h2 em { color: var(--rust); }
-.pricing-section .section-heading h2 em { color: #986430; }
+.pricing-section .section-heading h2 em { color: #456a80; }
 .about-title h2 em { color: var(--olive); }
 .showroom-grid { gap: 36px; }
 .template-card:nth-child(2) { margin-top: 0; }
@@ -87,6 +106,8 @@
   .brief-layout { padding-block: 78px; }
 }
 @media (max-width: 620px) {
+  .wordmark, .footer-top .wordmark { font-size: 30px; letter-spacing: -1.3px; }
+  .wordmark .rune-mark { width: 29px; height: 34px; margin-right: 7px; }
   .hero { padding-bottom: 51px; }
   .hero h1 { letter-spacing: -3.1px; }
   .intro-rule { padding: 23px 21px; }
