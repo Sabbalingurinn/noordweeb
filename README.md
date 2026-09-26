@@ -44,7 +44,7 @@ No online shops, accounts, custom booking systems, CMS dashboards, apps or compl
 
 ## Behaviour
 
-- A personal studio introduction, a café photograph presented as a keepsake, and an asymmetric portfolio with short design notes. Includes mobile navigation, the coastal N mark and serif wordmark, pricing, studio story and FAQ.
+- A warm studio introduction with live demo previews, an asymmetric portfolio and short design notes. The homepage pairs editorial serif details with clear product-style layouts. Includes mobile navigation, the coastal N mark and serif wordmark, pricing, studio story and FAQ.
 - Kade, Crumb, Still, Stem and Rove are fictional single-page demos. Each has its own page structure: Kade is a printed bistro menu in claret ink; Crumb uses oversized cobalt lettering and a sunny bakery counter; Still is a quiet hotel journal with sidebar navigation and expandable room details; Stem is an asymmetric floral lookbook; and Rove pairs workshop signage with a service sheet in graphite and orange. All start at €950; any design can be expanded under the five-page package. Demo actions do not make bookings.
 - Native package radios and four extra checkboxes share the same integer-cent calculator. Duplicate extras are never charged twice.
 - Form validation, local brief and custom price request previews, copy and text download. The configured `contactEmail` is `noordweeb@noordweeb.nl` and adds a mailto draft. The visitor reviews and sends it in their email app; there is no submission backend or automatic email delivery. Custom work receives a separate human-reviewed price.
@@ -58,7 +58,7 @@ The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgp
 
 ## Asset credits
 
-- Homepage café table: [Tanya Barrow / Unsplash](https://unsplash.com/photos/table-and-chairs-by-a-sunny-window-with-flowers-dsnC3bnP4Ew).
+- Retained café-table asset (currently unused): [Tanya Barrow / Unsplash](https://unsplash.com/photos/table-and-chairs-by-a-sunny-window-with-flowers-dsnC3bnP4Ew).
 - Restaurant: [Glenov Brankovic / Unsplash](https://unsplash.com/photos/a-room-with-tables-and-chairs-e4B5AvA7Jqo).
 - Bakery: [Conor Brown / Unsplash](https://unsplash.com/photos/a-bunch-of-croissants-that-are-on-a-table-sqkXyyj4WdE).
 - Hotel: [Point3D Commercial Imaging / Unsplash](https://unsplash.com/photos/white-bed-linen-on-bed-oxeCZrodz78).

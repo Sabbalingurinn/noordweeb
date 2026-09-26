@@ -1,6 +1,6 @@
 # NoordWeeb — remaining owner information
 
-The design and commercial offer are implemented: a coastal N mark and serif wordmark in deep fjord blue, a welcoming homepage café photograph, five original showroom demos, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
+The design and commercial offer are implemented: a coastal N mark and serif wordmark in deep fjord blue, a warm homepage with previews of the work, five original showroom demos, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
 
 The site remains a private preview. The owner supplied the enquiry email. No phone, registration number, review, payment schedule or confirmed trading-name registration has been invented.
 
@@ -21,7 +21,7 @@ Hosting, domains and booking providers are separate client costs in client-owned
 ```text
 Fill in the real business information in this existing NoordWeeb website.
 Read README.md, AGENTS.md, OFFER_STRATEGY.md and OWNER_HANDOFF.md. Preserve
-the paper/ink/fjord-blue design, coastal N mark, welcoming homepage photograph, five customer demos,
+the paper/ink/fjord-blue design, coastal N mark, homepage demo previews, five customer demos,
 two packages (€950 one page / €1,650 up to five pages), four extras and the
 pay-once model. Do not restore the old CRM catalogue or add complicated
 services. Keep the existing Site identity and current audience.
