@@ -23,7 +23,15 @@ if (founders.length === 2) {
 }
 
 function renderPreview(template) {
-  return `<img class="demo-snapshot" src="/assets/${template.id}-showcase.webp?v=3" alt="" loading="lazy" width="980" height="620">`;
+  const image = `<img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933">`;
+  const previews = {
+    kade: `<div class="kade-art"><div class="kade-art-copy"><span class="kade-art-brand">kade.</span><span class="kade-art-rule"></span><p>Good food.<br><em>Better company.</em></p><small>THE TABLE IS YOURS</small></div><div class="kade-art-photo">${image}</div></div>`,
+    crumb: `<div class="crumb-art"><span class="crumb-art-brand">crumb.</span><span class="crumb-art-sun" aria-hidden="true">✳</span><div class="crumb-art-photo">${image}</div><p>Good<br>mornings<br>start here.</p><small>BAKED FRESH · EVERY DAY</small></div>`,
+    still: `<div class="still-art"><div class="still-art-side"><span>STILL / A PLACE TO STAY</span><span>01 — 05</span></div><div class="still-art-photo">${image}</div><div class="still-art-copy"><span>THE ART OF ARRIVING</span><p>Somewhere<br><em>to slow down.</em></p><strong>still.</strong></div></div>`,
+    stem: `<div class="stem-art"><div class="stem-art-top"><span>stem.</span><small>FLOWERS & OTHER FEELINGS</small></div><div class="stem-art-photo">${image}</div><p>Flowers with<br><em>feeling.</em></p><span class="stem-art-sticker">A LITTLE<br>JOY, DAILY</span></div>`,
+    rove: `<div class="rove-art"><div class="rove-art-bar"><strong>ROVE.</strong><span>BIKES / REPAIRS / GOOD ADVICE</span></div><div class="rove-art-photo">${image}</div><div class="rove-art-copy"><span>FOR EVERY RIDER</span><p>Ride more.<br><em>Worry less.</em></p><strong>→</strong></div></div>`
+  };
+  return previews[template.id];
 }
 const designNotes = {
   kade: 'A warm evening, seen through an archway.',
@@ -33,8 +41,7 @@ const designNotes = {
   rove: 'Sharp angles and straight answers for every rider.'
 };
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
-  const base = catalog.packages.find(item => item.id === template.packageId);
-  return `<article class="template-card design-${template.id}"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true">${renderPreview(template)}</div><span class="preview-open">Step inside <span aria-hidden="true">↗</span></span></a><div class="template-caption"><div class="template-title"><h3>${escapeHtml(template.name)}<span class="model-index"> / 0${index + 1}</span></h3><span>${escapeHtml(template.type)}</span></div><p class="design-note">${designNotes[template.id]}</p><p class="template-description">${escapeHtml(template.description)}</p><div class="template-bottom"><div><span>ONE PAGE FROM</span><strong>${money(base.price)}</strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Make it yours <span aria-hidden="true">↗</span></button></div></div></article>`;
+  return `<article class="showcase-item showcase-${template.id}"><a class="showcase-visual" href="/templates/${template.id}/" aria-label="Explore the ${escapeHtml(template.name)} ${escapeHtml(template.type.toLowerCase())} demo"><div class="showcase-art" aria-hidden="true">${renderPreview(template)}</div><span class="showcase-open">View demo <span aria-hidden="true">↗</span></span></a><div class="showcase-meta"><div class="showcase-heading"><span>0${index + 1} / ${escapeHtml(template.type)}</span><h3>${escapeHtml(template.name)}</h3></div><p>${designNotes[template.id]}</p><button class="showcase-choose" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Choose this direction <span aria-hidden="true">↗</span></button></div></article>`;
 }).join('');
 
 const packageOptions = document.querySelector('#package-options');
