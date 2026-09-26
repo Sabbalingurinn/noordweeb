@@ -19,3 +19,11 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Replaced the previous rune favicon and wordmark with an original coastal N mark and a full lowercase serif wordmark. The mark appears consistently on the home and generated information pages.
 - Changed the primary accent to deep fjord blue while keeping the warm paper, muted sage and pale yellow surfaces.
 - `npm run build` and `npm run check` pass. Reviewed the updated home page at desktop and 365px phone width; the logo fits beside the mobile menu without horizontal overflow.
+
+## Welcoming photography, custom requests and new demos — 26 September 2026
+
+- Replaced the stark coast hero with a sunlit café table photograph, credited to Tanya Barrow. Added two fictional one-page demos: Stem, a florist with a soft editorial design, and Rove, a bike workshop with a bold industrial design. Both have locally hosted photographs and standalone template kits.
+- Kept the standard package estimate separate from custom work. The new request box prepares a scoped message; its email link targets the owner-supplied `noordweeb@noordweeb.nl`. The visitor must review and send it in their email app. A custom price is not calculated by the site.
+- Reviewed the homepage and showroom on desktop and at 768px and 390px, plus the Stem and Rove demos at 390px. Corrected the Rove hero image crop and showroom card lettering so the workshop scene and headline remain visible. At 390px, the custom request form and result dialog fit the viewport without horizontal overflow.
+- Entered a sample request in the browser and verified that the result contains the visitor's details and requested work, that it does not state a custom price, and that the mailto link contains the correct recipient, subject and body. No email was sent during testing.
+- `npm run build`, `npm run check` and `git diff --check` pass. Both new ZIP archives pass `unzip -t`. No browser console errors appeared on the homepage.

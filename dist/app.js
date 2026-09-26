@@ -22,9 +22,18 @@ if (founders.length === 2) {
   document.querySelector('#founder-signature').textContent = founders.join(' & ');
 }
 
+function renderPreview(template) {
+  if (template.id === 'stem') return `<div class="stem-card"><div class="stem-card-head"><strong>stem.</strong><span>FLOWERS FOR EVERYDAY</span></div><div class="stem-card-body"><p>Flowers<br>with feeling.</p><img src="/assets/stem.jpg" alt="" loading="lazy" width="1400" height="934"></div><span class="stem-card-flower" aria-hidden="true">✳</span></div>`;
+  if (template.id === 'rove') return `<div class="rove-card"><div class="rove-card-head"><strong>ROVE/</strong><span>FIX · RIDE · REPEAT</span></div><p>RIDE MORE.<br>WORRY LESS.</p><img src="/assets/rove.jpg" alt="" loading="lazy" width="1400" height="2100"><span class="rove-card-badge">YOUR NEIGHBOURHOOD BIKE WORKSHOP</span></div>`;
+  const previewNav = template.id === 'still' ? 'ROOMS & STORIES' : template.id === 'crumb' ? 'COFFEE. BREAD. GOOD COMPANY.' : 'OUR TABLE · OUR STORY';
+  const previewAction = template.id === 'still' ? 'Find your room' : template.id === 'crumb' ? 'Come on in' : 'Find your seat';
+  const headline = escapeHtml(template.business.headline).replaceAll('&lt;br&gt;', '<br>');
+  return `<div class="card-preview-nav"><span>${escapeHtml(template.business.name)}</span><span>${previewNav}</span></div><div class="card-preview-hero"><img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933"><div><span>${escapeHtml(template.tag)}</span><p>${headline}</p><span class="card-preview-cta">${previewAction} ↗</span></div></div>`;
+}
+
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
   const base = catalog.packages.find(item => item.id === template.packageId);
-  return `<article class="template-card"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true"><div class="card-preview-nav"><span>${escapeHtml(template.business.name)}</span><span>${template.id === 'still' ? 'ROOMS & STORIES' : template.id === 'crumb' ? 'COFFEE. BREAD. GOOD COMPANY.' : 'OUR TABLE · OUR STORY'}</span></div><div class="card-preview-hero"><img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933"><div><span>${escapeHtml(template.tag)}</span><p>${template.business.headline}</p><span class="card-preview-cta">${template.id === 'still' ? 'Find your room' : template.id === 'crumb' ? 'Come on in' : 'Find your seat'} ↗</span></div></div></div><span class="preview-open">Explore demo <span aria-hidden="true">↗</span></span></a><div class="template-title"><h3>${template.name}<span class="model-index"> / 0${index + 1}</span></h3><span>${template.type}</span></div><p>${template.description}</p><div class="template-features">${template.features.map(feature => `<span>${feature}</span>`).join('')}</div><div class="template-bottom"><div><span>BUILD FROM</span><strong>${money(base.price)} <small>one time</small></strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${template.name} design">Make it yours <span aria-hidden="true">↗</span></button></div></article>`;
+  return `<article class="template-card"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true">${renderPreview(template)}</div><span class="preview-open">Explore demo <span aria-hidden="true">↗</span></span></a><div class="template-title"><h3>${escapeHtml(template.name)}<span class="model-index"> / 0${index + 1}</span></h3><span>${escapeHtml(template.type)}</span></div><p>${escapeHtml(template.description)}</p><div class="template-features">${template.features.map(feature => `<span>${escapeHtml(feature)}</span>`).join('')}</div><div class="template-bottom"><div><span>BUILD FROM</span><strong>${money(base.price)} <small>one time</small></strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Make it yours <span aria-hidden="true">↗</span></button></div></article>`;
 }).join('');
 
 const packageOptions = document.querySelector('#package-options');
@@ -80,30 +89,51 @@ updateQuote();
 
 const dialog = document.querySelector('#brief-dialog');
 const emailConfigured = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(business.contactEmail);
-if (emailConfigured) document.querySelector('#brief-mode').textContent = 'Create your brief, then open it in your email app to send to ' + business.contactEmail + '. Nothing is sent automatically.';
+let briefFileName = 'noordweeb-project-brief.txt';
+if (emailConfigured) {
+  document.querySelector('#brief-mode').textContent = 'Create your brief, then open it in your email app to send to ' + business.contactEmail + '. Nothing is sent automatically.';
+  document.querySelector('#custom-price-mode').textContent = 'Review your request, then open it in your email app. Nothing is sent automatically.';
+}
+function showPreparedBrief({ text, title, subject, fileName, isPriceRequest = false }) {
+  briefText = text;
+  briefFileName = fileName;
+  document.querySelector('#brief-dialog-title').textContent = title;
+  document.querySelector('#brief-output').textContent = text;
+  document.querySelector('#copy-status').textContent = '';
+  document.querySelector('#download-brief').textContent = isPriceRequest ? 'Download request ↓' : 'Download brief ↓';
+  document.querySelector('#copy-brief').textContent = isPriceRequest ? 'Copy request' : 'Copy brief';
+  const emailLink = document.querySelector('#email-brief');
+  emailLink.hidden = !emailConfigured;
+  if (emailConfigured) emailLink.href = `mailto:${business.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+  document.querySelector('#brief-result-note').textContent = emailConfigured
+    ? `Review your ${isPriceRequest ? 'request' : 'brief'}, then open your email app to send it to ${business.contactEmail}. Nothing has been sent yet.`
+    : `Download or copy your ${isPriceRequest ? 'request' : 'brief'} to keep it. Nothing has been sent to NoordWeeb.`;
+  briefTrigger = document.activeElement;
+  dialog.showModal();
+}
 document.querySelector('#brief-form').addEventListener('submit', event => {
   event.preventDefault();
   if (!event.currentTarget.reportValidity()) return;
   const data = new FormData(event.currentTarget);
   const { base, addons, totalCents } = currentQuote;
-  briefText = ['NOORDWEEB — PROJECT BRIEF', new Date().toISOString().slice(0,10), '', `Name: ${data.get('name').trim()}`, `Business: ${data.get('business').trim()}`, `Email: ${data.get('email').trim()}`, '', `Design direction: ${chosenTemplate?.name || 'Let’s decide together'}`, `Website: ${base.name} (${base.scope}) — ${money(base.price)}`, ...addons.map(item => `Extra: ${item.name} — ${money(item.price)}\n  ${item.description}`), '', `ESTIMATED ONE-TIME BUILD: ${money(totalCents)}`, 'Excluding applicable VAT. Final scope, taxes, delivery and payment schedule to be agreed in a written quote.', 'Includes two grouped revision rounds, launch help and website files. Client supplies approved content unless the relevant extra is selected.', 'Hosting, domain and third-party subscriptions are separate, in your own accounts. No maintenance subscription required. Later changes are quoted separately.', 'Simple business websites only: no shop, customer accounts, custom booking system, CMS or custom integrations.', '', 'ABOUT THE PROJECT', data.get('message').trim() || 'To discuss.', '', 'This brief is not an order and has not been submitted to NoordWeeb.'].join('\n');
-  document.querySelector('#brief-output').textContent = briefText;
-  document.querySelector('#copy-status').textContent = '';
-  const emailLink = document.querySelector('#email-brief');
-  emailLink.hidden = !emailConfigured;
-  if (emailConfigured) {
-    emailLink.href = `mailto:${business.contactEmail}?subject=${encodeURIComponent('Website brief — ' + data.get('business'))}&body=${encodeURIComponent(briefText)}`;
-    document.querySelector('#brief-result-note').textContent = 'Download or copy your brief, or open your email app to send it to ' + business.contactEmail + '. Nothing has been sent yet.';
-  }
-  briefTrigger = document.activeElement;
-  dialog.showModal();
+  const text = ['NOORDWEEB — PROJECT BRIEF', new Date().toISOString().slice(0,10), '', `Name: ${data.get('name').trim()}`, `Business: ${data.get('business').trim()}`, `Email: ${data.get('email').trim()}`, '', `Design direction: ${chosenTemplate?.name || 'Let’s decide together'}`, `Website: ${base.name} (${base.scope}) — ${money(base.price)}`, ...addons.map(item => `Extra: ${item.name} — ${money(item.price)}\n  ${item.description}`), '', `ESTIMATED ONE-TIME BUILD: ${money(totalCents)}`, 'Excluding applicable VAT. Final scope, taxes, delivery and payment schedule to be agreed in a written quote.', 'Includes two grouped revision rounds, launch help and website files. Client supplies approved content unless the relevant extra is selected.', 'Hosting, domain and third-party subscriptions are separate, in your own accounts. No maintenance subscription required. Later changes are quoted separately.', 'Simple business websites only: no shop, customer accounts, custom booking system, CMS or custom integrations.', '', 'ABOUT THE PROJECT', data.get('message').trim() || 'To discuss.', '', 'This brief is not an order and has not been submitted to NoordWeeb.'].join('\n');
+  showPreparedBrief({ text, title: 'Your brief is ready.', subject: 'Website brief — ' + data.get('business').trim(), fileName: 'noordweeb-project-brief.txt' });
+});
+document.querySelector('#custom-quote-form').addEventListener('submit', event => {
+  event.preventDefault();
+  if (!event.currentTarget.reportValidity()) return;
+  const data = new FormData(event.currentTarget);
+  const name = data.get('name').trim();
+  const businessName = data.get('business').trim();
+  const text = ['NOORDWEEB — TAILORED PRICE REQUEST', new Date().toISOString().slice(0,10), '', `Name: ${name}`, `Business: ${businessName || 'Not supplied'}`, `Email: ${data.get('email').trim()}`, '', 'WHAT I NEED', data.get('request').trim(), '', `Starting design: ${chosenTemplate?.name || 'Not chosen'}`, `Current website estimate: ${money(currentQuote.totalCents)} excluding applicable VAT`, 'This is the standard website estimate only. The requested work above has no quoted price yet.', '', 'Please review whether this work fits NoordWeeb’s small-site offer and provide a separate price and scope before starting.', 'This request is not an order and has not been sent to NoordWeeb.'].join('\n');
+  showPreparedBrief({ text, title: 'Your price request is ready.', subject: 'Price request — ' + (businessName || name), fileName: 'noordweeb-price-request.txt', isPriceRequest: true });
 });
 document.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
 dialog.addEventListener('close', () => briefTrigger?.focus());
 document.querySelector('#download-brief').addEventListener('click', () => {
   const url = URL.createObjectURL(new Blob([briefText], { type: 'text/plain;charset=utf-8' }));
-  const link = document.createElement('a'); link.href = url; link.download = 'noordweeb-project-brief.txt'; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  const link = document.createElement('a'); link.href = url; link.download = briefFileName; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   document.querySelector('#copy-status').textContent = 'Download requested. If your browser blocks it, use Copy brief.';
 });
 document.querySelector('#copy-brief').addEventListener('click', async () => {

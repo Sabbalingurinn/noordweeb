@@ -7,7 +7,7 @@ export const business = {
     "",
     "Emil"
   ],
-  "contactEmail": "",
+  "contactEmail": "noordweeb@noordweeb.nl",
   "contactPhone": "",
   "whatsappNumber": "",
   "registeredAddress": "",
@@ -247,6 +247,114 @@ export const templates = [
         "Check-in from 15:00",
         "Check-out by 11:00",
         "Reception · 07:00–23:00"
+      ],
+      "contactEmail": "",
+      "phone": "",
+      "address": "Amsterdam · example location",
+      "bookingUrl": ""
+    }
+  },
+  {
+    "id": "stem",
+    "name": "Stem",
+    "type": "Florists & makers",
+    "tag": "FLOWERS, WITHOUT THE FUSS",
+    "description": "An expressive shopfront for seasonal flowers, small gifts and the people who make them.",
+    "packageId": "one-page",
+    "color": "#ded3e7",
+    "features": [
+      "Collections",
+      "Studio story",
+      "Enquiry link"
+    ],
+    "business": {
+      "name": "stem.",
+      "eyebrow": "A LITTLE COLOUR FOR THE EVERYDAY",
+      "headline": "Flowers with<br>feeling.",
+      "intro": "Loose, lovely flowers for birthdays, thank-yous and Tuesdays that need a lift.",
+      "location": "Amsterdam",
+      "storyTitle": "Not too perfect.<br>Just right.",
+      "story": "We follow the season and let the stems do their thing. Every bunch is gathered by hand, with a little surprise and plenty of personality.",
+      "menu": [
+        {
+          "name": "Market bunch",
+          "description": "A joyful handful of seasonal stems",
+          "price": "from €18"
+        },
+        {
+          "name": "The big gesture",
+          "description": "A generous, loose arrangement",
+          "price": "from €42"
+        },
+        {
+          "name": "Flowers for the table",
+          "description": "Small arrangements for gatherings",
+          "price": "from €34"
+        },
+        {
+          "name": "Something special",
+          "description": "Tell us the occasion; we’ll make it yours",
+          "price": "Ask us"
+        }
+      ],
+      "hours": [
+        "Tuesday–Friday · 10:00–18:00",
+        "Saturday · 09:00–17:00",
+        "Sunday–Monday · closed"
+      ],
+      "contactEmail": "",
+      "phone": "",
+      "address": "Amsterdam · example location",
+      "bookingUrl": ""
+    }
+  },
+  {
+    "id": "rove",
+    "name": "Rove",
+    "type": "Bike shops & repair",
+    "tag": "GOOD DAYS START ON TWO WHEELS",
+    "description": "A punchy, practical site for a workshop that gets people riding again.",
+    "packageId": "one-page",
+    "color": "#d9f469",
+    "features": [
+      "Services",
+      "Workshop",
+      "Enquiry link"
+    ],
+    "business": {
+      "name": "rove.",
+      "eyebrow": "YOUR NEIGHBOURHOOD BIKE WORKSHOP",
+      "headline": "Ride more.<br>Worry less.",
+      "intro": "Quick fixes, proper tune-ups and straight answers. Get back to the good part: the ride.",
+      "location": "Amsterdam",
+      "storyTitle": "Built for the long way home.",
+      "story": "From your daily commuter to the bike you take out on Sundays, we treat every ride like it matters. Drop by, tell us what’s wrong and we’ll talk through the fix before we start.",
+      "menu": [
+        {
+          "name": "Safety check",
+          "description": "Brakes, tyres, lights and a once-over",
+          "price": "€25"
+        },
+        {
+          "name": "Everyday tune-up",
+          "description": "The essentials, checked and adjusted",
+          "price": "from €65"
+        },
+        {
+          "name": "Brakes & gears",
+          "description": "Get your stopping and shifting right",
+          "price": "from €35"
+        },
+        {
+          "name": "Wheel true",
+          "description": "Smooth out the wobble",
+          "price": "from €30"
+        }
+      ],
+      "hours": [
+        "Tuesday–Friday · 09:00–18:00",
+        "Saturday · 10:00–16:00",
+        "Sunday–Monday · closed"
       ],
       "contactEmail": "",
       "phone": "",

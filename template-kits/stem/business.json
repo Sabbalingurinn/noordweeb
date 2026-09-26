@@ -1,0 +1,55 @@
+{
+  "id": "stem",
+  "name": "Stem",
+  "type": "Florists & makers",
+  "tag": "FLOWERS, WITHOUT THE FUSS",
+  "description": "An expressive shopfront for seasonal flowers, small gifts and the people who make them.",
+  "packageId": "one-page",
+  "color": "#ded3e7",
+  "features": [
+    "Collections",
+    "Studio story",
+    "Enquiry link"
+  ],
+  "business": {
+    "name": "stem.",
+    "eyebrow": "A LITTLE COLOUR FOR THE EVERYDAY",
+    "headline": "Flowers with<br>feeling.",
+    "intro": "Loose, lovely flowers for birthdays, thank-yous and Tuesdays that need a lift.",
+    "location": "Amsterdam",
+    "storyTitle": "Not too perfect.<br>Just right.",
+    "story": "We follow the season and let the stems do their thing. Every bunch is gathered by hand, with a little surprise and plenty of personality.",
+    "menu": [
+      {
+        "name": "Market bunch",
+        "description": "A joyful handful of seasonal stems",
+        "price": "from €18"
+      },
+      {
+        "name": "The big gesture",
+        "description": "A generous, loose arrangement",
+        "price": "from €42"
+      },
+      {
+        "name": "Flowers for the table",
+        "description": "Small arrangements for gatherings",
+        "price": "from €34"
+      },
+      {
+        "name": "Something special",
+        "description": "Tell us the occasion; we’ll make it yours",
+        "price": "Ask us"
+      }
+    ],
+    "hours": [
+      "Tuesday–Friday · 10:00–18:00",
+      "Saturday · 09:00–17:00",
+      "Sunday–Monday · closed"
+    ],
+    "contactEmail": "",
+    "phone": "",
+    "address": "Amsterdam · example location",
+    "bookingUrl": ""
+  },
+  "demo": true
+}

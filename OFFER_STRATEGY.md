@@ -11,7 +11,7 @@ The owner asked us to decide the pricing and avoid complicated websites. These a
 
 Both start from an established layout adapted to the customer's branding, approved text and photographs. Include mobile layouts, accessible basic navigation, page titles/descriptions, contact and map links, a link to an existing booking service, two grouped revision rounds, launch help on one agreed static-compatible host, and the website files. A menu PDF or up to six short menu/service/room entries is included.
 
-One page is the default recommendation. Use five pages only when the business benefits from separate services, menu, story or gallery pages. All three showroom demos are accurately priced as one-page starting points. The small-site package requires actual additional pages when sold; the one-page demo is not a five-page delivery.
+One page is the default recommendation. Use five pages only when the business benefits from separate services, menu, story or gallery pages. All five showroom demos are accurately priced as one-page starting points. The small-site package requires actual additional pages when sold; the one-page demo is not a five-page delivery.
 
 Typical timing is 1–2 weeks for one page and 2–3 weeks for a small site after approved content is ready. Confirm the calendar in the written quote.
 

@@ -1,0 +1,55 @@
+{
+  "id": "rove",
+  "name": "Rove",
+  "type": "Bike shops & repair",
+  "tag": "GOOD DAYS START ON TWO WHEELS",
+  "description": "A punchy, practical site for a workshop that gets people riding again.",
+  "packageId": "one-page",
+  "color": "#d9f469",
+  "features": [
+    "Services",
+    "Workshop",
+    "Enquiry link"
+  ],
+  "business": {
+    "name": "rove.",
+    "eyebrow": "YOUR NEIGHBOURHOOD BIKE WORKSHOP",
+    "headline": "Ride more.<br>Worry less.",
+    "intro": "Quick fixes, proper tune-ups and straight answers. Get back to the good part: the ride.",
+    "location": "Amsterdam",
+    "storyTitle": "Built for the long way home.",
+    "story": "From your daily commuter to the bike you take out on Sundays, we treat every ride like it matters. Drop by, tell us what’s wrong and we’ll talk through the fix before we start.",
+    "menu": [
+      {
+        "name": "Safety check",
+        "description": "Brakes, tyres, lights and a once-over",
+        "price": "€25"
+      },
+      {
+        "name": "Everyday tune-up",
+        "description": "The essentials, checked and adjusted",
+        "price": "from €65"
+      },
+      {
+        "name": "Brakes & gears",
+        "description": "Get your stopping and shifting right",
+        "price": "from €35"
+      },
+      {
+        "name": "Wheel true",
+        "description": "Smooth out the wobble",
+        "price": "from €30"
+      }
+    ],
+    "hours": [
+      "Tuesday–Friday · 09:00–18:00",
+      "Saturday · 10:00–16:00",
+      "Sunday–Monday · closed"
+    ],
+    "contactEmail": "",
+    "phone": "",
+    "address": "Amsterdam · example location",
+    "bookingUrl": ""
+  },
+  "demo": true
+}

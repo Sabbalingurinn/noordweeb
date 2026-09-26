@@ -10,11 +10,11 @@ Ask for the business name, approved logo/brand colours, audience, language, real
 
 1. Duplicate this whole folder into the customer project. Preserve the original kit.
 2. Edit business.json. Keep id set to still; it selects the established layout. name is the internal design name. All customer content goes inside business. Only the literal <br> tag is allowed in headline/storyTitle; other HTML is escaped.
-3. Replace hero.jpg with an authorised image; preserve a suitable wide crop. Update alt text in render-template.mjs if the image subject changes. Keep CREDITS.md current.
+3. Replace hero.jpg with an authorised image; preserve a suitable crop. Update alt text in render-template.mjs if the image subject changes. Keep CREDITS.md current.
 4. Keep demo true during sales review. When the customer has approved real details, set demo to false. Supply a real address and email or phone. Set bookingUrl to an existing HTTPS booking service if supplied. A simple link is included in either package; the €150 widget extra covers one supported embed only, never a custom booking system.
 5. Run node generate.mjs with Node 20 or newer. Preview using python3 -m http.server 4190. No package installation or framework is required.
 6. Use styles.css theme-still rules and variables to adapt branding. Preserve the type hierarchy, spacing rhythm and mobile layout. Keep other theme rules until the finished page works; deleting them is optional.
-7. Add approved legal/privacy links, a supported booking widget and extra pages only when included in the quote. Keep the site static: no shops, payments, customer accounts, CMS, dashboards or custom integrations. A visual reservation button is not a working booking integration; test the actual provider route.
+7. Add approved legal/privacy links, a supported booking widget and extra pages only when included in the quote. Keep the site static: no shops, payments, customer accounts, CMS, dashboards or custom integrations. A visual enquiry button is not a working booking integration; test the actual provider route.
 
 ## Scope and acceptance
 

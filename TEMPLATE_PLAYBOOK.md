@@ -7,8 +7,10 @@ Show a working design, choose one page or up to five pages, agree any of the fou
 | Kade | Restaurants, bistros, wine bars | `/templates/kade/` | `template-kits/noordweeb-kade.zip` |
 | Crumb | Cafés, bakeries, neighbourhood businesses | `/templates/crumb/` | `template-kits/noordweeb-crumb.zip` |
 | Still | Guesthouses, boutique stays, small hotels | `/templates/still/` | `template-kits/noordweeb-still.zip` |
+| Stem | Florists and small creative shops without online checkout | `/templates/stem/` | `template-kits/noordweeb-stem.zip` |
+| Rove | Bike workshops and practical local services | `/templates/rove/` | `template-kits/noordweeb-rove.zip` |
 
-All previews are fictional single-page designs, starting at €950. They have working section navigation, story, menu/rooms and practical information. Booking buttons explain demo mode; they never make reservations. The existing deployed preview is owner-private; remote customer access needs an owner-approved audience change.
+All previews are fictional single-page designs, starting at €950. They have working section navigation, story, relevant offerings and practical information. Contact or booking buttons explain demo mode; they never send an enquiry or make a reservation. The existing deployed preview is owner-private; remote customer access needs an owner-approved audience change.
 
 ## Sell a small, specific result
 

@@ -34,5 +34,41 @@
     "localPath": "/private/tmp/noordweeb-assets/hotel.jpg",
     "bytes": 191452,
     "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "welcome-table",
+    "filename": "welcome-table.jpg",
+    "photographer": "Tanya Barrow",
+    "sourcePage": "https://unsplash.com/photos/table-and-chairs-by-a-sunny-window-with-flowers-dsnC3bnP4Ew",
+    "imageUrl": "https://unsplash.com/photos/dsnC3bnP4Ew/download?force=true&w=1400&q=82",
+    "alt": "A sunlit café table by a window, with flowers in a glass vase.",
+    "position": "50% 54%",
+    "localPath": "dist/assets/welcome-table.jpg",
+    "bytes": 615763,
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "stem",
+    "filename": "stem.jpg",
+    "photographer": "Bohdan Stocek",
+    "sourcePage": "https://unsplash.com/photos/flowers-on-display-in-a-bright-and-airy-flower-shop-r4f9Nai_ztM",
+    "imageUrl": "https://unsplash.com/photos/r4f9Nai_ztM/download?force=true&w=1400&q=82",
+    "alt": "Colourful flowers displayed in a bright flower shop.",
+    "position": "50% 50%",
+    "localPath": "dist/assets/stem.jpg",
+    "bytes": 213956,
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "rove",
+    "filename": "rove.jpg",
+    "photographer": "Bohdan Kadun",
+    "sourcePage": "https://unsplash.com/photos/a-man-working-on-a-bicycle-in-a-garage-WIsOienEXBM",
+    "imageUrl": "https://unsplash.com/photos/WIsOienEXBM/download?force=true&w=1400&q=82",
+    "alt": "Bicycle mechanic working on a bike in a workshop.",
+    "position": "50% 38%",
+    "localPath": "dist/assets/rove.jpg",
+    "bytes": 616969,
+    "license": "https://unsplash.com/license"
   }
 ]
