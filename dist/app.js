@@ -23,18 +23,23 @@ if (founders.length === 2) {
 }
 
 function renderPreview(template) {
-  if (template.id === 'kade') return `<div class="kade-card"><img src="/assets/kade.jpg" alt="" loading="lazy" width="1400" height="933"><div class="kade-invite"><span>KADE · AMSTERDAM</span><strong>Good food.<br>Better company.</strong><small>FIND YOUR SEAT ↗</small></div></div>`;
-  if (template.id === 'stem') return `<div class="stem-card"><div class="stem-card-head"><strong>stem.</strong><span>FLOWERS FOR EVERYDAY</span></div><div class="stem-card-body"><p>Flowers<br>with feeling.</p><img src="/assets/stem.jpg" alt="" loading="lazy" width="1400" height="934"></div><span class="stem-card-flower" aria-hidden="true">✳</span></div>`;
-  if (template.id === 'rove') return `<div class="rove-card"><div class="rove-card-head"><strong>ROVE/</strong><span>FIX · RIDE · REPEAT</span></div><p>RIDE MORE.<br>WORRY LESS.</p><img src="/assets/rove.jpg" alt="" loading="lazy" width="1400" height="2100"><span class="rove-card-badge">YOUR NEIGHBOURHOOD BIKE WORKSHOP</span></div>`;
-  const previewNav = template.id === 'still' ? 'ROOMS & STORIES' : template.id === 'crumb' ? 'COFFEE. BREAD. GOOD COMPANY.' : 'OUR TABLE · OUR STORY';
-  const previewAction = template.id === 'still' ? 'Find your room' : template.id === 'crumb' ? 'Come on in' : 'Find your seat';
-  const headline = escapeHtml(template.business.headline).replaceAll('&lt;br&gt;', '<br>');
-  return `<div class="card-preview-nav"><span>${escapeHtml(template.business.name)}</span><span>${previewNav}</span></div><div class="card-preview-hero"><img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933"><div><span>${escapeHtml(template.tag)}</span><p>${headline}</p><span class="card-preview-cta">${previewAction} ↗</span></div></div>`;
+  const img = id => `<img src="/assets/${id}.jpg" alt="" loading="lazy" width="1400" height="933">`;
+  if (template.id === 'kade') return `<div class="sample-kade"><div class="sample-kade-top"><span>A NEIGHBOURHOOD BISTRO</span><span>AMSTERDAM</span></div><strong>kade.</strong><div class="sample-kade-nav">Food & wine <span>Around our table</span> Find your seat</div><div class="sample-kade-body"><p>Good food.<br>Better company.<small>A table for two. Or a few more.</small></p>${img('kade')}</div></div>`;
+  if (template.id === 'crumb') return `<div class="sample-crumb"><span>ON THE COUNTER / BAKERY & COFFEE</span><strong>crumb</strong><div><div class="sample-crumb-photo">${img('crumb')}</div><p>Good<br>mornings<br>start here.<small>WHAT’S BAKING? ↓</small></p></div></div>`;
+  if (template.id === 'still') return `<div class="sample-still"><aside><strong>still.</strong><span>A SMALL CITY STAY</span><small>02 &nbsp; The rooms<br>01 &nbsp; Our way of staying<br>03 &nbsp; The details</small></aside><div><span>A LITTLE ROOM TO BREATHE</span>${img('still')}<p>Somewhere<br>to slow down.</p></div></div>`;
+  if (template.id === 'stem') return `<div class="sample-stem"><div><strong>stem.</strong><span>THE FLOWERS &nbsp; THE STUDIO</span></div><p>Flowers with<br>feeling.</p>${img('stem')}<small>a little<br><em>everyday magic.</em></small></div>`;
+  return `<div class="sample-rove"><div><strong>ROVE.</strong><span>[ SERVICES ] &nbsp; [ THE WORKSHOP ]</span></div><p><span>RIDE MORE.</span><br>WORRY LESS.</p><div class="sample-rove-work">${img('rove')}<div><span>SERVICE SHEET</span><strong>WHAT NEEDS<br>FIXING?</strong><small>01 &nbsp; SAFETY CHECK<br>02 &nbsp; EVERYDAY TUNE-UP<br>03 &nbsp; BRAKES & GEARS</small></div></div></div>`;
 }
-
+const designNotes = {
+  kade: 'The kind of menu you’d keep after a good evening.',
+  crumb: 'A little louder. Best enjoyed with a coffee.',
+  still: 'Room to breathe, right down to the navigation.',
+  stem: 'A bit off-centre. Like the best bunches of flowers.',
+  rove: 'Straight to the point. Just like a good mechanic.'
+};
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
   const base = catalog.packages.find(item => item.id === template.packageId);
-  return `<article class="template-card"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true">${renderPreview(template)}</div><span class="preview-open">Explore demo <span aria-hidden="true">↗</span></span></a><div class="template-title"><h3>${escapeHtml(template.name)}<span class="model-index"> / 0${index + 1}</span></h3><span>${escapeHtml(template.type)}</span></div><p>${escapeHtml(template.description)}</p><div class="template-features">${template.features.map(feature => `<span>${escapeHtml(feature)}</span>`).join('')}</div><div class="template-bottom"><div><span>BUILD FROM</span><strong>${money(base.price)} <small>one time</small></strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Make it yours <span aria-hidden="true">↗</span></button></div></article>`;
+  return `<article class="template-card design-${template.id}"><a class="template-preview ${template.id}-preview" href="/templates/${template.id}/" aria-label="View the ${template.name} ${template.type.toLowerCase()} demo"><div class="card-preview-content" aria-hidden="true">${renderPreview(template)}</div><span class="preview-open">Step inside <span aria-hidden="true">↗</span></span></a><div class="template-caption"><div class="template-title"><h3>${escapeHtml(template.name)}<span class="model-index"> / 0${index + 1}</span></h3><span>${escapeHtml(template.type)}</span></div><p class="design-note">${designNotes[template.id]}</p><p class="template-description">${escapeHtml(template.description)}</p><div class="template-bottom"><div><span>ONE PAGE FROM</span><strong>${money(base.price)}</strong></div><button class="choose-template" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Make it yours <span aria-hidden="true">↗</span></button></div></div></article>`;
 }).join('');
 
 const packageOptions = document.querySelector('#package-options');

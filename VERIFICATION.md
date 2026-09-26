@@ -33,3 +33,14 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Replaced the former headline-left/photo-right opening with a full-width editorial headline, framed café photograph and short note from the studio. Removed the redundant strip below the hero. The price and showroom links remain visible in the new layout.
 - Reworked Kade as a dinner invitation over its restaurant photograph and a dark story section. Reworked Crumb as a type-led bakery poster with a wide photograph and a shelf-like menu. Still retains its quieter photographic layout. The showroom preview for Kade reflects its new design.
 - Reviewed the main opening at desktop, 768px, 390px and 360px; there was no horizontal overflow at 768px or 360px. Reviewed Kade and Crumb at desktop, tablet and phone widths, and Still at phone width. Updated the phone headline break so “walking in.” stays together.
+
+
+## Independent demo designs and personal studio page — 26 September 2026
+
+- Replaced the shared demo page scaffold with five independent compositions in `scripts/render-template.mjs`. Only the showroom toolbar, customer-contact safeguards, and accessible fictional-demo dialog are shared. Each layout, plus local Newsreader fonts and licences, is regenerated into the standalone kits and ZIP archives.
+- The main page now introduces the two-person studio directly, presents the existing café photograph as a keepsake, and shows an asymmetric portfolio with design-specific previews and short notes. Pricing, package scope, the owner email, and enquiry behaviour are unchanged.
+- Reviewed full desktop and phone screenshots of all five demos. Reviewed the homepage opening and complete showroom with all images loaded. Adjusted word spacing in the workshop headings after visual review.
+- All six routes have no horizontal overflow at 360, 390, 768 and 1440 CSS pixels. No outside-viewport headings, paragraphs, navigation, buttons or figures were found at those widths. No page errors occurred; the main page's six photographs loaded successfully after scrolling.
+- Verified mobile navigation opens and closes on selection. A showroom selection carries into the estimate. A small site with copy help and the booking widget totals €2,050; the prepared brief includes the selected design and this total. The email draft points to `noordweeb@noordweeb.nl`. No message was sent.
+- Verified the custom price request remains separate from the standard estimate. The brief closes with Escape and restores focus. Every demo action opens its fictional-business explanation, restores focus on Escape, and returns its selected design to a €950 starting estimate. Still's additional room details expand correctly.
+- `npm run build` and `npm run check` pass, including pricing, escaping, contact safeguards, and 97 local references across 74 published files. Browser inspection artifacts are kept under ignored `output/playwright/`.
