@@ -54,7 +54,7 @@ No online shops, accounts, custom booking systems, CMS dashboards, apps or compl
 
 ## Hosting
 
-The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgpt.site/. `.openai/hosting.json` contains its project identity. Preserve that identity and audience; do not create another Site. The enquiry email is configured; confirmed registration details and approved business policies are still needed before public launch. `dist/` is portable to another static-compatible host.
+The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgpt.site/. `.openai/hosting.json` contains its project identity. Preserve that identity and audience; do not create another Site. The enquiry email is configured and public privacy/project-terms pages are written. Before public launch, verify the registered company and VAT details, purchase the planned noordweeb.nl domain, test its mailbox, and confirm the production providers and retention arrangements. `dist/` is portable to another static-compatible host.
 
 ## Asset credits
 

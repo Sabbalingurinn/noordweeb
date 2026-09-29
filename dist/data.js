@@ -4,8 +4,8 @@ export const business = {
   "legalName": "Tæknistoð ehf.",
   "country": "Iceland",
   "founders": [
-    "",
-    "Emil"
+    "Sævar Breki Snorrason",
+    "Emil Danile Welling"
   ],
   "contactEmail": "noordweeb@noordweeb.nl",
   "contactPhone": "",
@@ -18,7 +18,8 @@ export const business = {
   "currency": "EUR",
   "pricesExcludeVat": true,
   "pricingStatus": "Owner-delegated fixed-scope offer: two website sizes and four optional extras",
-  "registrationStatus": "Trading-name and company details to be confirmed before public launch"
+  "registrationStatus": "Trading-name and company details to be confirmed before public launch",
+  "plannedDomain": "noordweeb.nl"
 };
 export const catalog = {
   "packages": [

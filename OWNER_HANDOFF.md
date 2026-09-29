@@ -2,17 +2,15 @@
 
 The design and commercial offer are implemented: a coastal N mark and serif wordmark in deep fjord blue, a warm homepage with previews of the work, five original showroom demos, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
 
-The site remains a private preview. The owner supplied the enquiry email. No phone, registration number, review, payment schedule or confirmed trading-name registration has been invented.
+The site remains a private preview. The owner supplied the enquiry email. The owner supplied both public founder names and chose the payment and project terms now shown on the site. No phone, registration number, VAT treatment or confirmed trading-name registration has been invented. The planned noordweeb.nl domain is not marked as owned or active; its mailbox must be tested after purchase.
 
 | Input still needed | Where it belongs |
 | --- | --- |
-| Your public first name; Emil's preferred public name | `content/business.json` → `founders`. The two names appear automatically when both are supplied. |
 | Optional public phone / WhatsApp | Matching config fields; add visible contact links if wanted. |
 | Confirmed legal company details | Tæknistoð ehf. is the owner-supplied name. Add registered address, company registration number, VAT status/number and trading-name status. |
-| Final owned domain | `websiteUrl`; then configure the actual domain and matching metadata. |
-| Language and primary customer market | English/EUR is currently used; translating requires updating actual page content, not just a config value. |
-| Agreed payment and project terms | Payment schedule, cancellation, correction obligations, handover and usage rights. |
-| Approved enquiry/privacy policy | Current page describes local brief generation. Update policies for any actual receiving email or future form service. |
+| Purchase and verify noordweeb.nl | Once owned and connected, set `websiteUrl`, configure matching metadata, and test receipt from the published email address. |
+| Public language | Amsterdam hospitality and similar independent businesses are the initial market. Confirm English, Dutch or bilingual; translation requires updating actual page content. |
+| Production processor facts | The privacy page and retention policy are written. Confirm hosting, mail, database, backup expiry and any transfer terms before public launch; update the notice if services change. |
 
 Hosting, domains and booking providers are separate client costs in client-owned accounts. Initial launch help is included. There is no maintenance subscription. The detailed offer is in `OFFER_STRATEGY.md`.
 
@@ -26,8 +24,7 @@ two packages (€950 one page / €1,650 up to five pages), four extras and the
 pay-once model. Do not restore the old CRM catalogue or add complicated
 services. Keep the existing Site identity and current audience.
 
-Owner's public first name:
-Emil's public name:
+Owner public names: Sævar Breki Snorrason and Emil Danile Welling
 Enquiry email: noordweeb@noordweeb.nl (owner supplied; keep unless changed)
 Phone / WhatsApp (optional):
 Confirmed legal company name:
@@ -35,13 +32,14 @@ Registered address:
 Company registration number:
 VAT registration/status and confirmed treatment:
 Trading-name status:
-Domain:
-Language(s) and customer market:
-Payment and project terms:
-Approved privacy policy:
+Planned domain: noordweeb.nl (purchase and verify before using as live URL)
+Language(s):
+Customer market: Amsterdam restaurants and other independent businesses
+Project terms: content/project-terms.html
+Privacy policy: content/privacy.html
 
 Use only the supplied facts. Update content/business.json and the relevant
-page source in scripts/build.mjs. Leave absent facts unresolved. Remove
+page source in dist/index.html and content/*.html, with scripts/build.mjs generating information pages. Leave absent facts unresolved. Remove
 private-preview/draft notices only when the information is complete. The
 email field enables a mailto draft, not automatic enquiry delivery; do not
 claim messages are delivered by this website.
