@@ -1,6 +1,6 @@
 # NoordWeeb — remaining owner information
 
-The design and commercial offer are implemented: a coastal N mark and serif wordmark in deep fjord blue, a warm homepage with previews of the work, five original showroom demos, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
+The design and commercial offer are implemented: a minimal monochrome N symbol and wordmark, upright Manrope typography and a navy-and-blue homepage with previews of the work, five showroom demos with independent typography, layout, shapes and content presentation, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
 
 The site remains a private preview. The owner supplied the enquiry email. The owner supplied both public founder names and chose the payment and project terms now shown on the site. No phone, registration number, VAT treatment or confirmed trading-name registration has been invented. The planned noordweeb.nl domain is not marked as owned or active; its mailbox must be tested after purchase.
 
@@ -19,12 +19,12 @@ Hosting, domains and booking providers are separate client costs in client-owned
 ```text
 Fill in the real business information in this existing NoordWeeb website.
 Read README.md, AGENTS.md, OFFER_STRATEGY.md and OWNER_HANDOFF.md. Preserve
-the paper/ink/fjord-blue design, coastal N mark, homepage demo previews, five customer demos,
+the navy/blue design, minimal monochrome N symbol and wordmark, upright Manrope, homepage demo previews, five customer demos,
 two packages (€950 one page / €1,650 up to five pages), four extras and the
 pay-once model. Do not restore the old CRM catalogue or add complicated
 services. Keep the existing Site identity and current audience.
 
-Owner public names: Sævar Breki Snorrason and Emil Danile Welling
+Owner public names: Sævar Breki Snorrason and Emil Daniel Welling
 Enquiry email: noordweeb@noordweeb.nl (owner supplied; keep unless changed)
 Phone / WhatsApp (optional):
 Confirmed legal company name:
@@ -45,7 +45,7 @@ email field enables a mailto draft, not automatic enquiry delivery; do not
 claim messages are delivered by this website.
 
 Run npm run build and npm run check. Verify names, the actual email draft
-recipient, brief flow, mobile layout and information pages. Publish to the
+recipient, price-request flow, mobile layout and information pages. Publish to the
 existing Site while preserving its audience. Summarize remaining gaps.
 ```
 

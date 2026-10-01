@@ -4,9 +4,9 @@
     "name": "Kade",
     "type": "Restaurants & bistros",
     "tag": "AN EVENING AT KADE",
-    "description": "A wine-dark bistro invitation framed by an arched photograph and a pared-back evening menu.",
+    "description": "A neighbourhood restaurant. Traditional serif type, a side rail and a typeset menu.",
     "packageId": "one-page",
-    "color": "#4b202b",
+    "color": "#913e2b",
     "features": [
       "Menu",
       "Your story",
@@ -51,6 +51,22 @@
       "phone": "",
       "address": "Amsterdam · example location",
       "bookingUrl": ""
+    },
+    "designReference": {
+      "name": "Bar Parry",
+      "url": "https://barparry.nl/site/",
+      "reviewedOn": "2026-10-01",
+      "layoutTraits": [
+        "Fixed cream navigation rail",
+        "Orange uppercase identity",
+        "Circular text over immersive restaurant photography"
+      ]
+    },
+    "designDirection": {
+      "summary": "Traditional Dutch bistro with warm cream, oxblood and a permanent navigation rail.",
+      "typography": "Georgia for traditional restaurant lettering; restrained Arial labels.",
+      "contentLayout": "Full-height restaurant arrival, centered à-la-carte menu, a single oxblood table invitation and simple opening hours.",
+      "updatedOn": "2026-10-01"
     }
   },
   {
@@ -58,9 +74,9 @@
     "name": "Crumb",
     "type": "Cafés & bakeries",
     "tag": "THE GOOD STUFF",
-    "description": "A bright bakery poster with tilted photography, rounded counter cards and joyful colour.",
+    "description": "A bakery poster. Heavy lettering, butter yellow, red accents and a paper receipt.",
     "packageId": "one-page",
-    "color": "#89dce2",
+    "color": "#f8db55",
     "features": [
       "One-page",
       "Menu",
@@ -104,6 +120,22 @@
       "phone": "",
       "address": "Amsterdam · example location",
       "bookingUrl": ""
+    },
+    "designReference": {
+      "name": "Bread Ahead",
+      "url": "https://www.breadahead.com/",
+      "reviewedOn": "2026-10-01",
+      "layoutTraits": [
+        "White header with stacked green wordmark",
+        "Full-width pastry photograph and large serif heading",
+        "Overlapping cream introduction panel"
+      ]
+    },
+    "designDirection": {
+      "summary": "Expressive bakery poster with oversized block lettering, a curved pastry photograph, yellow paper and tomato red.",
+      "typography": "Dela Gothic One display headings, DM Sans supporting copy and Courier New receipt lettering.",
+      "contentLayout": "Poster composition, bold word ribbon, one continuous bakery receipt, oversized red story and a big come-by sign.",
+      "updatedOn": "2026-10-01"
     }
   },
   {
@@ -111,9 +143,9 @@
     "name": "Still",
     "type": "Boutique stays",
     "tag": "ROOM TO BREATHE",
-    "description": "A quiet hotel editorial with generous space, right-aligned type and considered room details.",
+    "description": "A quiet hotel journal. Airy serif type, asymmetric photography and a room selector.",
     "packageId": "one-page",
-    "color": "#f7f4ed",
+    "color": "#52677c",
     "features": [
       "Rooms",
       "Your story",
@@ -153,6 +185,22 @@
       "phone": "",
       "address": "Amsterdam · example location",
       "bookingUrl": ""
+    },
+    "designReference": {
+      "name": "De Durgerdam",
+      "url": "https://www.dedurgerdam.com/",
+      "reviewedOn": "2026-10-01",
+      "layoutTraits": [
+        "Image-led full-height hero",
+        "Fine white header rule and menu toggle",
+        "Muted blue controls and centered serif typography"
+      ]
+    },
+    "designDirection": {
+      "summary": "Restrained hotel journal with bone paper, slate ink, generous empty space and fine rules.",
+      "typography": "Newsreader for airy editorial headings and copy; small Arial index labels.",
+      "contentLayout": "Asymmetric arrival spread, text-led hotel philosophy, one selected room at a time with accessible tabs, and a compact arrival directory.",
+      "updatedOn": "2026-10-01"
     }
   },
   {
@@ -160,9 +208,9 @@
     "name": "Stem",
     "type": "Florists & makers",
     "tag": "FIELD NOTES",
-    "description": "A lilac and green flower study with a circular specimen and soft, numbered collection pills.",
+    "description": "A botanical scrapbook. Handwriting, a taped photograph and illustrated flower rows.",
     "packageId": "one-page",
-    "color": "#eee4f4",
+    "color": "#5a304b",
     "features": [
       "Collections",
       "Studio story",
@@ -207,6 +255,22 @@
       "phone": "",
       "address": "Amsterdam · example location",
       "bookingUrl": ""
+    },
+    "designReference": {
+      "name": "Petalon",
+      "url": "https://petalon.co.uk/",
+      "reviewedOn": "2026-10-01",
+      "layoutTraits": [
+        "Cream announcement strip and olive controls",
+        "Centered white identity over floral photography",
+        "Spacious collection grid with product enquiries"
+      ]
+    },
+    "designDirection": {
+      "summary": "Handmade botanical studio with blush paper, plum ink, a taped photograph and original line drawings.",
+      "typography": "Caveat handwritten display type with Courier New supporting notes.",
+      "contentLayout": "Loose scrapbook arrival, illustrated collection rows, a signed studio letter and a large handwritten invitation.",
+      "updatedOn": "2026-10-01"
     }
   },
   {
@@ -214,9 +278,9 @@
     "name": "Rove",
     "type": "Bike shops & repair",
     "tag": "FIX. RIDE. REPEAT.",
-    "description": "An angular workshop sheet with orange signals, diagonal imagery and clear service rows.",
+    "description": "A workshop board. Condensed capitals, charcoal, yellow signals and expandable service rows.",
     "packageId": "one-page",
-    "color": "#ff6938",
+    "color": "#e2f75b",
     "features": [
       "Services",
       "Workshop",
@@ -261,6 +325,22 @@
       "phone": "",
       "address": "Amsterdam · example location",
       "bookingUrl": ""
+    },
+    "designReference": {
+      "name": "tokyobike London",
+      "url": "https://tokyobike.co.uk/",
+      "reviewedOn": "2026-10-01",
+      "layoutTraits": [
+        "Grey announcement strip",
+        "Generous white navigation and full-width photography",
+        "Restrained sans-serif typography and simple service grid"
+      ]
+    },
+    "designDirection": {
+      "summary": "Industrial bike workshop with charcoal, high-visibility yellow, compressed capitals and hard straight rules.",
+      "typography": "Anton condensed display headings with Courier New technical labels and copy.",
+      "contentLayout": "Oversized typography beside a narrow monochrome workshop photo, native service accordions, a typographic manifesto and workshop data rows.",
+      "updatedOn": "2026-10-01"
     }
   }
 ]

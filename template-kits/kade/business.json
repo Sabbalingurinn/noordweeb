@@ -3,9 +3,9 @@
   "name": "Kade",
   "type": "Restaurants & bistros",
   "tag": "AN EVENING AT KADE",
-  "description": "A wine-dark bistro invitation framed by an arched photograph and a pared-back evening menu.",
+  "description": "A neighbourhood restaurant. Traditional serif type, a side rail and a typeset menu.",
   "packageId": "one-page",
-  "color": "#4b202b",
+  "color": "#913e2b",
   "features": [
     "Menu",
     "Your story",
@@ -50,6 +50,22 @@
     "phone": "",
     "address": "Amsterdam · example location",
     "bookingUrl": ""
+  },
+  "designReference": {
+    "name": "Bar Parry",
+    "url": "https://barparry.nl/site/",
+    "reviewedOn": "2026-10-01",
+    "layoutTraits": [
+      "Fixed cream navigation rail",
+      "Orange uppercase identity",
+      "Circular text over immersive restaurant photography"
+    ]
+  },
+  "designDirection": {
+    "summary": "Traditional Dutch bistro with warm cream, oxblood and a permanent navigation rail.",
+    "typography": "Georgia for traditional restaurant lettering; restrained Arial labels.",
+    "contentLayout": "Full-height restaurant arrival, centered à-la-carte menu, a single oxblood table invitation and simple opening hours.",
+    "updatedOn": "2026-10-01"
   },
   "demo": true
 }

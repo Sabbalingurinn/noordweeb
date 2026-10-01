@@ -1,9 +1,10 @@
-import { business, catalog, templates } from './data.js';
+import { business, catalog, templates } from './data.js?v=20261001distinct2';
 import { calculateQuote, formatMoney as money } from './quote.js';
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const menu = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('#mobile-nav');
+function closeMenu() { mobileNav.hidden = true; menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); }
 menu.addEventListener('click', () => {
   const open = menu.getAttribute('aria-expanded') !== 'true';
   menu.setAttribute('aria-expanded', String(open));
@@ -11,8 +12,9 @@ menu.addEventListener('click', () => {
   mobileNav.hidden = !open;
 });
 mobileNav.addEventListener('click', (event) => {
-  if (event.target.closest('a')) { mobileNav.hidden = true; menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); }
+  if (event.target.closest('a')) closeMenu();
 });
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); menu.focus(); } });
 document.querySelector('#year').textContent = new Date().getFullYear();
 document.querySelector('#hero-starting-price').textContent = money(catalog.packages.find(item => item.id === 'one-page').price);
 document.querySelectorAll('[data-company-line]').forEach(element => { element.textContent = `A project of ${business.legalName} · ${business.country}`; });
@@ -22,26 +24,10 @@ if (founders.length === 2) {
   document.querySelector('#founder-signature').textContent = founders.join(' & ');
 }
 
-function renderPreview(template) {
-  const image = `<img src="/assets/${template.id}.jpg" alt="" loading="lazy" width="1400" height="933">`;
-  const previews = {
-    kade: `<div class="kade-art"><div class="kade-art-copy"><span class="kade-art-brand">kade.</span><span class="kade-art-rule"></span><p>Good food.<br><em>Better company.</em></p><small>THE TABLE IS YOURS</small></div><div class="kade-art-photo">${image}</div></div>`,
-    crumb: `<div class="crumb-art"><span class="crumb-art-brand">crumb.</span><span class="crumb-art-sun" aria-hidden="true">✳</span><div class="crumb-art-photo">${image}</div><p>Good<br>mornings<br>start here.</p><small>BAKED FRESH · EVERY DAY</small></div>`,
-    still: `<div class="still-art"><div class="still-art-side"><span>STILL / A PLACE TO STAY</span><span>01 — 05</span></div><div class="still-art-photo">${image}</div><div class="still-art-copy"><span>THE ART OF ARRIVING</span><p>Somewhere<br><em>to slow down.</em></p><strong>still.</strong></div></div>`,
-    stem: `<div class="stem-art"><div class="stem-art-top"><span>stem.</span><small>FLOWERS & OTHER FEELINGS</small></div><div class="stem-art-photo">${image}</div><p>Flowers with<br><em>feeling.</em></p><span class="stem-art-sticker">A LITTLE<br>JOY, DAILY</span></div>`,
-    rove: `<div class="rove-art"><div class="rove-art-bar"><strong>ROVE.</strong><span>BIKES / REPAIRS / GOOD ADVICE</span></div><div class="rove-art-photo">${image}</div><div class="rove-art-copy"><span>FOR EVERY RIDER</span><p>Ride more.<br><em>Worry less.</em></p><strong>→</strong></div></div>`
-  };
-  return previews[template.id];
-}
-const designNotes = {
-  kade: 'A warm evening, seen through an archway.',
-  crumb: 'A bakery that feels like a bright little poster.',
-  still: 'Space to pause, with every detail in its place.',
-  stem: 'A flower study gathered into soft circles.',
-  rove: 'Sharp angles and straight answers for every rider.'
-};
 document.querySelector('#showroom-grid').innerHTML = templates.map((template, index) => {
-  return `<article class="showcase-item showcase-${template.id}"><a class="showcase-visual" href="/templates/${template.id}/" aria-label="Explore the ${escapeHtml(template.name)} ${escapeHtml(template.type.toLowerCase())} demo"><div class="showcase-art" aria-hidden="true">${renderPreview(template)}</div><span class="showcase-open">View demo <span aria-hidden="true">↗</span></span></a><div class="showcase-meta"><div class="showcase-heading"><span>0${index + 1} / ${escapeHtml(template.type)}</span><h3>${escapeHtml(template.name)}</h3></div><p>${designNotes[template.id]}</p><button class="showcase-choose" data-template="${template.id}" aria-label="Choose the ${escapeHtml(template.name)} design">Choose this direction <span aria-hidden="true">↗</span></button></div></article>`;
+  const title = escapeHtml(template.name);
+  const href = `/templates/${template.id}/`;
+  return `<article class="showcase-item showcase-${template.id}"><div class="showcase-title-line"><p>${String(index + 1).padStart(2, '0')} / ${escapeHtml(template.type)}</p><h3>${title}</h3></div><a class="showcase-visual" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Explore the ${title} ${escapeHtml(template.type.toLowerCase())} demo (opens in a new tab)"><img class="demo-preview" src="/assets/${template.id}-showcase.webp?v=20261001distinct2" alt="${title} website design preview" loading="lazy" width="980" height="620"></a><div class="showcase-meta"><p>${escapeHtml(template.description)}</p><div class="showcase-features">${template.features.map(feature => `<span>${escapeHtml(feature)}</span>`).join('')}</div><a class="showcase-demo-link" href="${href}" target="_blank" rel="noopener noreferrer">Open live demo ↗</a><button class="showcase-choose" data-template="${template.id}" aria-label="Choose the ${title} design">Choose ${title} ↗</button></div></article>`;
 }).join('');
 
 const packageOptions = document.querySelector('#package-options');
@@ -68,7 +54,8 @@ function updateQuote() {
   const templateNote = document.querySelector('#chosen-template');
   templateNote.hidden = !chosenTemplate;
   templateNote.innerHTML = chosenTemplate ? `Design direction: <strong>${chosenTemplate.name}</strong><button type="button" id="clear-template" aria-label="Remove ${chosenTemplate.name} design selection">×</button>` : '';
-  document.querySelector('#clear-template')?.addEventListener('click', () => { chosenTemplate = null; updateQuote(); });
+  document.querySelectorAll('[data-template]').forEach(button => { const selected = button.dataset.template === chosenTemplate?.id; button.setAttribute('aria-pressed', String(selected)); button.textContent = selected ? `${chosenTemplate.name} selected` : `Choose ${templates.find(item => item.id === button.dataset.template).name}`; });
+  document.querySelector('#clear-template')?.addEventListener('click', () => { chosenTemplate = null; updateQuote(); packageOptions.querySelector('input:checked').focus({ preventScroll: true }); });
   document.querySelectorAll('input[name="addon"]').forEach(input => {
     input.checked = selectedExtras.includes(input.value);
   });
@@ -88,7 +75,7 @@ document.querySelector('#addon-groups').addEventListener('change', event => {
 });
 document.querySelectorAll('[data-template]').forEach(button => button.addEventListener('click', () => {
   chosenTemplate = templates.find(item => item.id === button.dataset.template);
-  selectedPackage = chosenTemplate.packageId;
+  // Keep the visitor’s chosen website size and extras when changing design.
   updateQuote();
   document.querySelector('#configure').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   packageOptions.querySelector('input:checked').focus({ preventScroll: true });
@@ -99,7 +86,6 @@ const dialog = document.querySelector('#brief-dialog');
 const emailConfigured = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(business.contactEmail);
 let briefFileName = 'noordweeb-project-brief.txt';
 if (emailConfigured) {
-  document.querySelector('#brief-mode').textContent = 'Create your brief, then open it in your email app to send to ' + business.contactEmail + '. Nothing is sent automatically.';
   document.querySelector('#custom-price-mode').textContent = 'Review your request, then open it in your email app. Nothing is sent automatically.';
 }
 function showPreparedBrief({ text, title, subject, fileName, isPriceRequest = false }) {
@@ -108,7 +94,7 @@ function showPreparedBrief({ text, title, subject, fileName, isPriceRequest = fa
   document.querySelector('#brief-dialog-title').textContent = title;
   document.querySelector('#brief-output').textContent = text;
   document.querySelector('#copy-status').textContent = '';
-  document.querySelector('#download-brief').textContent = isPriceRequest ? 'Download request ↓' : 'Download brief ↓';
+  document.querySelector('#download-brief').textContent = isPriceRequest ? 'Download request' : 'Download brief';
   document.querySelector('#copy-brief').textContent = isPriceRequest ? 'Copy request' : 'Copy brief';
   const emailLink = document.querySelector('#email-brief');
   emailLink.hidden = !emailConfigured;
@@ -119,14 +105,6 @@ function showPreparedBrief({ text, title, subject, fileName, isPriceRequest = fa
   briefTrigger = document.activeElement;
   dialog.showModal();
 }
-document.querySelector('#brief-form').addEventListener('submit', event => {
-  event.preventDefault();
-  if (!event.currentTarget.reportValidity()) return;
-  const data = new FormData(event.currentTarget);
-  const { base, addons, totalCents } = currentQuote;
-  const text = ['NOORDWEEB — PROJECT BRIEF', new Date().toISOString().slice(0,10), '', `Name: ${data.get('name').trim()}`, `Business: ${data.get('business').trim()}`, `Email: ${data.get('email').trim()}`, '', `Design direction: ${chosenTemplate?.name || 'Let’s decide together'}`, `Website: ${base.name} (${base.scope}) — ${money(base.price)}`, ...addons.map(item => `Extra: ${item.name} — ${money(item.price)}\n  ${item.description}`), '', `ESTIMATED ONE-TIME BUILD: ${money(totalCents)}`, 'Excluding applicable VAT. Final scope, delivery and tax treatment are confirmed in a written quote. Standard terms: 30-day quote validity, 50% after acceptance, 50% at handover, and invoices due in 14 calendar days.', 'Includes two grouped revision rounds, launch help and website files. Client supplies approved content unless the relevant extra is selected.', 'Hosting, domain and third-party subscriptions are separate, in your own accounts. No maintenance subscription required. Later changes are quoted separately.', 'Simple business websites only: no shop, customer accounts, custom booking system, CMS or custom integrations.', '', 'ABOUT THE PROJECT', data.get('message').trim() || 'To discuss.', '', 'This brief is not an order and has not been submitted to NoordWeeb.'].join('\n');
-  showPreparedBrief({ text, title: 'Your brief is ready.', subject: 'Website brief — ' + data.get('business').trim(), fileName: 'noordweeb-project-brief.txt' });
-});
 document.querySelector('#custom-quote-form').addEventListener('submit', event => {
   event.preventDefault();
   if (!event.currentTarget.reportValidity()) return;

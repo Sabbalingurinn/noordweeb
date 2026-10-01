@@ -3,9 +3,9 @@
   "name": "Crumb",
   "type": "Cafés & bakeries",
   "tag": "THE GOOD STUFF",
-  "description": "A bright bakery poster with tilted photography, rounded counter cards and joyful colour.",
+  "description": "A bakery poster. Heavy lettering, butter yellow, red accents and a paper receipt.",
   "packageId": "one-page",
-  "color": "#89dce2",
+  "color": "#f8db55",
   "features": [
     "One-page",
     "Menu",
@@ -49,6 +49,22 @@
     "phone": "",
     "address": "Amsterdam · example location",
     "bookingUrl": ""
+  },
+  "designReference": {
+    "name": "Bread Ahead",
+    "url": "https://www.breadahead.com/",
+    "reviewedOn": "2026-10-01",
+    "layoutTraits": [
+      "White header with stacked green wordmark",
+      "Full-width pastry photograph and large serif heading",
+      "Overlapping cream introduction panel"
+    ]
+  },
+  "designDirection": {
+    "summary": "Expressive bakery poster with oversized block lettering, a curved pastry photograph, yellow paper and tomato red.",
+    "typography": "Dela Gothic One display headings, DM Sans supporting copy and Courier New receipt lettering.",
+    "contentLayout": "Poster composition, bold word ribbon, one continuous bakery receipt, oversized red story and a big come-by sign.",
+    "updatedOn": "2026-10-01"
   },
   "demo": true
 }

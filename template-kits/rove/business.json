@@ -3,9 +3,9 @@
   "name": "Rove",
   "type": "Bike shops & repair",
   "tag": "FIX. RIDE. REPEAT.",
-  "description": "An angular workshop sheet with orange signals, diagonal imagery and clear service rows.",
+  "description": "A workshop board. Condensed capitals, charcoal, yellow signals and expandable service rows.",
   "packageId": "one-page",
-  "color": "#ff6938",
+  "color": "#e2f75b",
   "features": [
     "Services",
     "Workshop",
@@ -50,6 +50,22 @@
     "phone": "",
     "address": "Amsterdam · example location",
     "bookingUrl": ""
+  },
+  "designReference": {
+    "name": "tokyobike London",
+    "url": "https://tokyobike.co.uk/",
+    "reviewedOn": "2026-10-01",
+    "layoutTraits": [
+      "Grey announcement strip",
+      "Generous white navigation and full-width photography",
+      "Restrained sans-serif typography and simple service grid"
+    ]
+  },
+  "designDirection": {
+    "summary": "Industrial bike workshop with charcoal, high-visibility yellow, compressed capitals and hard straight rules.",
+    "typography": "Anton condensed display headings with Courier New technical labels and copy.",
+    "contentLayout": "Oversized typography beside a narrow monochrome workshop photo, native service accordions, a typographic manifesto and workshop data rows.",
+    "updatedOn": "2026-10-01"
   },
   "demo": true
 }

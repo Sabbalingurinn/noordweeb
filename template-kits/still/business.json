@@ -3,9 +3,9 @@
   "name": "Still",
   "type": "Boutique stays",
   "tag": "ROOM TO BREATHE",
-  "description": "A quiet hotel editorial with generous space, right-aligned type and considered room details.",
+  "description": "A quiet hotel journal. Airy serif type, asymmetric photography and a room selector.",
   "packageId": "one-page",
-  "color": "#f7f4ed",
+  "color": "#52677c",
   "features": [
     "Rooms",
     "Your story",
@@ -45,6 +45,22 @@
     "phone": "",
     "address": "Amsterdam · example location",
     "bookingUrl": ""
+  },
+  "designReference": {
+    "name": "De Durgerdam",
+    "url": "https://www.dedurgerdam.com/",
+    "reviewedOn": "2026-10-01",
+    "layoutTraits": [
+      "Image-led full-height hero",
+      "Fine white header rule and menu toggle",
+      "Muted blue controls and centered serif typography"
+    ]
+  },
+  "designDirection": {
+    "summary": "Restrained hotel journal with bone paper, slate ink, generous empty space and fine rules.",
+    "typography": "Newsreader for airy editorial headings and copy; small Arial index labels.",
+    "contentLayout": "Asymmetric arrival spread, text-led hotel philosophy, one selected room at a time with accessible tabs, and a compact arrival directory.",
+    "updatedOn": "2026-10-01"
   },
   "demo": true
 }

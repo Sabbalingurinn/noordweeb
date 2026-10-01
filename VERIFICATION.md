@@ -44,3 +44,43 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Verified mobile navigation opens and closes on selection. A showroom selection carries into the estimate. A small site with copy help and the booking widget totals €2,050; the prepared brief includes the selected design and this total. The email draft points to `noordweeb@noordweeb.nl`. No message was sent.
 - Verified the custom price request remains separate from the standard estimate. The brief closes with Escape and restores focus. Every demo action opens its fictional-business explanation, restores focus on Escape, and returns its selected design to a €950 starting estimate. Still's additional room details expand correctly.
 - `npm run build` and `npm run check` pass, including pricing, escaping, contact safeguards, and 97 local references across 74 published files. Browser inspection artifacts are kept under ignored `output/playwright/`.
+
+## Rendering repairs — 1 October 2026
+
+- Restored a light hero heading on the navy background and reserved responsive space for the absolutely positioned desktop/mobile previews and their caption.
+- Replaced five missing `*-preview.jpg` references with the existing local `*-showcase.webp` assets. Screenshot cards now keep their natural proportions below a styled concept toolbar, without old decorative clipping.
+- Verified the homepage at 320px, 390px, 768px and 1440px without horizontal overflow; visually reviewed the hero and mobile showroom. Choosing and clearing Kade updates the estimator correctly. No console errors or warnings appeared during the checked flow.
+- `npm run build`, `npm run check` and `git diff --check` pass. Opened the local preview in Codex for owner review.
+
+## Owner review edits — 1 October 2026
+
+- Added a geometric N logo and matching favicon; unified studio and information-page typography under upright Manrope. Navy surfaces and blue accents replace the studio’s green and peach colors. The footer now has a direct email link.
+- Corrected Emil Daniel Welling in business data, visible text, the privacy source and owner handoff. Versioned browser data imports avoid retaining the old spelling from cache.
+- Removed the selected project-brief section, process-step grid and FAQ. Repointed project and estimate links to the remaining price-request form and removed JavaScript that depended on the deleted form.
+- Verified no broken hash links, no italic studio text, and no horizontal overflow at 320px, 390px, 768px and 1384px. The mobile menu closes after navigation. The remaining form prepares the request dialog and correct email recipient; no email was sent. No console errors or warnings were recorded.
+- Build, static checks, JavaScript syntax and whitespace checks pass. The updated local preview remains open for review.
+
+## Minimal logo and demo navigation — 1 October 2026
+
+- Reduced the logo to a bare monochrome N and quieter wordmark, using Attio’s simple symbol/wordmark composition as a visual reference. Updated header, footer, generated information pages and light/dark favicon.
+- The existing in-app review tabs timed out during browser control. The local demo server returned HTTP 200 in about 3 ms and Kade opened normally in a fresh tab. Changed hero and gallery demo links to open separate tabs, with accessible labels and `noopener noreferrer`, to keep the showroom available and avoid navigating the stalled review tab.
+- Clicked all five actual gallery links. Every demo reached `document.readyState === 'complete'` with a loaded hero image in roughly 280–335 ms during the checks. Left the refreshed homepage and Kade demo open for the owner.
+- Build, existing static checks, JavaScript syntax and whitespace checks pass. No Kade console errors or warnings appeared.
+
+## Business-site design references — 1 October 2026
+
+- Reviewed Bar Parry, Bread Ahead, De Durgerdam, Petalon and tokyobike London as matching references for Kade, Crumb, Still, Stem and Rove. Rebuilt all five layouts in the shared renderer and theme stylesheet while retaining the fictional businesses, existing local stock photographs and demo action boundaries.
+- Recorded the reference URLs, review date and observed design patterns in `content/templates.json`, README and every generated kit's replication brief. Regenerated standalone kits and ZIP archives.
+- Replaced all five showroom screenshots and the mobile Crumb hero preview with captures of the rebuilt pages. Updated descriptions, dimensions and cache versions. Corrected word spacing when a multiline headline becomes a single line.
+- Checked every demo at 320px, 390px, 768px and 1440px with no horizontal overflow or missing section anchors. Reviewed complete phone screenshots and desktop arrivals. All five action dialogs open, close and restore focus; Still's navigation expands, follows its room link and closes correctly. No console warnings or errors appeared in the checked flows.
+- Every demo's choose link returns its template query to the €950 estimator. Confirmed Rove's selected design in the visible estimate. All five refreshed gallery previews load. Left a fresh showroom tab and Kade demo open at the normal browser size for owner feedback.
+- `npm run build`, `npm run check`, JavaScript syntax and `git diff --check` pass. These changes are local; no hosted publication was performed in this task.
+
+## Independent layouts, typography and content presentation — 1 October 2026
+
+- Rebuilt the complete demo compositions after the owner rejected recurring cards, shapes and fonts. Kade uses a permanent rail, Georgia type and a centered à-la-carte menu; Crumb uses Dela Gothic One, a yellow/red bakery poster and one continuous receipt; Still uses Newsreader, an asymmetric journal spread and a room selector; Stem uses Caveat, a taped photograph, original flower drawings and illustrated collection rows; Rove uses Anton and Courier, a dark workshop board and native service accordions. Repeated product-card grids and alternating photo/copy sections were removed.
+- Replaced the shared rounded showroom screenshot frame with independent portfolio spreads. Regenerated all previews, including the mobile bakery preview, and refreshed cache URLs after capture so previously loaded pages cannot retain older previews. Every preview was confirmed loaded in the refreshed showroom.
+- Added licensed local Dela Gothic One, Caveat and Anton webfonts from Google Fonts. Used optimized Latin WOFF2 files (approximately 14 KB, 75 KB and 19 KB) rather than the original large TTF downloads. Updated kit assets, licences, replication briefs and current design directions; the earlier business-site references are retained as historical background.
+- Reviewed desktop arrivals and full phone pages for all five demos. Checked 320px, 390px, 768px and 1440px with no horizontal overflow or broken section anchors. Every page loads its intended heading family. The main showroom and estimate also fit 320px.
+- Verified Still's room selection by click and arrow keys, its navigation menu, and Rove's native service expansion. All five action dialogs close with Escape and restore focus. Every design's choose link returns the correct name to the €950 estimate. Showroom selection and removal work. No console errors or warnings appeared in the checked flows.
+- Rebuilt the five portable kits and archives. Build, source syntax, local-reference checks and whitespace checks pass. Left the refreshed showroom visible at the normal browser size for owner feedback. Changes remain local.
