@@ -1,6 +1,6 @@
 # NoordWeeb
 
-A small web studio with Icelandic roots. Two straightforward website sizes, four useful extras, and individually quoted changes after launch. The showroom lets customers explore five working design concepts before choosing.
+A small web studio with Icelandic roots. Two straightforward website sizes, four useful extras, and individually quoted changes after launch. The showroom lets customers explore five working design concepts in separate tabs before choosing.
 
 ## Open and edit
 
@@ -20,7 +20,7 @@ Open http://127.0.0.1:4173. The distributable website is `dist/`.
 | Two packages, four extras and service boundaries | `content/catalog.json` |
 | Demo content and design mappings | `content/templates.json` |
 | Landing page and styles | `dist/index.html`, `dist/styles.css` |
-| Configurator, navigation and brief | `dist/app.js`, `dist/quote.js` |
+| Configurator, navigation and price request | `dist/app.js`, `dist/quote.js` |
 | Generated browser data | `dist/data.js` — do not edit directly |
 | Demo renderer and styles | `scripts/render-template.mjs`, `scripts/template-styles.css` |
 | Generated demos | `dist/templates/{kade,crumb,still,stem,rove}/` |
@@ -44,10 +44,10 @@ No online shops, accounts, custom booking systems, CMS dashboards, apps or compl
 
 ## Behaviour
 
-- A warm studio introduction with live demo previews, an asymmetric portfolio and short design notes. The homepage pairs editorial serif details with clear product-style layouts. Includes mobile navigation, the coastal N mark and serif wordmark, pricing, studio story and FAQ.
-- Kade, Crumb, Still, Stem and Rove are fictional single-page demos with deliberately different visual systems. Kade uses a wine-dark arched photograph and a claret menu; Crumb is a turquoise bakery poster with tilted photography and rounded counter cards; Still is a quiet cream-and-navy hotel editorial with right-aligned type and fine rules; Stem pairs a circular flower specimen with lilac and green collection pills; and Rove uses a diagonal workshop photograph, orange signals and clear service rows. The homepage showroom uses five distinct editorial previews based on those visual systems rather than repeated screenshot cards. All start at €950; any design can be expanded under the five-page package. Demo actions do not make bookings.
+- A navy studio introduction with live demo previews, an asymmetric portfolio and short design notes. The studio uses upright Manrope typography, cool blue accents and a minimal monochrome N symbol and wordmark. Includes mobile navigation, pricing and the studio story. The owner removed the project-brief section, process-step grid and FAQ on 1 October 2026; the remaining price-request form handles enquiries.
+- The owner’s latest 1 October review requires five independent visual systems, not a shared content-card scaffold. Kade is a traditional Dutch bistro with Georgia type, a permanent navigation rail and a centered typeset menu. Crumb is a butter-yellow and tomato-red bakery poster, with Dela Gothic One display lettering, a curved pastry photo and one paper receipt. Still is an airy Newsreader hotel journal with an asymmetric arrival and an accessible room selector. Stem is a blush-and-plum botanical scrapbook with Caveat handwriting, a taped photograph, original flower drawings and illustrated collection rows. Rove is a charcoal workshop board with Anton condensed capitals, Courier labels, monochrome photography and native expandable service rows. Every design has its own section composition and content presentation. The earlier real-site references remain recorded in `content/templates.json` as background; the current `designDirection` and working files take precedence. The showroom uses distinct portfolio spreads and actual screenshots. All businesses remain fictional, all start at €950, and demo actions never make bookings.
 - Native package radios and four extra checkboxes share the same integer-cent calculator. Duplicate extras are never charged twice.
-- Form validation, local brief and custom price request previews, copy and text download. The configured `contactEmail` is `noordweeb@noordweeb.nl` and adds a mailto draft. The visitor reviews and sends it in their email app; there is no submission backend or automatic email delivery. Custom work receives a separate human-reviewed price.
+- Form validation, local custom price request previews, copy and text download. The configured `contactEmail` is `noordweeb@noordweeb.nl` and adds a mailto draft. The visitor reviews and sends it in their email app; there is no submission backend or automatic email delivery. Custom work receives a separate human-reviewed price.
 - Optional WebMCP tools read the catalogue/service policy and stage estimates without submitting orders.
 - No app analytics or tracking scripts; fonts and photos are served locally.
 - Privacy and working-together pages still identify the missing launch details.
@@ -65,4 +65,5 @@ The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgp
 - Florist: [Bohdan Stocek / Unsplash](https://unsplash.com/photos/flowers-on-display-in-a-bright-and-airy-flower-shop-r4f9Nai_ztM).
 - Bike workshop: [Bohdan Kadun / Unsplash](https://unsplash.com/photos/a-man-working-on-a-bicycle-in-a-garage-WIsOienEXBM).
 
-Photos were obtained under the [Unsplash License](https://unsplash.com/license). The scenes are stock photography, not actual NoordWeeb customers. Newsreader, DM Sans and Manrope are served locally with their SIL Open Font License files. The hand-drawn N mark keeps a restrained Nordic reference, with a small wave for the Icelandic coast. Its shape is original to NoordWeeb.
+Photos were obtained under the [Unsplash License](https://unsplash.com/license). The scenes are stock photography, not actual NoordWeeb customers. Newsreader, DM Sans, Manrope, Dela Gothic One, Caveat and Anton are served locally with their SIL Open Font License files. The minimal monochrome N mark is original to NoordWeeb. The studio uses Manrope; the five fictional demos use distinct type systems. New fonts come from the official [Google Fonts repository](https://github.com/google/fonts); optimized Latin WOFF2 files are served locally.
+# noordweeb
