@@ -9,7 +9,6 @@ The site remains a private preview. The owner supplied the enquiry email. The ow
 | Optional public phone / WhatsApp | Matching config fields; add visible contact links if wanted. |
 | Confirmed legal company details | Tæknistoð ehf. is the owner-supplied name. Add registered address, company registration number, VAT status/number and trading-name status. |
 | Purchase and verify noordweeb.nl | Once owned and connected, set `websiteUrl`, configure matching metadata, and test receipt from the published email address. |
-| Public language | Amsterdam hospitality and similar independent businesses are the initial market. Confirm English, Dutch or bilingual; translation requires updating actual page content. |
 | Production processor facts | The privacy page and retention policy are written. Confirm hosting, mail, database, backup expiry and any transfer terms before public launch; update the notice if services change. |
 
 Hosting, domains and booking providers are separate client costs in client-owned accounts. Initial launch help is included. There is no maintenance subscription. The detailed offer is in `OFFER_STRATEGY.md`.
@@ -33,7 +32,7 @@ Company registration number:
 VAT registration/status and confirmed treatment:
 Trading-name status:
 Planned domain: noordweeb.nl (purchase and verify before using as live URL)
-Language(s):
+Language(s): Dutch default, with English available through the NL/EN toggle (owner decided 1 October 2026)
 Customer market: Amsterdam restaurants and other independent businesses
 Project terms: content/project-terms.html
 Privacy policy: content/privacy.html

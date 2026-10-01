@@ -1,0 +1,77 @@
+{
+  "packages": [
+    {
+      "id": "one-page",
+      "name": "Eén sterke pagina",
+      "price": 95000,
+      "description": "Een heldere kennismaking met je bedrijf. Wat je doet, waarom dat ertoe doet en hoe mensen je bereiken.",
+      "scope": "1 pagina · maximaal 6 secties",
+      "delivery": "1–2 weken",
+      "includes": [
+        "Je eigen huisstijl, teksten en foto’s",
+        "Een doordachte indeling voor mobiel en computer",
+        "Links voor contact, route en bestaande boekingen",
+        "Je menukaart als pdf of maximaal 6 menu- of dienstenitems",
+        "Paginatitel, beschrijving en de basis voor vindbaarheid",
+        "Twee gebundelde feedbackrondes",
+        "Hulp bij de lancering en je websitebestanden"
+      ]
+    },
+    {
+      "id": "small-site",
+      "name": "Wat meer ruimte",
+      "price": 165000,
+      "description": "Een kleine website met aparte pagina’s voor je diensten, menu, verhaal of werk. Nog steeds eenvoudig in gebruik.",
+      "scope": "Maximaal 5 pagina’s",
+      "delivery": "2–3 weken",
+      "includes": [
+        "Alles uit Eén sterke pagina",
+        "Maximaal vijf pagina’s in één samenhangend ontwerp",
+        "Duidelijke navigatie tussen je pagina’s",
+        "Ruimte voor je menu, diensten of fotogalerij",
+        "Zoektitels en beschrijvingen voor elke pagina",
+        "Twee gebundelde feedbackrondes voor de hele website"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "copy",
+      "name": "Hulp met de teksten",
+      "price": 25000,
+      "description": "We maken van je aantekeningen maximaal 1.000 woorden voor de website. Inclusief één correctieronde."
+    },
+    {
+      "id": "menu",
+      "name": "Je menukaart online",
+      "price": 10000,
+      "description": "Voor langere lijsten: we zetten maximaal 30 aangeleverde menu- of prijslijstitems om in leesbare tekst. Zonder bestelsysteem."
+    },
+    {
+      "id": "language",
+      "name": "Een extra taal",
+      "price": 35000,
+      "description": "Een tweede versie van dezelfde pagina’s, met een taalkeuze. Jij levert de vertalingen aan."
+    },
+    {
+      "id": "booking-widget",
+      "name": "Je boekingstool op de pagina",
+      "price": 15000,
+      "description": "We plaatsen één ondersteunde widget van een bestaande aanbieder. Het account blijft van jou; abonnementskosten betaal je apart. Een eenvoudige boekingslink is al inbegrepen."
+    }
+  ],
+  "servicePolicy": {
+    "model": "Eenmalige websitebouw; latere wijzigingen worden vooraf apart geoffreerd.",
+    "included": "Aangeleverde links voor contact, telefoon, WhatsApp, route en bestaande boekingen zijn inbegrepen. Eén taal, aangeleverde teksten en afbeeldingen, lancering op één afgesproken geschikte host en websitebestanden zijn inbegrepen. Een aangeleverde menukaart als pdf of maximaal zes korte menu-, diensten- of kameritems zijn inbegrepen; de menu-extra is voor langere lijsten tot 30 items.",
+    "excluded": [
+      "Webshops of betalingen op de website",
+      "Klantaccounts of ledenomgevingen",
+      "Boekingssystemen op maat",
+      "Dashboards, apps of koppelingen op maat",
+      "Contentmanagementsystemen of doorlopend invoeren van inhoud"
+    ],
+    "providerCosts": "Hosting, domeinregistratie en diensten van derden worden apart door de klant betaald. Accounts blijven op naam van de klant. Geen verplicht onderhoudsabonnement.",
+    "aftercare": "Nieuwe wijzigingen worden vooraf geoffreerd. Fouten in het afgesproken geleverde werk worden beoordeeld op basis van de oorspronkelijke afspraak en niet automatisch als nieuw werk verkocht.",
+    "scope": "Maximaal vijf oorspronkelijke pagina’s, plus hun vertaalde versies als de taal-extra is gekozen. Geen onbeperkt ontwikkeltraject op maat."
+  }
+}

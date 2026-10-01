@@ -6,4 +6,4 @@ export function calculateQuote(catalog, packageId, addonIds = []) {
   const selected = catalog.addons.filter(item => unique.includes(item.id));
   return { packageId, base, addons: selected, addonIds: selected.map(item => item.id), totalCents: base.price + selected.reduce((sum, item) => sum + item.price, 0) };
 }
-export function formatMoney(cents) { return new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(cents / 100); }
+export function formatMoney(cents, language = 'nl') { return new Intl.NumberFormat(language === 'en' ? 'en-IE' : 'nl-NL', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(cents / 100); }

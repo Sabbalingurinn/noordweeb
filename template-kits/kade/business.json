@@ -67,5 +67,53 @@
     "contentLayout": "Full-height restaurant arrival, centered à-la-carte menu, a single oxblood table invitation and simple opening hours.",
     "updatedOn": "2026-10-01"
   },
-  "demo": true
+  "demo": true,
+  "defaultLanguage": "nl",
+  "translations": {
+    "nl": {
+      "type": "Restaurants & bistro’s",
+      "tag": "EEN AVOND BIJ KADE",
+      "description": "Een buurtrestaurant. Klassieke letters, een zijmenu en een zorgvuldig opgemaakte menukaart.",
+      "features": [
+        "Menukaart",
+        "Je verhaal",
+        "Reserveringslink"
+      ],
+      "business": {
+        "eyebrow": "IETS LANGZAMER. IETS DICHTERBIJ.",
+        "headline": "Lekker eten.<br>Goed gezelschap.",
+        "intro": "Een tafel in de buurt voor lange lunches, late gesprekken en alles wat het seizoen brengt.",
+        "storyTitle": "Een plek om samen te komen.",
+        "story": "De beste avonden hebben zelden een plan nodig. Alleen een warm welkom, iets lekkers op je bord en mensen met wie je nog even wilt blijven zitten.",
+        "menu": [
+          {
+            "name": "Burrata & nazomertomaten",
+            "description": "Basilicumolie, geroosterd zuurdesembrood",
+            "price": "€14"
+          },
+          {
+            "name": "Vis van de markt",
+            "description": "Seizoensgroenten, citroenboter",
+            "price": "€26"
+          },
+          {
+            "name": "Geroosterde bloemkool",
+            "description": "Wittebonenpuree, kruidendressing",
+            "price": "€21"
+          },
+          {
+            "name": "Chocolade & zeezout",
+            "description": "Pure chocolademousse, olijfolie",
+            "price": "€9"
+          }
+        ],
+        "hours": [
+          "Woensdag–donderdag · 17:00–22:00",
+          "Vrijdag–zaterdag · 12:00–23:00",
+          "Zondag · 12:00–21:00"
+        ],
+        "address": "Amsterdam · voorbeeldlocatie"
+      }
+    }
+  }
 }

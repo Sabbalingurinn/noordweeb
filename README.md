@@ -19,6 +19,9 @@ Open http://127.0.0.1:4173. The distributable website is `dist/`.
 | Business details and enquiry destination | `content/business.json` |
 | Two packages, four extras and service boundaries | `content/catalog.json` |
 | Demo content and design mappings | `content/templates.json` |
+| Dutch catalogue and demo copy | `content/catalog.nl.json`, `content/templates.nl.json` |
+| Shared Dutch and English interface text | `content/ui.json` |
+| Language switch and stored preference | `dist/language.js` |
 | Landing page and styles | `dist/index.html`, `dist/styles.css` |
 | Configurator, navigation and price request | `dist/app.js`, `dist/quote.js` |
 | Generated browser data | `dist/data.js` — do not edit directly |
@@ -44,6 +47,7 @@ No online shops, accounts, custom booking systems, CMS dashboards, apps or compl
 
 ## Behaviour
 
+- Dutch is the first-visit default. The visible NL/EN buttons switch the homepage, all five demos and information pages, including titles, descriptions, labels, price formatting and prepared email requests. The language choice is remembered locally and carried in internal links. Switching preserves the chosen design, package, extras, form entries, Still’s room selection and Rove’s open service rows. Only the language preference is stored; personal form data is not. Static HTML is Dutch before JavaScript runs. Edit paired `data-nl` / `data-en` copy in `dist/index.html`; generated pages use the content translation sources. The Dutch preview images are actual browser captures; English uses the existing English captures.
 - A navy studio introduction with live demo previews, an asymmetric portfolio and short design notes. The studio uses upright Manrope typography, cool blue accents and a minimal monochrome N symbol and wordmark. Includes mobile navigation, pricing and the studio story. The owner removed the project-brief section, process-step grid and FAQ on 1 October 2026; the remaining price-request form handles enquiries.
 - The owner’s latest 1 October review requires five independent visual systems, not a shared content-card scaffold. Kade is a traditional Dutch bistro with Georgia type, a permanent navigation rail and a centered typeset menu. Crumb is a butter-yellow and tomato-red bakery poster, with Dela Gothic One display lettering, a curved pastry photo and one paper receipt. Still is an airy Newsreader hotel journal with an asymmetric arrival and an accessible room selector. Stem is a blush-and-plum botanical scrapbook with Caveat handwriting, a taped photograph, original flower drawings and illustrated collection rows. Rove is a charcoal workshop board with Anton condensed capitals, Courier labels, monochrome photography and native expandable service rows. Every design has its own section composition and content presentation. The earlier real-site references remain recorded in `content/templates.json` as background; the current `designDirection` and working files take precedence. The showroom uses distinct portfolio spreads and actual screenshots. All businesses remain fictional, all start at €950, and demo actions never make bookings.
 - Native package radios and four extra checkboxes share the same integer-cent calculator. Duplicate extras are never charged twice.

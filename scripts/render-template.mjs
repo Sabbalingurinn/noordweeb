@@ -1,3 +1,6 @@
+import { localizeHtml, languageSwitch } from './i18n.mjs';
+import { templateCopy } from './template-copy.mjs';
+
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const lines = value => esc(value).replaceAll('&lt;br&gt;', '<br>');
 const safeUrl = value => { try { const url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch { return ''; } };
@@ -58,17 +61,39 @@ export function renderTemplate(config) {
     <section id="story" class="rove-manifesto"><p>02 / THE WORKSHOP</p><h2>${lines(b.storyTitle)}</h2><div><span>FIX.<br>RIDE.<br>REPEAT.</span><p>${esc(b.story)}</p></div></section>
     <section id="visit" class="rove-visit"><header><p>03 / DROP BY</p><h2>Bring your bike.</h2></header><div class="rove-visit-data"><div><h3>WORKSHOP HOURS</h3>${hours}</div><div><h3>LOCATION</h3>${location}${contact}${action('rove-button','Get in touch ↗')}</div></div></section></main>`;
   }
-  const showroom = demo?`<div class="showroom-bar"><a href="/#showroom">← Back to NoordWeeb</a><span>${esc(config.name)} · Fictional demo</span><a class="choose-design" href="/?template=${id}#configure">Choose this design ↗</a></div>`:'';
+  const bilingual = Boolean(config.translations?.nl);
+  const showroom = demo?`<div class="showroom-bar"><a href="/#showroom">← Back to NoordWeeb</a><span>${esc(config.name)} · Fictional demo</span>${bilingual ? languageSwitch() : ''}<a class="choose-design" href="/?template=${id}#configure">Choose this design ↗</a></div>`:bilingual ? `<div class="customer-language">${languageSwitch()}</div>` : '';
   const dialog = demo?`<dialog class="demo-dialog" aria-labelledby="demo-dialog-title"><button type="button" class="close-demo" aria-label="Close demo message">×</button><p class="dialog-label">NOORDWEEB / DESIGN PREVIEW</p><h2 id="demo-dialog-title">Picture your business here.</h2><p>This is a fictional ${subjects[id]} demo. No booking, order or enquiry is made. For your website, we connect the real contact or booking route agreed in your quote.</p><a class="dialog-action" href="/?template=${id}#configure">Choose the ${esc(config.name)} design</a></dialog>`:'';
   const interactions = `<script>
 const roomTabs=[...document.querySelectorAll('[data-room-tab]')];
 const selectRoom=tab=>{roomTabs.forEach(item=>{const selected=item===tab;item.setAttribute('aria-selected',String(selected));item.tabIndex=selected?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!selected})};
 roomTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectRoom(tab));tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%roomTabs.length;if(event.key==='ArrowLeft')next=(index+roomTabs.length-1)%roomTabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=roomTabs.length-1;if(next!==undefined){event.preventDefault();selectRoom(roomTabs[next]);roomTabs[next].focus()}})});
 const toggle=document.querySelector('[data-menu-toggle]');
-if(toggle){const nav=document.getElementById(toggle.getAttribute('aria-controls'));const close=()=>{nav.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation')};toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';nav.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav.addEventListener('click',event=>{if(event.target.closest('a'))close()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!nav.hidden){close();toggle.focus()}})}
+if(toggle){const nav=document.getElementById(toggle.getAttribute('aria-controls'));const close=()=>{nav.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label',document.documentElement.lang==='nl'?'Navigatie openen':'Open navigation')};toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';nav.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',document.documentElement.lang==='nl'?(open?'Navigatie sluiten':'Navigatie openen'):(open?'Close navigation':'Open navigation'))});nav.addEventListener('click',event=>{if(event.target.closest('a'))close()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!nav.hidden){close();toggle.focus()}})}
 const dialog=document.querySelector('.demo-dialog');
 if(dialog){let opener;document.querySelectorAll('[data-demo-action]').forEach(button=>button.addEventListener('click',()=>{opener=button;dialog.showModal()}));document.querySelector('.close-demo').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>opener?.focus());dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()}})}
 </script>`;
   const colors={kade:'#f4f0e6',crumb:'#f8db55',still:'#ecece6',stem:'#f4e4e6',rove:'#171a18'};
-  return `<!doctype html><html lang="${esc(b.language || 'en')}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(b.name)} — ${esc(config.type)}${demo?' | NoordWeeb demo':''}</title><meta name="description" content="${esc(b.intro)}">${demo?'<meta name="robots" content="noindex,follow">':''}<meta name="theme-color" content="${colors[id]}"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23${colors[id].slice(1)}'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Georgia' font-size='28' fill='%23${id==='rove'?'e2f75b':'252b26'}'%3E${id[0]}%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="./styles.css?v=20261001distinct2"></head><body class="theme-${id}${demo?' is-demo':''}"><a class="skip-link" href="#main">Skip to content</a>${showroom}${body}${footer}${dialog}${interactions}</body></html>`;
+  const html = `<!doctype html><html lang="${esc(b.language || 'en')}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(b.name)} — ${esc(config.type)}${demo?' | NoordWeeb demo':''}</title><meta name="description" content="${esc(b.intro)}">${demo?'<meta name="robots" content="noindex,follow">':''}<meta name="theme-color" content="${colors[id]}"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23${colors[id].slice(1)}'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Georgia' font-size='28' fill='%23${id==='rove'?'e2f75b':'252b26'}'%3E${id[0]}%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="./styles.css?v=20261001languages"></head><body class="theme-${id}${demo?' is-demo':''}"><a class="skip-link" href="#main">Skip to content</a>${showroom}${body}${footer}${dialog}${interactions}${bilingual ? '<script type="module" src="./language.js"></script>' : ''}</body></html>`;
+  if (!bilingual) return html;
+  const nl = config.translations.nl;
+  const pairs = { ...templateCopy };
+  const collect = (en, translated) => {
+    if (typeof en === 'string' && typeof translated === 'string') pairs[lines(en)] = lines(translated);
+    else if (en && translated && typeof translated === 'object') for (const key of Object.keys(translated)) collect(en[key], translated[key]);
+  };
+  collect(config, nl);
+  pairs[`${esc(b.name)} home`] = `${esc(b.name)} startpagina`;
+  pairs[`${esc(config.name)} · Fictional demo`] = `${esc(config.name)} · Fictieve demo`;
+  pairs[`Choose the ${esc(config.name)} design`] = `Kies het ${esc(config.name)}-ontwerp`;
+  pairs[`${esc(b.name)} — ${esc(config.type)}${demo ? ' | NoordWeeb demo' : ''}`] = `${esc(b.name)} — ${esc(nl.type || config.type)}${demo ? ' | NoordWeeb demo' : ''}`;
+  const dutchSubjects = {kade:'restaurant',crumb:'bakkerij',still:'hotel',stem:'bloemenatelier',rove:'fietswerkplaats'};
+  pairs[`This is a fictional ${subjects[id]} demo. No booking, order or enquiry is made. For your website, we connect the real contact or booking route agreed in your quote.`] = `Dit is een fictieve demo van een ${dutchSubjects[id]}. Er wordt geen boeking, bestelling of aanvraag gedaan. Voor jouw website sluiten we de echte contact- of boekingsroute aan die we in je offerte afspreken.`;
+  pairs[`A little calm, in ${esc(b.location)}.`] = `Een beetje rust, in ${esc(b.location)}.`;
+  pairs[`with love, ${esc(b.name)}`] = `liefs, ${esc(b.name)}`;
+  b.menu.forEach((item, i) => {
+    pairs[`<span>0${i + 1}</span>${esc(item.name)}`] = `<span>0${i + 1}</span>${esc(nl.business.menu[i].name)}`;
+    pairs[`YOUR OWN LITTLE CORNER · ${esc(item.price)}`] = `JE EIGEN PLEKJE · ${esc(nl.business.menu[i].price)}`;
+  });
+  return localizeHtml(html, pairs, config.defaultLanguage || 'nl');
 }

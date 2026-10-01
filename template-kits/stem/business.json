@@ -67,5 +67,53 @@
     "contentLayout": "Loose scrapbook arrival, illustrated collection rows, a signed studio letter and a large handwritten invitation.",
     "updatedOn": "2026-10-01"
   },
-  "demo": true
+  "demo": true,
+  "defaultLanguage": "nl",
+  "translations": {
+    "nl": {
+      "type": "Bloemisten & makers",
+      "tag": "VELDNOTITIES",
+      "description": "Een botanisch plakboek. Handschrift, een opgeplakte foto en geïllustreerde bloemenrijen.",
+      "features": [
+        "Collecties",
+        "Het atelier",
+        "Contactlink"
+      ],
+      "business": {
+        "eyebrow": "EEN BEETJE KLEUR VOOR ELKE DAG",
+        "headline": "Bloemen met<br>gevoel.",
+        "intro": "Losse, mooie bloemen voor verjaardagen, bedankjes en dinsdagen die wat kleur kunnen gebruiken.",
+        "storyTitle": "Niet te perfect.<br>Precies goed.",
+        "story": "We volgen het seizoen en laten de bloemen hun gang gaan. Elke bos wordt met de hand samengesteld, met een kleine verrassing en volop karakter.",
+        "menu": [
+          {
+            "name": "Marktboeket",
+            "description": "Een vrolijke handvol seizoensbloemen",
+            "price": "vanaf €18"
+          },
+          {
+            "name": "Het grote gebaar",
+            "description": "Een royaal, los geschikt boeket",
+            "price": "vanaf €42"
+          },
+          {
+            "name": "Bloemen voor op tafel",
+            "description": "Kleine bloemstukken voor samenzijn",
+            "price": "vanaf €34"
+          },
+          {
+            "name": "Iets bijzonders",
+            "description": "Vertel ons de gelegenheid; wij maken het persoonlijk",
+            "price": "Vraag het ons"
+          }
+        ],
+        "hours": [
+          "Dinsdag–vrijdag · 10:00–18:00",
+          "Zaterdag · 09:00–17:00",
+          "Zondag–maandag · gesloten"
+        ],
+        "address": "Amsterdam · voorbeeldlocatie"
+      }
+    }
+  }
 }

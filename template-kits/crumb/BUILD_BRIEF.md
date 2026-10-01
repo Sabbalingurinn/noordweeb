@@ -13,7 +13,7 @@ Ask for the business name, approved logo/brand colours, audience, language, real
 ## Implementation
 
 1. Duplicate this whole folder into the customer project. Preserve the original kit.
-2. Edit business.json. Keep id set to crumb; it selects the established layout. name is the internal design name. All customer content goes inside business. Only the literal <br> tag is allowed in headline/storyTitle; other HTML is escaped.
+2. Edit business.json. Keep id set to crumb; it selects the established layout. name is the internal design name. English customer content goes inside business; the Dutch equivalent goes inside translations.nl.business. Update both versions when adapting a bilingual site. Set defaultLanguage to nl or en. For a single English site, remove translations; for a single Dutch site, remove translations and replace business and the interface copy with approved Dutch content. Only the literal <br> tag is allowed in headline/storyTitle; other HTML is escaped.
 3. Replace hero.jpg with an authorised image; preserve a suitable crop. Update alt text in render-template.mjs if the image subject changes. Keep CREDITS.md current.
 4. Keep demo true during sales review. When the customer has approved real details, set demo to false. Supply a real address and email or phone. Set bookingUrl to an existing HTTPS booking service if supplied. A simple link is included in either package; the €150 widget extra covers one supported embed only, never a custom booking system.
 5. Run node generate.mjs with Node 20 or newer. Preview using python3 -m http.server 4190. No package installation or framework is required.

@@ -1,0 +1,106 @@
+{
+  "kade": {
+    "type": "Restaurants & bistro’s",
+    "tag": "EEN AVOND BIJ KADE",
+    "description": "Een buurtrestaurant. Klassieke letters, een zijmenu en een zorgvuldig opgemaakte menukaart.",
+    "features": ["Menukaart", "Je verhaal", "Reserveringslink"],
+    "business": {
+      "eyebrow": "IETS LANGZAMER. IETS DICHTERBIJ.",
+      "headline": "Lekker eten.<br>Goed gezelschap.",
+      "intro": "Een tafel in de buurt voor lange lunches, late gesprekken en alles wat het seizoen brengt.",
+      "storyTitle": "Een plek om samen te komen.",
+      "story": "De beste avonden hebben zelden een plan nodig. Alleen een warm welkom, iets lekkers op je bord en mensen met wie je nog even wilt blijven zitten.",
+      "menu": [
+        {"name": "Burrata & nazomertomaten", "description": "Basilicumolie, geroosterd zuurdesembrood", "price": "€14"},
+        {"name": "Vis van de markt", "description": "Seizoensgroenten, citroenboter", "price": "€26"},
+        {"name": "Geroosterde bloemkool", "description": "Wittebonenpuree, kruidendressing", "price": "€21"},
+        {"name": "Chocolade & zeezout", "description": "Pure chocolademousse, olijfolie", "price": "€9"}
+      ],
+      "hours": ["Woensdag–donderdag · 17:00–22:00", "Vrijdag–zaterdag · 12:00–23:00", "Zondag · 12:00–21:00"],
+      "address": "Amsterdam · voorbeeldlocatie"
+    }
+  },
+  "crumb": {
+    "type": "Cafés & bakkerijen",
+    "tag": "AL HET LEKKERS",
+    "description": "Een bakkerijposter. Stevige letters, botergeel, rode accenten en een papieren kassabon.",
+    "features": ["Eén pagina", "Menukaart", "Openingstijden"],
+    "business": {
+      "eyebrow": "VERS UIT DE OVEN. ELKE OCHTEND.",
+      "headline": "Een goede morgen<br>begint hier.",
+      "intro": "Deeg dat de tijd krijgt. Goede koffie. Iets lekkers waar je graag voor opstaat.",
+      "storyTitle": "Rustig gemaakt.<br>Vóór de lunch op.",
+      "story": "Een fijne buurt draait op goede koffie en vertrouwde gezichten. Daarom staan we vroeg op om boter te vouwen, deeg te vormen en de eerste koffie te zetten. Kom zoals je bent.",
+      "menu": [
+        {"name": "De botercroissant", "description": "Luchtig, goudbruin en elke dag vers", "price": "€3,80"},
+        {"name": "Kaneelbroodje", "description": "Zacht vanbinnen, knapperige suikerrand", "price": "€4,20"},
+        {"name": "Zuurdesemtoast", "description": "Ambachtelijke boter & seizoensjam", "price": "€6,50"},
+        {"name": "Flat white", "description": "Dubbele espresso, zijdezachte melk", "price": "€3,90"}
+      ],
+      "hours": ["Maandag–vrijdag · 07:30–16:00", "Zaterdag–zondag · 08:30–16:00"],
+      "address": "Amsterdam · voorbeeldlocatie"
+    }
+  },
+  "still": {
+    "type": "Kleinschalige hotels",
+    "tag": "RUIMTE OM ADEM TE HALEN",
+    "description": "Een rustig hoteldagboek. Luchtige letters, asymmetrische fotografie en een kamerkeuze.",
+    "features": ["Kamers", "Je verhaal", "Boekingslink"],
+    "business": {
+      "eyebrow": "BLIJF EVEN. VOEL JE THUIS.",
+      "headline": "Een plek<br>om te vertragen.",
+      "intro": "Kamers met aandacht. Ochtenden zonder haast. Een klein verblijf in de stad dat helemaal van jou voelt.",
+      "storyTitle": "Minder haast.<br>Meer ruimte.",
+      "story": "Een fijn verblijf gaat om het gevoel dat je eraan overhoudt. Natuurlijke materialen, rustige hoekjes en een team dat tijd voor je heeft. Ga de stad in en kom daarna thuis in de rust.",
+      "menu": [
+        {"name": "De knusse kamer", "description": "Een rustige plek voor twee · queensize bed", "price": "18 m²"},
+        {"name": "De tuinkamer", "description": "Groen uitzicht & wat extra ruimte", "price": "25 m²"},
+        {"name": "De loft", "description": "Ruimte om te blijven · kingsize bed", "price": "35 m²"}
+      ],
+      "hours": ["Inchecken vanaf 15:00", "Uitchecken vóór 11:00", "Receptie · 07:00–23:00"],
+      "address": "Amsterdam · voorbeeldlocatie"
+    }
+  },
+  "stem": {
+    "type": "Bloemisten & makers",
+    "tag": "VELDNOTITIES",
+    "description": "Een botanisch plakboek. Handschrift, een opgeplakte foto en geïllustreerde bloemenrijen.",
+    "features": ["Collecties", "Het atelier", "Contactlink"],
+    "business": {
+      "eyebrow": "EEN BEETJE KLEUR VOOR ELKE DAG",
+      "headline": "Bloemen met<br>gevoel.",
+      "intro": "Losse, mooie bloemen voor verjaardagen, bedankjes en dinsdagen die wat kleur kunnen gebruiken.",
+      "storyTitle": "Niet te perfect.<br>Precies goed.",
+      "story": "We volgen het seizoen en laten de bloemen hun gang gaan. Elke bos wordt met de hand samengesteld, met een kleine verrassing en volop karakter.",
+      "menu": [
+        {"name": "Marktboeket", "description": "Een vrolijke handvol seizoensbloemen", "price": "vanaf €18"},
+        {"name": "Het grote gebaar", "description": "Een royaal, los geschikt boeket", "price": "vanaf €42"},
+        {"name": "Bloemen voor op tafel", "description": "Kleine bloemstukken voor samenzijn", "price": "vanaf €34"},
+        {"name": "Iets bijzonders", "description": "Vertel ons de gelegenheid; wij maken het persoonlijk", "price": "Vraag het ons"}
+      ],
+      "hours": ["Dinsdag–vrijdag · 10:00–18:00", "Zaterdag · 09:00–17:00", "Zondag–maandag · gesloten"],
+      "address": "Amsterdam · voorbeeldlocatie"
+    }
+  },
+  "rove": {
+    "type": "Fietswinkels & reparatie",
+    "tag": "MAAK. RIJD. HERHAAL.",
+    "description": "Een werkplaatsbord. Smalle hoofdletters, antraciet, gele accenten en uitklapbare diensten.",
+    "features": ["Diensten", "Werkplaats", "Contactlink"],
+    "business": {
+      "eyebrow": "DE FIETSWERKPLAATS IN JE BUURT",
+      "headline": "Meer fietsen.<br>Minder zorgen.",
+      "intro": "Snelle reparaties, een grondige onderhoudsbeurt en duidelijke antwoorden. Zodat je weer kunt doen waar het om gaat: fietsen.",
+      "storyTitle": "Klaar voor de lange weg naar huis.",
+      "story": "Van je dagelijkse stadsfiets tot de fiets voor je zondagse rondje: we behandelen elke fiets met aandacht. Kom langs, vertel wat er mis is en we bespreken de reparatie voordat we beginnen.",
+      "menu": [
+        {"name": "Veiligheidscheck", "description": "Remmen, banden, verlichting en een algemene controle", "price": "€25"},
+        {"name": "Onderhoudsbeurt", "description": "De basis, gecontroleerd en afgesteld", "price": "vanaf €65"},
+        {"name": "Remmen & versnellingen", "description": "Goed remmen en soepel schakelen", "price": "vanaf €35"},
+        {"name": "Wiel richten", "description": "De slag uit je wiel", "price": "vanaf €30"}
+      ],
+      "hours": ["Dinsdag–vrijdag · 09:00–18:00", "Zaterdag · 10:00–16:00", "Zondag–maandag · gesloten"],
+      "address": "Amsterdam · voorbeeldlocatie"
+    }
+  }
+}

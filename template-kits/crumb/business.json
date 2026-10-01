@@ -66,5 +66,52 @@
     "contentLayout": "Poster composition, bold word ribbon, one continuous bakery receipt, oversized red story and a big come-by sign.",
     "updatedOn": "2026-10-01"
   },
-  "demo": true
+  "demo": true,
+  "defaultLanguage": "nl",
+  "translations": {
+    "nl": {
+      "type": "Cafés & bakkerijen",
+      "tag": "AL HET LEKKERS",
+      "description": "Een bakkerijposter. Stevige letters, botergeel, rode accenten en een papieren kassabon.",
+      "features": [
+        "Eén pagina",
+        "Menukaart",
+        "Openingstijden"
+      ],
+      "business": {
+        "eyebrow": "VERS UIT DE OVEN. ELKE OCHTEND.",
+        "headline": "Een goede morgen<br>begint hier.",
+        "intro": "Deeg dat de tijd krijgt. Goede koffie. Iets lekkers waar je graag voor opstaat.",
+        "storyTitle": "Rustig gemaakt.<br>Vóór de lunch op.",
+        "story": "Een fijne buurt draait op goede koffie en vertrouwde gezichten. Daarom staan we vroeg op om boter te vouwen, deeg te vormen en de eerste koffie te zetten. Kom zoals je bent.",
+        "menu": [
+          {
+            "name": "De botercroissant",
+            "description": "Luchtig, goudbruin en elke dag vers",
+            "price": "€3,80"
+          },
+          {
+            "name": "Kaneelbroodje",
+            "description": "Zacht vanbinnen, knapperige suikerrand",
+            "price": "€4,20"
+          },
+          {
+            "name": "Zuurdesemtoast",
+            "description": "Ambachtelijke boter & seizoensjam",
+            "price": "€6,50"
+          },
+          {
+            "name": "Flat white",
+            "description": "Dubbele espresso, zijdezachte melk",
+            "price": "€3,90"
+          }
+        ],
+        "hours": [
+          "Maandag–vrijdag · 07:30–16:00",
+          "Zaterdag–zondag · 08:30–16:00"
+        ],
+        "address": "Amsterdam · voorbeeldlocatie"
+      }
+    }
+  }
 }

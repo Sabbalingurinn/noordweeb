@@ -7,6 +7,7 @@ import { renderTemplate } from './render-template.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const catalog=JSON.parse(readFileSync(resolve(root,'content/catalog.json'),'utf8'));
 const templates=JSON.parse(readFileSync(resolve(root,'content/templates.json'),'utf8'));
+const translations=JSON.parse(readFileSync(resolve(root,'content/templates.nl.json'),'utf8'));
 assert.equal(calculateQuote(catalog,'one-page',[]).totalCents,95000);
 assert.equal(calculateQuote(catalog,'small-site',['copy','booking-widget']).totalCents,205000);
 assert.equal(calculateQuote(catalog,'one-page',['copy','menu','language','booking-widget']).totalCents,180000);
@@ -21,9 +22,17 @@ for(const template of templates){
   assert(catalog.packages.some(item=>item.id===template.packageId),'Each demo must map to an available package');
   const malicious=structuredClone(template); malicious.business.name='<script>alert(1)</script>';
   assert(!renderTemplate(malicious).includes('<script>alert(1)</script>'),'Customer content must be escaped');
+  const localized=renderTemplate({...malicious,translations:{nl:translations[template.id]}});
+  assert(!localized.includes('<script>alert(1)</script>'),'Localization must keep customer content escaped');
   assert.throws(()=>renderTemplate({...template,demo:false}),'Do not silently launch with no contact route');
   const output=readFileSync(resolve(root,`dist/templates/${template.id}/index.html`),'utf8');
   assert(output.includes('Fictional demo'));
+  assert(output.includes('<html lang="nl">') && output.includes('Fictieve demo'),'Demos must have a Dutch static default');
+  assert(output.includes('data-language="en"'),'Every demo needs the English switch');
+}
+for (const page of ['index.html','privacy/index.html','project-terms/index.html','404.html']) {
+  const output=readFileSync(resolve(root,'dist',page),'utf8');
+  assert(output.includes('<html lang="nl">') && output.includes('data-language="en"'),`${page} needs a Dutch default and an English switch`);
 }
 const files=[];const walk=path=>{for(const entry of readdirSync(path,{withFileTypes:true})){const full=join(path,entry.name);entry.isDirectory()?walk(full):files.push(full)}};walk(resolve(root,'dist'));
 let references=0;

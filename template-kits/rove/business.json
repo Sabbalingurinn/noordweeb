@@ -67,5 +67,53 @@
     "contentLayout": "Oversized typography beside a narrow monochrome workshop photo, native service accordions, a typographic manifesto and workshop data rows.",
     "updatedOn": "2026-10-01"
   },
-  "demo": true
+  "demo": true,
+  "defaultLanguage": "nl",
+  "translations": {
+    "nl": {
+      "type": "Fietswinkels & reparatie",
+      "tag": "MAAK. RIJD. HERHAAL.",
+      "description": "Een werkplaatsbord. Smalle hoofdletters, antraciet, gele accenten en uitklapbare diensten.",
+      "features": [
+        "Diensten",
+        "Werkplaats",
+        "Contactlink"
+      ],
+      "business": {
+        "eyebrow": "DE FIETSWERKPLAATS IN JE BUURT",
+        "headline": "Meer fietsen.<br>Minder zorgen.",
+        "intro": "Snelle reparaties, een grondige onderhoudsbeurt en duidelijke antwoorden. Zodat je weer kunt doen waar het om gaat: fietsen.",
+        "storyTitle": "Klaar voor de lange weg naar huis.",
+        "story": "Van je dagelijkse stadsfiets tot de fiets voor je zondagse rondje: we behandelen elke fiets met aandacht. Kom langs, vertel wat er mis is en we bespreken de reparatie voordat we beginnen.",
+        "menu": [
+          {
+            "name": "Veiligheidscheck",
+            "description": "Remmen, banden, verlichting en een algemene controle",
+            "price": "€25"
+          },
+          {
+            "name": "Onderhoudsbeurt",
+            "description": "De basis, gecontroleerd en afgesteld",
+            "price": "vanaf €65"
+          },
+          {
+            "name": "Remmen & versnellingen",
+            "description": "Goed remmen en soepel schakelen",
+            "price": "vanaf €35"
+          },
+          {
+            "name": "Wiel richten",
+            "description": "De slag uit je wiel",
+            "price": "vanaf €30"
+          }
+        ],
+        "hours": [
+          "Dinsdag–vrijdag · 09:00–18:00",
+          "Zaterdag · 10:00–16:00",
+          "Zondag–maandag · gesloten"
+        ],
+        "address": "Amsterdam · voorbeeldlocatie"
+      }
+    }
+  }
 }

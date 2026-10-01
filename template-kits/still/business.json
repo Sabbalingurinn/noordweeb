@@ -62,5 +62,48 @@
     "contentLayout": "Asymmetric arrival spread, text-led hotel philosophy, one selected room at a time with accessible tabs, and a compact arrival directory.",
     "updatedOn": "2026-10-01"
   },
-  "demo": true
+  "demo": true,
+  "defaultLanguage": "nl",
+  "translations": {
+    "nl": {
+      "type": "Kleinschalige hotels",
+      "tag": "RUIMTE OM ADEM TE HALEN",
+      "description": "Een rustig hoteldagboek. Luchtige letters, asymmetrische fotografie en een kamerkeuze.",
+      "features": [
+        "Kamers",
+        "Je verhaal",
+        "Boekingslink"
+      ],
+      "business": {
+        "eyebrow": "BLIJF EVEN. VOEL JE THUIS.",
+        "headline": "Een plek<br>om te vertragen.",
+        "intro": "Kamers met aandacht. Ochtenden zonder haast. Een klein verblijf in de stad dat helemaal van jou voelt.",
+        "storyTitle": "Minder haast.<br>Meer ruimte.",
+        "story": "Een fijn verblijf gaat om het gevoel dat je eraan overhoudt. Natuurlijke materialen, rustige hoekjes en een team dat tijd voor je heeft. Ga de stad in en kom daarna thuis in de rust.",
+        "menu": [
+          {
+            "name": "De knusse kamer",
+            "description": "Een rustige plek voor twee · queensize bed",
+            "price": "18 m²"
+          },
+          {
+            "name": "De tuinkamer",
+            "description": "Groen uitzicht & wat extra ruimte",
+            "price": "25 m²"
+          },
+          {
+            "name": "De loft",
+            "description": "Ruimte om te blijven · kingsize bed",
+            "price": "35 m²"
+          }
+        ],
+        "hours": [
+          "Inchecken vanaf 15:00",
+          "Uitchecken vóór 11:00",
+          "Receptie · 07:00–23:00"
+        ],
+        "address": "Amsterdam · voorbeeldlocatie"
+      }
+    }
+  }
 }

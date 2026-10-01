@@ -84,3 +84,13 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Reviewed desktop arrivals and full phone pages for all five demos. Checked 320px, 390px, 768px and 1440px with no horizontal overflow or broken section anchors. Every page loads its intended heading family. The main showroom and estimate also fit 320px.
 - Verified Still's room selection by click and arrow keys, its navigation menu, and Rove's native service expansion. All five action dialogs close with Escape and restore focus. Every design's choose link returns the correct name to the €950 estimate. Showroom selection and removal work. No console errors or warnings appeared in the checked flows.
 - Rebuilt the five portable kits and archives. Build, source syntax, local-reference checks and whitespace checks pass. Left the refreshed showroom visible at the normal browser size for owner feedback. Changes remain local.
+
+
+## Dutch default and English toggle — 1 October 2026
+
+- Translated the homepage, catalogue, five demos, privacy page, project terms and 404 page. Static HTML defaults to Dutch; visible NL/EN buttons also translate metadata, navigation labels, form placeholders, price formatting and prepared email requests. Refreshed the Dutch showroom images from the actual demos; English retains the existing English previews.
+- Tested a fresh English-browser visit: the site still defaults to Dutch. English is remembered on a later visit. Only the language preference enters browser storage. With storage disabled, the toggle and language-bearing links still work. Dutch remains readable without JavaScript.
+- Selected Still, the five-page package and two extras, entered a request, and switched in both directions. Design, package, extras, all entered text and the €2,250 total are preserved. Prepared Dutch and English requests have the correct localized subject and recipient noordweeb@noordweeb.nl. No email was sent.
+- Verified Still’s selected room, Rove’s expanded service and the open mobile menu survive language switches. The menu’s accessibility label changes to the selected language.
+- Checked homepage and all demos at 360px, 390px, 768px and 1440px in both languages, with no horizontal overflow. Checked all information pages in both languages at 360px, 768px and 1440px. Visually reviewed Dutch desktop and mobile arrivals and the English mobile homepage. No page errors occurred during the main flow.
+- Build, required checks, localized customer-content escaping and local-reference checks pass. The Kade portable kit regenerates successfully with its copied localization helpers. Screenshot evidence is in ignored output/playwright/.
