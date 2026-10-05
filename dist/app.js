@@ -1,6 +1,7 @@
-import { business, catalog as englishCatalog, templates as englishTemplates, dutch, ui } from './data.js?v=20261001languages';
+import { business, catalog as englishCatalog, templates as englishTemplates, dutch, ui } from './data.js?v=20261005svgicons';
 import { calculateQuote, formatMoney } from './quote.js';
 import { getLanguage, onLanguageChange } from './language.js';
+import { icon } from './icons.js?v=20261005svgicons';
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const t = (key, values = {}) => ui[getLanguage()][key].replace(/\{(\w+)\}/g, (_, name) => values[name] ?? '');
@@ -50,7 +51,7 @@ function renderPage() {
   showroom.innerHTML = templates.map((template, index) => {
     const title = escapeHtml(template.name);
     const href = `/templates/${template.id}/?lang=${getLanguage()}`;
-    return `<article class="showcase-item showcase-${template.id}"><div class="showcase-title-line"><p>${String(index + 1).padStart(2, '0')} / ${escapeHtml(template.type)}</p><h3>${title}</h3></div><a class="showcase-visual" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(t('demoLabel', { name: template.name, type: template.type.toLowerCase() }))}"><img class="demo-preview" src="/assets/${template.id}-showcase${getLanguage() === 'nl' ? '-nl.jpg?v=20261001languages' : '.webp?v=20261001distinct2'}" alt="${escapeHtml(t('previewAlt', { name: template.name }))}" loading="lazy" width="980" height="620"></a><div class="showcase-meta"><p>${escapeHtml(template.description)}</p><div class="showcase-features">${template.features.map(feature => `<span>${escapeHtml(feature)}</span>`).join('')}</div><a class="showcase-demo-link" href="${href}" target="_blank" rel="noopener noreferrer">${t('liveDemo')}</a><button class="showcase-choose" data-template="${template.id}" aria-label="${escapeHtml(t('chooseLabel', { name: template.name }))}">${t('choose', { name: title })}</button></div></article>`;
+    return `<article class="showcase-item showcase-${template.id}"><div class="showcase-title-line"><p>${String(index + 1).padStart(2, '0')} / ${escapeHtml(template.type)}</p><h3>${title}</h3></div><a class="showcase-visual" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(t('demoLabel', { name: template.name, type: template.type.toLowerCase() }))}"><img class="demo-preview" src="/assets/${template.id}-showcase${getLanguage() === 'nl' ? '-nl.jpg?v=20261001languages' : '.webp?v=20261001distinct2'}" alt="${escapeHtml(t('previewAlt', { name: template.name }))}" loading="lazy" width="980" height="620"></a><div class="showcase-meta"><p>${escapeHtml(template.description)}</p><div class="showcase-features">${template.features.map(feature => `<span>${escapeHtml(feature)}</span>`).join('')}</div><a class="showcase-demo-link" href="${href}" target="_blank" rel="noopener noreferrer">${t('liveDemo')} ${icon('arrow-up-right')}</a><button class="showcase-choose" data-template="${template.id}" aria-label="${escapeHtml(t('chooseLabel', { name: template.name }))}">${t('choose', { name: title })}</button></div></article>`;
   }).join('');
   packageOptions.innerHTML = catalog.packages.map(item => `<label class="package-option"><input type="radio" name="package" value="${item.id}"><span><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.scope)}</span></span><b>${money(item.price)}</b></label>`).join('');
   addonsElement.innerHTML = catalog.addons.map(item => `<label class="addon-item"><input type="checkbox" name="addon" value="${item.id}"><span><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></span><span class="addon-price">+${money(item.price)}</span></label>`).join('');
@@ -65,14 +66,14 @@ function updateQuote() {
   selectedExtras = currentQuote.addonIds;
   packageOptions.querySelectorAll('input').forEach(input => { input.checked = input.value === selectedPackage; });
   const { base, addons, totalCents } = currentQuote;
-  document.querySelector('#package-detail').innerHTML = `<p>${escapeHtml(base.description)}</p><div class="scope-tags"><span>${escapeHtml(base.scope)}</span><span>${t('buildTime', { time: base.delivery })}</span></div><ul>${base.includes.map(item => `<li><span aria-hidden="true">✓</span>${escapeHtml(item)}</li>`).join('')}</ul><p class="delivery-note">${t('deliveryNote')}</p>`;
+  document.querySelector('#package-detail').innerHTML = `<p>${escapeHtml(base.description)}</p><div class="scope-tags"><span>${escapeHtml(base.scope)}</span><span>${t('buildTime', { time: base.delivery })}</span></div><ul>${base.includes.map(item => `<li><span aria-hidden="true">${icon('check')}</span>${escapeHtml(item)}</li>`).join('')}</ul><p class="delivery-note">${t('deliveryNote')}</p>`;
   document.querySelector('#quote-name').textContent = base.name;
   document.querySelector('#quote-scope').textContent = base.scope;
   document.querySelector('#quote-lines').innerHTML = `<div><span>${t('websiteBuild')}</span><strong>${money(base.price)}</strong></div>${addons.map(item => `<div><span>${escapeHtml(item.name)}</span><strong>${money(item.price)}</strong></div>`).join('')}${addons.length === 0 ? `<p>${t('noExtras')}</p>` : ''}`;
   document.querySelector('#quote-total').textContent = money(totalCents);
   const templateNote = document.querySelector('#chosen-template');
   templateNote.hidden = !chosenTemplate;
-  templateNote.innerHTML = chosenTemplate ? `${t('direction')} <strong>${escapeHtml(chosenTemplate.name)}</strong><button type="button" id="clear-template" aria-label="${escapeHtml(t('removeDesign', { name: chosenTemplate.name }))}">×</button>` : '';
+  templateNote.innerHTML = chosenTemplate ? `${t('direction')} <strong>${escapeHtml(chosenTemplate.name)}</strong><button type="button" id="clear-template" aria-label="${escapeHtml(t('removeDesign', { name: chosenTemplate.name }))}">${icon('close')}</button>` : '';
   document.querySelectorAll('[data-template]').forEach(button => {
     const name = templates.find(item => item.id === button.dataset.template).name;
     const selected = button.dataset.template === chosenTemplate?.id;

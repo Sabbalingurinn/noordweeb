@@ -26,6 +26,7 @@ Open http://127.0.0.1:4173. The distributable website is `dist/`.
 | Configurator, navigation and price request | `dist/app.js`, `dist/quote.js` |
 | Generated browser data | `dist/data.js` — do not edit directly |
 | Demo renderer and styles | `scripts/render-template.mjs`, `scripts/template-styles.css` |
+| SVG interface icons (no emoji font fallback) | `scripts/icons.mjs` |
 | Generated demos | `dist/templates/{kade,crumb,still,stem,rove}/` |
 | Portable AI kits and ZIPs | `template-kits/` |
 | Information-page and kit generation | `scripts/build.mjs` |

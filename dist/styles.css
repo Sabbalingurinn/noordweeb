@@ -836,3 +836,6 @@
 @media(max-width:850px){.site-header{gap:15px}.site-header>.language-switch{margin-left:auto}}
 @media(max-width:380px){.site-header{gap:9px}.site-header>.wordmark{font-size:21px;gap:6px}.site-header .tech-mark{width:25px;height:25px}.language-switch button{padding:7px}.menu-toggle{gap:7px;font-size:12px}}
 @media(max-width:620px){.site-header:has(+ .legal-page){flex-wrap:wrap;height:auto;padding-block:20px}.site-header:has(+ .legal-page)>.text-link{order:3;width:100%;font-size:13px}}
+
+/* Draw interface symbols as SVG, with the surrounding text colour. */
+.ui-icon{display:inline-block;width:1em;height:1em;flex-shrink:0;vertical-align:-.125em;overflow:visible}

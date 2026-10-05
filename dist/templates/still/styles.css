@@ -47,3 +47,6 @@
 }
 @media(max-width:380px){.kade-sidebar{grid-template-columns:1fr auto;column-gap:7px}.kade-sidebar>.kade-reserve{font-size:11px;padding:11px}.kade-logo{font-size:45px}.crumb-poster h1{font-size:40px}.crumb-poster figure{height:285px}.crumb-poster figcaption{width:90px;height:90px;font-size:12px}.crumb-header nav{font-size:10px}.crumb-counter h2{font-size:43px}.crumb-receipt{padding-inline:20px}.crumb-receipt li{gap:12px}.still-header-actions{gap:15px}.still-book{padding:11px 13px}.still-arrival h1{font-size:57px}.still-room-switch button{font-size:15px}.stem-scrapbook h1{font-size:76px}.stem-header nav{font-size:9px}.stem-price{flex-wrap:wrap}.stem-hello h2{font-size:62px}.rove-header nav{font-size:7px}.rove-board h1{font-size:60px}.rove-manifesto>div{gap:20px}.business-footer{font-size:10px;gap:13px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+
+/* Draw interface symbols as SVG, with the surrounding text colour. */
+.ui-icon{display:inline-block;width:1em;height:1em;flex-shrink:0;vertical-align:-.125em;overflow:visible}

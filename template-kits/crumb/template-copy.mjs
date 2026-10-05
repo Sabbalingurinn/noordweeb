@@ -1,4 +1,6 @@
-export const templateCopy = {
+import { iconPairs } from './icons.mjs';
+
+export const templateCopy = iconPairs({
   'Skip to content': 'Ga naar inhoud',
   'Main navigation': 'Hoofdnavigatie',
   'Open navigation': 'Navigatie openen',
@@ -96,4 +98,4 @@ export const templateCopy = {
   'Close demo message': 'Demobericht sluiten',
   'noordclick / DESIGN PREVIEW': 'noordclick / ONTWERPVOORBEELD',
   'Picture your business here.': 'Stel je jouw bedrijf hier voor.'
-};
+});

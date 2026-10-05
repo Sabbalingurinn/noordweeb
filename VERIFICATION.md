@@ -94,3 +94,10 @@ One browser navigation temporarily stalled during inspection, then loaded succes
 - Verified Still’s selected room, Rove’s expanded service and the open mobile menu survive language switches. The menu’s accessibility label changes to the selected language.
 - Checked homepage and all demos at 360px, 390px, 768px and 1440px in both languages, with no horizontal overflow. Checked all information pages in both languages at 360px, 768px and 1440px. Visually reviewed Dutch desktop and mobile arrivals and the English mobile homepage. No page errors occurred during the main flow.
 - Build, required checks, localized customer-content escaping and local-reference checks pass. The Kade portable kit regenerates successfully with its copied localization helpers. Screenshot evidence is in ignored output/playwright/.
+
+## 5 October 2026 — iPhone emoji rendering
+
+- Replaced Unicode interface arrows, decorative asterisks, checkmarks and close controls with SVG paths. The icons inherit the design colours and are hidden from assistive technology. Dutch and English copies retain the SVGs when switching language.
+- Homepage, all five demos, privacy, project terms and 404 have no remaining Unicode icon glyphs or emoji variation selectors in their rendered text. Shared SVG markup comes from scripts/icons.mjs; builds copy it into the frontend and portable kits. Asset versions were updated for mobile caches.
+- Build and required checks pass; all five portable kits regenerate. Browser checks pass at 360, 390, 768 and 1440 pixels with no horizontal overflow. Dutch/English switches retain the SVGs in the homepage and every demo; mobile navigation still opens and closes. Mobile screenshot: output/playwright/no-emoji-mobile.png. These checks use the desktop browser at mobile widths, not a physical iPhone.
+- The owner explicitly approved uploading the source and publishing this fix on 5 October 2026. The existing Site identity and private audience are preserved.
