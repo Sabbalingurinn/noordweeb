@@ -1,4 +1,4 @@
-# NoordWeeb
+# noordclick
 
 A small web studio with Icelandic roots. Two straightforward website sizes, four useful extras, and individually quoted changes after launch. The showroom lets customers explore five working design concepts in separate tabs before choosing.
 
@@ -69,6 +69,6 @@ The existing private preview is https://noordweeb-showroom.expert-ox-1874.chatgp
 - Florist: [Bohdan Stocek / Unsplash](https://unsplash.com/photos/flowers-on-display-in-a-bright-and-airy-flower-shop-r4f9Nai_ztM).
 - Bike workshop: [Bohdan Kadun / Unsplash](https://unsplash.com/photos/a-man-working-on-a-bicycle-in-a-garage-WIsOienEXBM).
 
-Photos were obtained under the [Unsplash License](https://unsplash.com/license). The scenes are stock photography, not actual NoordWeeb customers. Newsreader, DM Sans, Manrope, Dela Gothic One, Caveat and Anton are served locally with their SIL Open Font License files. The minimal monochrome N mark is original to NoordWeeb. The studio uses Manrope; the five fictional demos use distinct type systems. New fonts come from the official [Google Fonts repository](https://github.com/google/fonts); optimized Latin WOFF2 files are served locally.
-# noordweeb
-# noordweeb
+Photos were obtained under the [Unsplash License](https://unsplash.com/license). The scenes are stock photography, not actual noordclick customers. Newsreader, DM Sans, Manrope, Dela Gothic One, Caveat and Anton are served locally with their SIL Open Font License files. The minimal monochrome N mark is original to noordclick. The studio uses Manrope; the five fictional demos use distinct type systems. New fonts come from the official [Google Fonts repository](https://github.com/google/fonts); optimized Latin WOFF2 files are served locally.
+# noordclick
+# noordclick

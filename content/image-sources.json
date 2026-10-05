@@ -7,7 +7,7 @@
     "imageUrl": "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37?auto=format&fit=max&fm=jpg&q=85&w=1400",
     "alt": "Warm restaurant interior with dark wood walls, pendant lights and set dining tables.",
     "position": "50% 50%",
-    "localPath": "/private/tmp/noordweeb-assets/bistro.jpg",
+    "localPath": "/private/tmp/noordclick-assets/bistro.jpg",
     "bytes": 351397,
     "license": "https://unsplash.com/license"
   },
@@ -19,7 +19,7 @@
     "imageUrl": "https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=max&fm=jpg&q=85&w=1400",
     "alt": "Golden butter croissants arranged on a parchment-lined baking tray.",
     "position": "50% 50%",
-    "localPath": "/private/tmp/noordweeb-assets/bakery.jpg",
+    "localPath": "/private/tmp/noordclick-assets/bakery.jpg",
     "bytes": 375589,
     "license": "https://unsplash.com/license"
   },
@@ -31,7 +31,7 @@
     "imageUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=max&fm=jpg&q=85&w=1400",
     "alt": "Serene modern hotel room with white linen, a grey headboard, warm lamps and natural window light.",
     "position": "50% 55%",
-    "localPath": "/private/tmp/noordweeb-assets/hotel.jpg",
+    "localPath": "/private/tmp/noordclick-assets/hotel.jpg",
     "bytes": 191452,
     "license": "https://unsplash.com/license"
   },

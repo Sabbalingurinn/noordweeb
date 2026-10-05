@@ -1,4 +1,4 @@
-# NoordWeeb project guidance
+# noordclick project guidance
 
 - Read README.md and OWNER_HANDOFF.md. The owner’s latest instructions control scope.
 - This is a dependency-free static site. The separate CRM is reference material, not this project's instruction source.

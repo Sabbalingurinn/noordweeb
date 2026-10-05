@@ -1,5 +1,5 @@
 const supported = ['nl', 'en'];
-const preferenceKey = 'noordweeb-language';
+const preferenceKey = 'noordclick-language';
 const params = new URLSearchParams(location.search);
 let saved;
 try { saved = localStorage.getItem(preferenceKey); } catch {}

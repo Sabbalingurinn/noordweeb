@@ -1,4 +1,4 @@
-# NoordWeeb — remaining owner information
+# noordclick — remaining owner information
 
 The design and commercial offer are implemented: a minimal monochrome N symbol and wordmark, upright Manrope typography and a navy-and-blue homepage with previews of the work, five showroom demos with independent typography, layout, shapes and content presentation, two website sizes (€950 / €1,650) and four optional extras. Pricing has been decided under the owner's instruction; it does not require a return to the old CRM catalogue. A custom price request opens a prepared email addressed to `noordweeb@noordweeb.nl`; the visitor sends it from their email app.
 
@@ -16,7 +16,7 @@ Hosting, domains and booking providers are separate client costs in client-owned
 ## Ready-to-paste prompt for GPT-6 Luna
 
 ```text
-Fill in the real business information in this existing NoordWeeb website.
+Fill in the real business information in this existing noordclick website.
 Read README.md, AGENTS.md, OFFER_STRATEGY.md and OWNER_HANDOFF.md. Preserve
 the navy/blue design, minimal monochrome N symbol and wordmark, upright Manrope, homepage demo previews, five customer demos,
 two packages (€950 one page / €1,650 up to five pages), four extras and the

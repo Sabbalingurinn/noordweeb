@@ -1,14 +1,14 @@
-# The NoordWeeb template workflow
+# The noordclick template workflow
 
 Show a working design, choose one page or up to five pages, agree any of the four extras, and adapt the known implementation to the customer's real business.
 
 | Design | Good fit | Preview | Portable AI kit |
 | --- | --- | --- | --- |
-| Kade | Restaurants, bistros, wine bars | `/templates/kade/` | `template-kits/noordweeb-kade.zip` |
-| Crumb | Cafés, bakeries, neighbourhood businesses | `/templates/crumb/` | `template-kits/noordweeb-crumb.zip` |
-| Still | Guesthouses, boutique stays, small hotels | `/templates/still/` | `template-kits/noordweeb-still.zip` |
-| Stem | Florists and small creative shops without online checkout | `/templates/stem/` | `template-kits/noordweeb-stem.zip` |
-| Rove | Bike workshops and practical local services | `/templates/rove/` | `template-kits/noordweeb-rove.zip` |
+| Kade | Restaurants, bistros, wine bars | `/templates/kade/` | `template-kits/noordclick-kade.zip` |
+| Crumb | Cafés, bakeries, neighbourhood businesses | `/templates/crumb/` | `template-kits/noordclick-crumb.zip` |
+| Still | Guesthouses, boutique stays, small hotels | `/templates/still/` | `template-kits/noordclick-still.zip` |
+| Stem | Florists and small creative shops without online checkout | `/templates/stem/` | `template-kits/noordclick-stem.zip` |
+| Rove | Bike workshops and practical local services | `/templates/rove/` | `template-kits/noordclick-rove.zip` |
 
 All previews are fictional single-page designs, starting at €950. They have working section navigation, story, relevant offerings and practical information. Contact or booking buttons explain demo mode; they never send an enquiry or make a reservation. The existing deployed preview is owner-private; remote customer access needs an owner-approved audience change.
 
@@ -29,7 +29,7 @@ Get approved name/logo/colours, audience/language, address/hours, email/phone, f
 Unzip the kit into a separate customer project. It includes HTML/CSS, editable business.json, a renderer, a local stock image, local fonts/licences, credits and BUILD_BRIEF.md. This makes the design reproducible without guessing from screenshots.
 
 ```text
-Adapt this NoordWeeb template for the customer below. Read BUILD_BRIEF.md
+Adapt this noordclick template for the customer below. Read BUILD_BRIEF.md
 and CREDITS.md. Preserve the established layout and mobile behaviour. Edit
 business.json, replace authorised imagery and run node generate.mjs. Add
 only the actual pages and four permitted extras included in the quote.

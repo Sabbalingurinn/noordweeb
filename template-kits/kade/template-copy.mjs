@@ -21,7 +21,7 @@ export const templateCopy = {
   'Example room types and amenities for this fictional business.': 'Voorbeeldkamers en voorzieningen voor dit fictieve bedrijf.',
   'Example flowers and prices for this fictional business.': 'Voorbeeldbloemen en prijzen voor dit fictieve bedrijf.',
   'Example services and prices for this fictional business.': 'Voorbeelddiensten en prijzen voor dit fictieve bedrijf.',
-  'A fictional concept by NoordWeeb.': 'Een fictief concept van NoordWeeb.',
+  'A fictional concept by noordclick.': 'Een fictief concept van noordclick.',
   'Make this yours ↗': 'Maak dit jouw website ↗',
   'The menu': 'De menukaart',
   'Our table': 'Onze tafel',
@@ -91,9 +91,9 @@ export const templateCopy = {
   'WORKSHOP HOURS': 'OPENINGSTIJDEN',
   'LOCATION': 'LOCATIE',
   'Get in touch ↗': 'Neem contact op ↗',
-  '← Back to NoordWeeb': '← Terug naar NoordWeeb',
+  '← Back to noordclick': '← Terug naar noordclick',
   'Choose this design ↗': 'Kies dit ontwerp ↗',
   'Close demo message': 'Demobericht sluiten',
-  'NOORDWEEB / DESIGN PREVIEW': 'NOORDWEEB / ONTWERPVOORBEELD',
+  'noordclick / DESIGN PREVIEW': 'noordclick / ONTWERPVOORBEELD',
   'Picture your business here.': 'Stel je jouw bedrijf hier voor.'
 };

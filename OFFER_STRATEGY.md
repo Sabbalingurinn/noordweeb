@@ -1,4 +1,4 @@
-# A small offer NoordWeeb can deliver well
+# A small offer noordclick can deliver well
 
 The owner asked us to decide the pricing and avoid complicated websites. These are the implemented decisions, replacing the earlier five-tier CRM catalogue. EUR remains the currency because the existing sales context targets small hospitality businesses in the Netherlands; Icelandic company identity does not by itself determine customer currency or VAT treatment.
 
@@ -38,7 +38,7 @@ After launch, quote each new request before doing it. Do not sell a care plan, p
 
 For internal planning, aim for roughly 8–12 delivery hours on a one-page build and 16–22 on a five-page build. These are starting effort budgets, not measured margins or promised profit; track real time on the first projects and revise the business offer if the work consistently exceeds them. Sales, tax, overhead and unpaid support still consume revenue.
 
-A limited 25 September 2026 sense-check used advertised pricing at [WebArctic](https://webarctic.nl/) and [DirectWebsite](https://directwebsite.nl/). Their scopes and recurring arrangements differ, so their prices are not treated as a market average or a like-for-like comparison. NoordWeeb's figures are its own scope-based business decision.
+A limited 25 September 2026 sense-check used advertised pricing at [WebArctic](https://webarctic.nl/) and [DirectWebsite](https://directwebsite.nl/). Their scopes and recurring arrangements differ, so their prices are not treated as a market average or a like-for-like comparison. noordclick's figures are its own scope-based business decision.
 
 ## Written quote boundaries
 
